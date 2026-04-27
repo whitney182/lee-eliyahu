@@ -1,0 +1,610 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Lee Eliyahu — New York Real Estate</title>
+<meta name="description" content="Residential, commercial, and investment real estate across the five boroughs. A broker who knows the block, not just the listing." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lucide-static@0.460.0/font/lucide.css">
+<style>
+:root{
+  --bone: #F6F1E7;
+  --paper: #FBF7EE;
+  --ink: #1A1916;
+  --ink-soft: #3D3A33;
+  --mute: #7F7A70;
+  --gold: #A88657;
+  --gold-soft: #C9A872;
+  --rule: #E2D9C5;
+  --rule-soft: #EDE5D3;
+  --serif: 'Fraunces', 'Iowan Old Style', Georgia, serif;
+  --sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+  --c-max: 1360px;
+  --pad: clamp(20px, 4vw, 56px);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+body{
+  margin:0; background:var(--bone); color:var(--ink);
+  font-family:var(--sans); font-size:16px; line-height:1.55;
+  font-feature-settings:"ss01","ss02";
+}
+img{display:block; max-width:100%; height:auto}
+a{color:inherit; text-decoration:none}
+button{font-family:inherit; cursor:pointer}
+
+/* Typography */
+.display {
+  font-family: var(--serif); font-weight: 400;
+  letter-spacing:-0.025em; line-height:0.98;
+  font-variation-settings: "opsz" 144;
+  font-size: clamp(56px, 9.5vw, 172px);
+}
+.display em { font-style: italic; font-weight: 300; color: var(--gold); font-variation-settings: "opsz" 144; }
+.eyebrow {
+  font-family: var(--sans); font-size:11px; font-weight:500;
+  letter-spacing:0.22em; text-transform:uppercase; color:var(--mute);
+}
+.h2 {
+  font-family:var(--serif); font-weight:400;
+  font-size:clamp(32px, 4.8vw, 68px); line-height:1.02;
+  letter-spacing:-0.022em;
+  font-variation-settings:"opsz" 72;
+}
+.h2 em { font-style:italic; color:var(--gold); font-weight:300;}
+.h3 {
+  font-family:var(--serif); font-weight:400;
+  font-size:clamp(24px,2.4vw,34px); line-height:1.1;
+  letter-spacing:-0.015em;
+}
+.body-lg { font-size:18px; line-height:1.55; color:var(--ink-soft); }
+.body { font-size:16px; color:var(--ink-soft); }
+.meta { font-family:var(--sans); font-size:12px; letter-spacing:0.12em; text-transform:uppercase; color:var(--mute);}
+
+/* Wrap */
+.wrap { max-width:var(--c-max); margin:0 auto; padding:0 var(--pad); }
+
+/* Nav */
+.nav {
+  position:sticky; top:0; z-index:50;
+  background:color-mix(in oklab, var(--bone) 92%, transparent);
+  backdrop-filter:saturate(150%) blur(14px);
+  border-bottom:1px solid color-mix(in oklab, var(--rule) 70%, transparent);
+}
+.nav-inner { display:flex; align-items:center; justify-content:space-between;
+  height:76px;
+}
+.logo { display:flex; align-items:center; gap:12px; }
+.logo-mark {
+  width:36px; height:36px; border-radius:50%;
+  border:1px solid var(--ink); display:grid; place-items:center;
+  font-family:var(--serif); font-weight:500; font-size:14px; letter-spacing:0.02em;
+  position:relative;
+}
+.logo-mark::before {
+  content:""; position:absolute; inset:5px;
+  border-radius:50%; border:1px solid color-mix(in oklab, var(--gold) 60%, transparent);
+}
+.logo-word { font-family:var(--serif); font-weight:400; letter-spacing:0.01em; font-size:18px; }
+.logo-word span { font-style:italic; color:var(--gold);}
+
+.nav-links { display:flex; gap:34px; align-items:center; }
+.nav-links a { font-size:14px; color:var(--ink-soft); position:relative; padding:6px 0;}
+.nav-links a::after {
+  content:""; position:absolute; left:0; right:100%; bottom:0; height:1px;
+  background:var(--gold); transition:right .4s cubic-bezier(.2,.8,.2,1);
+}
+.nav-links a:hover::after { right:0; }
+.nav-links .has-dd { display:inline-flex; align-items:center; gap:4px;}
+.nav-links .has-dd::after { display:none; }
+.nav-cta {
+  font-family:var(--sans); font-size:13px; letter-spacing:0.04em;
+  padding:11px 22px; border:1px solid var(--ink);
+  border-radius:999px; background:transparent;
+  transition: background .35s ease, color .35s ease, transform .35s ease;
+}
+.nav-cta:hover { background:var(--ink); color:var(--bone); }
+.menu-btn { display:none; background:transparent; border:0; color:var(--ink); font-size:22px; }
+
+/* Hero */
+.hero { padding: clamp(64px, 10vw, 140px) 0 clamp(40px,6vw,88px); }
+.hero-inner {
+  display:grid; grid-template-columns: 1.15fr 1fr; gap: clamp(32px,5vw,72px);
+  align-items:end;
+}
+.hero-left h1 { margin:24px 0 0;}
+.hero-meta {
+  display:flex; align-items:center; gap:14px; color:var(--mute);
+}
+.hero-meta::before { content:""; width:36px; height:1px; background:var(--gold);}
+.hero-right { padding-bottom: 10px; }
+.hero-right p { font-family:var(--serif); font-weight:300; font-size:clamp(18px,1.4vw,22px); line-height:1.45; color:var(--ink-soft); font-style:italic; max-width:52ch; font-variation-settings:"opsz" 72;}
+.hero-cta-row { margin-top: clamp(28px, 4vw, 48px); display:flex; gap:16px; align-items:center; flex-wrap:wrap;}
+.btn {
+  font-family:var(--sans); font-size:14px; letter-spacing:0.04em;
+  padding:16px 32px; border-radius:999px; border:1px solid transparent;
+  transition: all .4s cubic-bezier(.2,.8,.2,1);
+  display:inline-flex; align-items:center; gap:10px;
+}
+.btn-primary { background:var(--ink); color:var(--bone);}
+.btn-primary:hover { background:var(--gold); color:var(--ink); transform:translateY(-1px);}
+.btn-ghost { background:transparent; color:var(--ink); border-color:color-mix(in oklab, var(--ink) 30%, transparent);}
+.btn-ghost:hover { border-color:var(--ink);}
+.hero-marquee {
+  margin-top:clamp(56px,8vw,120px);
+  border-top:1px solid var(--rule); border-bottom:1px solid var(--rule);
+  padding:22px 0;
+  display:flex; justify-content:space-between; align-items:center;
+  gap:clamp(16px, 3vw, 40px); flex-wrap:wrap;
+}
+.hero-marquee span { font-family:var(--serif); font-weight:300; font-style:italic; font-size:clamp(14px,1.1vw,18px); color:var(--ink-soft);}
+.hero-marquee .dot { color:var(--gold); font-style:normal; }
+
+/* Services */
+.section { padding: clamp(80px,10vw,140px) 0; }
+.section-head { display:grid; grid-template-columns: 1fr 1.5fr; gap: clamp(24px,4vw,72px); align-items:end; margin-bottom: clamp(40px,5vw,72px);}
+.section-head .eyebrow-wrap {display:flex; align-items:center; gap:16px;}
+.section-head .eyebrow-wrap::before { content:""; width:28px; height:1px; background:var(--gold);}
+.section-head h2 { margin:24px 0 0; max-width:18ch; }
+.section-head .lede { color:var(--ink-soft); font-family:var(--serif); font-weight:300; font-style:italic; font-size:clamp(17px,1.4vw,21px); max-width:48ch; font-variation-settings:"opsz" 72;}
+
+.services-grid { display:grid; grid-template-columns: repeat(3, 1fr); gap: 0; border-top:1px solid var(--rule);}
+.svc {
+  padding: clamp(28px, 3vw, 48px) clamp(24px,2.4vw,36px);
+  border-bottom:1px solid var(--rule); border-right:1px solid var(--rule);
+  min-height: 420px; display:flex; flex-direction:column; justify-content:space-between;
+  transition: background .4s ease;
+  position:relative; overflow:hidden;
+}
+.svc:last-child { border-right:0 ;}
+.svc .num { font-family:var(--serif); font-weight:300; font-style:italic; color:var(--gold); font-size:22px; letter-spacing:0.02em;}
+.svc h3 { margin:clamp(60px,9vw,110px) 0 12px; max-width:14ch;}
+.svc p { margin:0 0 28px; color:var(--ink-soft); max-width:36ch; font-size:15px;}
+.svc .svc-link { font-size:13px; letter-spacing:0.1em; text-transform:uppercase; color:var(--ink); display:inline-flex; align-items:center; gap:8px;}
+.svc .svc-link i { transition: transform .4s cubic-bezier(.2,.8,.2,1);}
+.svc:hover { background: var(--paper);}
+.svc:hover .svc-link i { transform: translateX(6px);}
+
+/* About */
+.about { display:grid; grid-template-columns:1.15fr 1fr; gap: clamp(40px,6vw,100px); align-items:center;}
+.about .photo {
+  aspect-ratio: 4/5; background: linear-gradient(135deg, #2b2821 0%, #0f0e0c 60%);
+  border-radius: 2px; position:relative; overflow:hidden;
+  box-shadow: 0 40px 80px -30px rgba(0,0,0,0.25);
+}
+.about .photo::before {
+  content:""; position:absolute; inset:0;
+  background: radial-gradient(ellipse at 30% 30%, rgba(168,134,87,0.22), transparent 60%);
+}
+.about .photo::after {
+  content:"LE"; position:absolute; left:50%; top:50%; transform:translate(-50%,-50%);
+  font-family:var(--serif); font-weight:300; font-size:170px; color:rgba(246,241,231,0.1); letter-spacing:-0.04em;
+}
+.about h2 { margin:20px 0 22px; }
+.about p { color:var(--ink-soft); font-size:17px; max-width:50ch;}
+.about p + p { margin-top:18px;}
+.about .signature { margin-top:36px; font-family:var(--serif); font-style:italic; font-weight:300; font-size:24px; color:var(--gold);}
+.about-meta { display:grid; grid-template-columns: repeat(2, 1fr); gap:18px; margin-top:40px; padding-top:32px; border-top:1px solid var(--rule);}
+.about-meta > div span:first-child { font-family:var(--serif); font-size:13px; text-transform:uppercase; letter-spacing:0.14em; color:var(--mute); display:block; margin-bottom:6px;}
+.about-meta > div span:last-child { font-family:var(--serif); font-size:17px; color:var(--ink);}
+
+/* Stats */
+.stats {
+  background:var(--ink); color:var(--bone); padding: clamp(64px,8vw,120px) 0;
+  position:relative;
+}
+.stats .wrap { display:grid; grid-template-columns: repeat(3, 1fr); gap: clamp(32px,4vw,64px);}
+.stat .num {
+  font-family:var(--serif); font-weight:300; font-variation-settings:"opsz" 144;
+  font-size: clamp(64px, 10vw, 148px); line-height:0.9; letter-spacing:-0.03em;
+}
+.stat .num em { font-style:italic; color:var(--gold-soft);}
+.stat .sub { margin-top:18px; color:color-mix(in oklab, var(--bone) 70%, transparent); max-width:32ch; font-size:15px;}
+.stat .label { color:var(--gold-soft); font-size:12px; letter-spacing:0.2em; text-transform:uppercase; display:block; margin-bottom:14px;}
+
+/* Testimonials */
+.quotes { display:grid; grid-template-columns: 1fr 1fr; gap: clamp(32px,4vw,72px); }
+.quote {
+  padding: clamp(28px,3vw,48px); background:var(--paper); border-radius:2px;
+  border:1px solid var(--rule-soft);
+  position:relative;
+  transition: transform .5s cubic-bezier(.2,.8,.2,1), box-shadow .5s ease;
+}
+.quote:hover { transform:translateY(-4px); box-shadow: 0 30px 60px -40px rgba(26,25,22,0.3);}
+.quote .mark { font-family:var(--serif); font-weight:300; font-size:68px; line-height:0.6; color:var(--gold); position:absolute; top:22px; left:28px;}
+.quote p { font-family:var(--serif); font-weight:300; font-size:clamp(19px, 1.6vw, 24px); line-height:1.45; margin:36px 0 28px; color:var(--ink); font-variation-settings:"opsz" 72;}
+.quote-meta { display:flex; align-items:center; gap:14px; padding-top:20px; border-top:1px solid var(--rule);}
+.quote-avatar { width:42px; height:42px; border-radius:50%; background:var(--ink); color:var(--bone); display:grid; place-items:center; font-family:var(--serif); font-weight:400; font-size:15px;}
+.quote-meta .name { font-size:15px; color:var(--ink); display:block;}
+.quote-meta .role { font-size:12px; color:var(--mute); letter-spacing:0.06em; text-transform:uppercase;}
+
+/* Video */
+.video-wrap {
+  position:relative;
+  aspect-ratio: 21/9; border-radius:2px;
+  overflow:hidden;
+  background:
+    linear-gradient(135deg, #1a1916 0%, #3d3a33 100%);
+}
+.video-placeholder {
+  position:absolute; inset:0;
+  display:grid; place-items:center; gap:20px;
+  color:var(--bone);
+}
+.video-placeholder .badge {
+  padding:10px 20px; border:1px solid color-mix(in oklab, var(--bone) 40%, transparent);
+  border-radius:999px; font-size:11px; letter-spacing:0.24em; text-transform:uppercase;
+  backdrop-filter:blur(6px);
+}
+.video-placeholder .note {
+  font-family:var(--serif); font-style:italic; font-weight:300; font-size:20px; color:color-mix(in oklab, var(--bone) 75%, transparent);
+  max-width:44ch; text-align:center; padding:0 24px;
+}
+.video-placeholder .play {
+  width:84px; height:84px; border-radius:50%;
+  border:1px solid color-mix(in oklab, var(--bone) 40%, transparent);
+  display:grid; place-items:center; color:var(--gold-soft); font-size:28px; padding-left:6px;
+  transition: transform .5s cubic-bezier(.2,.8,.2,1), background .5s ease;
+}
+.video-wrap:hover .play { transform:scale(1.05); background:rgba(255,255,255,0.06);}
+
+/* Contact */
+.contact-section { background:var(--paper); }
+.contact-grid { display:grid; grid-template-columns: 1fr 1.2fr; gap: clamp(40px,6vw,100px); align-items:start;}
+.contact-left h2 { margin:20px 0 24px;}
+.contact-left p { color:var(--ink-soft); font-size:17px; max-width:42ch;}
+.contact-info { margin-top:48px; display:flex; flex-direction:column; gap:20px;}
+.contact-info > div { display:flex; gap:16px; align-items:center; padding-bottom:20px; border-bottom:1px solid var(--rule); font-size:15px;}
+.contact-info > div span:first-child { font-family:var(--serif); font-style:italic; color:var(--gold); font-size:14px; min-width:70px;}
+
+form.contact-form { display:grid; gap:18px;}
+.form-row { display:grid; grid-template-columns:1fr 1fr; gap:18px;}
+.field label {
+  font-size:11px; letter-spacing:0.16em; text-transform:uppercase; color:var(--mute);
+  display:block; margin-bottom:8px;
+}
+.field input, .field textarea, .field select {
+  width:100%; background:transparent;
+  border:0; border-bottom:1px solid var(--rule); padding:12px 0;
+  font-family:var(--sans); font-size:16px; color:var(--ink);
+  transition: border-color .3s ease;
+}
+.field input:focus, .field textarea:focus { outline:0; border-color:var(--gold);}
+.field textarea { resize:vertical; min-height:120px;}
+.contact-form button { margin-top:12px; justify-self:start;}
+
+/* Footer */
+footer { background:var(--ink); color:var(--bone); padding: clamp(60px,7vw,100px) 0 32px;}
+.foot-grid { display:grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap:clamp(24px,4vw,56px); padding-bottom:56px; border-bottom:1px solid color-mix(in oklab, var(--bone) 15%, transparent);}
+.foot-grid h4 { font-family:var(--serif); font-weight:400; font-size:15px; letter-spacing:0.08em; text-transform:uppercase; color:var(--gold-soft); margin:0 0 20px;}
+.foot-grid a { display:block; color:color-mix(in oklab, var(--bone) 78%, transparent); padding:7px 0; font-size:15px; transition: color .3s ease; }
+.foot-grid a:hover { color:var(--gold-soft);}
+.foot-top p { color:color-mix(in oklab, var(--bone) 70%, transparent); margin:22px 0 0; font-size:15px; max-width:38ch;}
+.socials { display:flex; gap:12px; margin-top:28px;}
+.socials a {
+  width:40px; height:40px; border-radius:50%;
+  border:1px solid color-mix(in oklab, var(--bone) 25%, transparent);
+  display:grid; place-items:center; padding:0;
+  transition: background .3s ease, border-color .3s ease, color .3s ease;
+}
+.socials a:hover { background:var(--gold); color:var(--ink); border-color:var(--gold);}
+.foot-bottom { padding-top:32px; display:flex; justify-content:space-between; align-items:center; font-size:13px; color:color-mix(in oklab, var(--bone) 55%, transparent); flex-wrap:wrap; gap:16px;}
+
+/* Reveal */
+.reveal { opacity:0; transform:translateY(22px); transition: opacity .9s cubic-bezier(.2,.8,.2,1), transform .9s cubic-bezier(.2,.8,.2,1);}
+.reveal.in { opacity:1; transform:none;}
+
+/* Responsive */
+@media (max-width: 980px){
+  .hero-inner, .section-head, .about, .contact-grid, .quotes, .stats .wrap { grid-template-columns: 1fr; }
+  .services-grid { grid-template-columns: 1fr; }
+  .svc { min-height:auto; border-right:0;}
+  .nav-links { display:none;}
+  .menu-btn { display:block;}
+  .foot-grid { grid-template-columns: 1fr 1fr; }
+  .form-row { grid-template-columns: 1fr; }
+  .hero-right { padding-bottom:0;}
+  .about-meta { grid-template-columns: 1fr;}
+  .hero-marquee { justify-content:flex-start;}
+}
+@media (prefers-reduced-motion: reduce){
+  *{animation:none !important; transition:none !important;}
+  html{scroll-behavior:auto;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="wrap nav-inner">
+    <a class="logo" href="#" aria-label="Lee Eliyahu home">
+      <span class="logo-mark" aria-hidden="true">LE</span>
+      <span class="logo-word">Lee <span>Eliyahu</span></span>
+    </a>
+    <div class="nav-links" role="menubar">
+      <a href="#">Home</a>
+      <a href="#about">About</a>
+      <a href="#services" class="has-dd">Real Estate <i class="lucide lucide-chevron-down" style="font-size:14px"></i></a>
+      <a href="#services">Financial</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <button class="nav-cta">Let's Talk</button>
+    <button class="menu-btn" aria-label="Open menu"><i class="lucide lucide-menu"></i></button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="wrap">
+    <div class="hero-inner">
+      <div class="hero-left reveal">
+        <span class="eyebrow">Residential · Commercial · Investment</span>
+        <h1 class="display">
+          The block,<br>
+          not just the<br>
+          <em>listing.</em>
+        </h1>
+        <div class="hero-cta-row">
+          <a class="btn btn-primary" href="#contact">Schedule a Consultation <i class="lucide lucide-arrow-right"></i></a>
+          <a class="btn btn-ghost" href="#listings">View Active Listings</a>
+        </div>
+      </div>
+      <div class="hero-right reveal">
+        <p>A decade brokering residential sales, commercial leases, and investment deals across the five boroughs &mdash; handled with the discretion the work requires.</p>
+        <div class="hero-meta" style="margin-top:36px;">
+          <span class="meta">New York, NY &middot; Since 2014</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-marquee reveal">
+      <span>Manhattan</span> <span class="dot">·</span>
+      <span>Brooklyn</span> <span class="dot">·</span>
+      <span>Queens</span> <span class="dot">·</span>
+      <span>The Bronx</span> <span class="dot">·</span>
+      <span>Staten Island</span>
+    </div>
+  </div>
+</header>
+
+<!-- SERVICES -->
+<section id="services" class="section">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div>
+        <div class="eyebrow-wrap"><span class="eyebrow">01 &mdash; Services</span></div>
+        <h2 class="h2">Three practices,<br>one <em>broker.</em></h2>
+      </div>
+      <p class="lede">Buying a first apartment, leasing a flagship storefront, or deploying capital into multi-family — the work is different, the standard isn't.</p>
+    </div>
+
+    <div class="services-grid">
+      <article class="svc reveal">
+        <span class="num">01 / Residential</span>
+        <div>
+          <h3 class="h3">Residential sales &amp; rentals.</h3>
+          <p>From Tribeca lofts to Park Slope brownstones. Quiet listings, careful negotiations, and a broker who answers the phone.</p>
+          <a class="svc-link" href="#">Explore Listings <i class="lucide lucide-arrow-up-right"></i></a>
+        </div>
+      </article>
+      <article class="svc reveal">
+        <span class="num">02 / Commercial</span>
+        <div>
+          <h3 class="h3">Commercial leasing.</h3>
+          <p>Retail, office, and mixed-use across Manhattan and the outer boroughs. Tenant-side or landlord-side, no shortcuts.</p>
+          <a class="svc-link" href="#">See Available Space <i class="lucide lucide-arrow-up-right"></i></a>
+        </div>
+      </article>
+      <article class="svc reveal">
+        <span class="num">03 / Investment</span>
+        <div>
+          <h3 class="h3">Investment &amp; capital.</h3>
+          <p>Off-market deals, hard-money lending, and merchant processing when the numbers need to pencil faster than the banks move.</p>
+          <a class="svc-link" href="#">Review the Pipeline <i class="lucide lucide-arrow-up-right"></i></a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section" style="padding-top:0;">
+  <div class="wrap">
+    <div class="about">
+      <div class="photo reveal" role="img" aria-label="Portrait placeholder of Lee Eliyahu"></div>
+      <div class="reveal">
+        <span class="eyebrow">02 &mdash; About Lee</span>
+        <h2 class="h2">A broker who<br>knows the <em>block.</em></h2>
+        <p>Ten years working residential and commercial deals across New York, with a practice built on a handful of repeat clients and the referrals they send.</p>
+        <p>The work is equal parts real estate and relationships: legal, financing, renovation, and the two or three people in every neighborhood who actually know what's trading.</p>
+        <div class="about-meta">
+          <div><span>Licensed</span><span>New York State · NAR Member</span></div>
+          <div><span>Languages</span><span>English · Hebrew · Spanish (conv.)</span></div>
+          <div><span>Specialty</span><span>Five boroughs, full-service</span></div>
+          <div><span>Network</span><span>Property mgmt, lending, legal</span></div>
+        </div>
+        <div class="signature">&mdash; Lee Eliyahu</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats">
+  <div class="wrap">
+    <div class="stat reveal">
+      <span class="label">10+ Years</span>
+      <div class="num">$<em>420</em>M</div>
+      <p class="sub">Closed volume across residential sales, commercial leases, and investment transactions.</p>
+    </div>
+    <div class="stat reveal">
+      <span class="label">Since 2014</span>
+      <div class="num"><em>1,200</em>+</div>
+      <p class="sub">Units leased and sold, from Financial District studios to Bay Ridge multi-families.</p>
+    </div>
+    <div class="stat reveal">
+      <span class="label">Every Borough</span>
+      <div class="num"><em>5</em>/5</div>
+      <p class="sub">Boroughs actively worked &mdash; because a New York broker who only knows Manhattan isn't really a New York broker.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div>
+        <div class="eyebrow-wrap"><span class="eyebrow">03 &mdash; Testimony</span></div>
+        <h2 class="h2">What clients<br>actually <em>say.</em></h2>
+      </div>
+      <p class="lede">Names on request. Deals closed over a decade, not a season.</p>
+    </div>
+    <div class="quotes">
+      <figure class="quote reveal">
+        <span class="mark" aria-hidden="true">&ldquo;</span>
+        <blockquote><p>Lee found us an off-market two-bedroom in West Village that was never going to hit the listings. He walked the building with our contractor before we'd even made an offer. That's a broker.</p></blockquote>
+        <figcaption class="quote-meta">
+          <span class="quote-avatar">MR</span>
+          <span>
+            <span class="name">Maya R.</span>
+            <span class="role">Buyer · West Village, 2026</span>
+          </span>
+        </figcaption>
+      </figure>
+      <figure class="quote reveal">
+        <span class="mark" aria-hidden="true">&ldquo;</span>
+        <blockquote><p>We were signing a retail lease in Soho and his advice on the TI package saved us six figures across the term. He negotiated like it was his own money on the line.</p></blockquote>
+        <figcaption class="quote-meta">
+          <span class="quote-avatar">DK</span>
+          <span>
+            <span class="name">David K.</span>
+            <span class="role">Tenant · Soho, 2025</span>
+          </span>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- VIDEO PRESERVED -->
+<section class="section" style="padding-top:0;">
+  <div class="wrap">
+    <div class="video-wrap reveal" aria-label="Video section">
+      <div class="video-placeholder">
+        <span class="badge">Video Section · Preserved from Existing Site</span>
+        <span class="play" aria-hidden="true"><i class="lucide lucide-play"></i></span>
+        <span class="note">The existing hero reel (/wp-content/uploads/2026/02/7.mp4) drops in here, untouched &mdash; autoplay, muted, looped.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section contact-section">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div class="contact-left reveal">
+        <span class="eyebrow">04 &mdash; Contact</span>
+        <h2 class="h2">Start a<br><em>conversation.</em></h2>
+        <p>Whether you're pricing an apartment, walking a lease, or sizing a bridge loan &mdash; the first call is a conversation, not a pitch.</p>
+        <div class="contact-info">
+          <div><span>Phone</span><span>+1 (516) 567-8715</span></div>
+          <div><span>Email</span><span>lee@leeeliyahu.com</span></div>
+          <div><span>Office</span><span>New York, NY &mdash; by appointment</span></div>
+        </div>
+      </div>
+      <form class="contact-form reveal" onsubmit="event.preventDefault(); this.querySelector('button').textContent='Sent &mdash; Lee will reply shortly.';">
+        <div class="form-row">
+          <div class="field">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" required>
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="field">
+            <label for="phone">Phone</label>
+            <input id="phone" name="phone" type="tel">
+          </div>
+          <div class="field">
+            <label for="interest">Interest</label>
+            <select id="interest" name="interest">
+              <option>Residential Sales</option>
+              <option>Commercial Leasing</option>
+              <option>Investment / Capital</option>
+              <option>Property Management</option>
+            </select>
+          </div>
+        </div>
+        <div class="field">
+          <label for="message">How can Lee help?</label>
+          <textarea id="message" name="message" rows="4"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Send Message <i class="lucide lucide-arrow-right"></i></button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-top">
+        <a class="logo" href="#" style="color:var(--bone)">
+          <span class="logo-mark" style="border-color:color-mix(in oklab, var(--bone) 60%, transparent); color:var(--bone)">LE</span>
+          <span class="logo-word" style="color:var(--bone)">Lee <span style="color:var(--gold-soft)">Eliyahu</span></span>
+        </a>
+        <p>Residential, commercial, and investment real estate across the five boroughs since 2014.</p>
+        <div class="socials">
+          <a href="#" aria-label="Instagram"><i class="lucide lucide-instagram"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="lucide lucide-linkedin"></i></a>
+          <a href="#" aria-label="YouTube"><i class="lucide lucide-youtube"></i></a>
+        </div>
+      </div>
+      <div>
+        <h4>Real Estate</h4>
+        <a href="#">Residential Sales</a>
+        <a href="#">Active Listings</a>
+        <a href="#">Commercial Leasing</a>
+        <a href="#">Property Management</a>
+      </div>
+      <div>
+        <h4>Financial</h4>
+        <a href="#">Hard Money Lending</a>
+        <a href="#">Merchant Processing</a>
+        <a href="#">Business Funding</a>
+        <a href="#">Broker Opinion of Value</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <a href="tel:+15165678715">+1 (516) 567-8715</a>
+        <a href="mailto:lee@leeeliyahu.com">lee@leeeliyahu.com</a>
+        <a href="#">New York, NY</a>
+        <a href="#">By Appointment</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Lee Eliyahu. Licensed in New York State.</span>
+      <span>Privacy &middot; Terms &middot; Fair Housing</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e => { if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);}});
+  },{ threshold:0.12 });
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+
+</body>
+</html>

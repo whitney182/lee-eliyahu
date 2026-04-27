@@ -1,0 +1,636 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Lee Eliyahu — Real Estate, NY</title>
+<meta name="description" content="Buy, sell, lease — without the runaround. New York real estate from a broker who works the whole city." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,500;12..96,600;12..96,700;12..96,800;12..96,900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lucide-static@0.460.0/font/lucide.css">
+<style>
+:root{
+  --paper: #E4E4E0;
+  --paper-deep: #CBCBC6;
+  --ink: #060606;
+  --ink-soft: #1E1E1E;
+  --cobalt: #2563EB;
+  --cobalt-deep: #1D4FB8;
+  --red: #2563EB;
+  --red-deep: #1D4FB8;
+  --gold: #C59A3D;
+  --blue: #2563EB;
+  --accent-warm: #F25C2A;
+  --rule: #151515;
+  --display: 'Bricolage Grotesque', 'Plus Jakarta Sans', sans-serif;
+  --sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+  --c-max: 1480px;
+  --pad: clamp(18px, 3.5vw, 52px);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth; -webkit-font-smoothing:antialiased;}
+body{
+  margin:0; background:var(--paper); color:var(--ink);
+  font-family:var(--sans); font-size:16px; line-height:1.5;
+  overflow-x:hidden;
+  background-image:
+    linear-gradient(to right, rgba(10,10,10,0.055) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(10,10,10,0.055) 1px, transparent 1px);
+  background-size: 64px 64px;
+}
+img{display:block; max-width:100%; height:auto}
+a{color:inherit; text-decoration:none}
+button{font-family:inherit; cursor:pointer}
+.wrap { max-width:var(--c-max); margin:0 auto; padding:0 var(--pad); }
+
+/* Type */
+.display {
+  font-family:var(--display); font-weight:800;
+  font-size:clamp(64px, 13vw, 240px);
+  line-height:0.82; letter-spacing:-0.05em;
+  font-variation-settings:"opsz" 96; text-transform:uppercase;
+}
+.display .accent { color:var(--red); }
+.display .outline {
+  -webkit-text-stroke: 2px var(--ink); color: transparent;
+  font-style: italic; font-weight: 500;
+}
+.h2 { font-family:var(--display); font-weight:700; font-size:clamp(40px, 6.8vw, 108px); line-height:0.88; letter-spacing:-0.035em; text-transform:uppercase; font-variation-settings:"opsz" 72;}
+.h2 .accent { color:var(--red);}
+.h3 { font-family:var(--display); font-weight:700; font-size:clamp(26px,3vw,42px); line-height:0.95; letter-spacing:-0.02em; text-transform:uppercase;}
+.kicker { font-family:var(--sans); font-size:11px; font-weight:600; letter-spacing:0.18em; text-transform:uppercase;}
+.body-lg { font-size:18px; line-height:1.5;}
+
+/* Ticker */
+.ticker {
+  background:var(--ink); color:var(--paper); overflow:hidden; white-space:nowrap;
+  padding:10px 0; font-size:12px; letter-spacing:0.24em; text-transform:uppercase; font-weight:500;
+  border-bottom:2px solid var(--ink);
+}
+.ticker-track { display:inline-flex; gap:48px; animation: ticker 40s linear infinite; padding-right:48px;}
+.ticker-track span::before { content:"●"; color:var(--red); margin-right:12px;}
+@keyframes ticker { from{ transform:translateX(0);} to{ transform:translateX(-50%);} }
+
+/* Nav */
+.nav { background:var(--paper); border-bottom:2px solid var(--ink); position:sticky; top:0; z-index:50;}
+.nav-inner { display:flex; align-items:center; justify-content:space-between; height:74px; }
+.logo { display:flex; align-items:center; gap:12px; }
+.logo-mark {
+  width:42px; height:42px; border-radius:50%; background:var(--ink); color:var(--paper);
+  display:grid; place-items:center;
+  font-family:var(--display); font-weight:800; font-size:14px; letter-spacing:0;
+  border:2px solid var(--ink); position:relative;
+}
+.logo-mark::after { content:""; position:absolute; inset:-6px; border:2px solid var(--red); border-radius:50%; opacity:0; transition:opacity .3s ease;}
+.logo:hover .logo-mark::after { opacity:1;}
+.logo-word { font-family:var(--display); font-weight:800; font-size:18px; text-transform:uppercase; letter-spacing:-0.01em;}
+.logo-word .k { color:var(--red);}
+
+.nav-links { display:flex; gap:0; align-items:center;}
+.nav-links a {
+  font-size:13px; font-weight:600; letter-spacing:0.04em; text-transform:uppercase;
+  padding:14px 18px; position:relative; color:var(--ink);
+  transition: color .3s ease;
+}
+.nav-links a:hover { color:var(--red);}
+.nav-links a + a { border-left:1px solid rgba(13,12,10,0.15);}
+.nav-cta {
+  background:var(--ink); color:var(--paper); border:2px solid var(--ink);
+  padding:14px 22px; font-size:13px; font-weight:600; letter-spacing:0.04em; text-transform:uppercase;
+  display:inline-flex; align-items:center; gap:8px;
+  transition: all .3s ease; border-radius:0;
+}
+.nav-cta:hover { background:var(--red); border-color:var(--red); transform:translate(-2px,-2px); box-shadow:4px 4px 0 var(--ink);}
+.menu-btn { display:none; background:transparent; border:0; color:var(--ink); font-size:22px;}
+
+/* Hero */
+.hero { padding: clamp(40px,6vw,80px) 0 clamp(64px,8vw,120px); position:relative;}
+.hero-grid {
+  display:grid;
+  grid-template-columns: repeat(12,1fr);
+  gap: clamp(12px,2vw,24px);
+  align-items:end;
+}
+.hero-headline { grid-column: 1 / 13; position:relative; z-index:2;}
+.hero-headline h1 { margin:0;}
+.hero-shout {
+  position:absolute; top:-8px; right:0;
+  background:var(--red); color:var(--paper);
+  padding:8px 14px; font-size:11px; font-weight:700; letter-spacing:0.18em; text-transform:uppercase;
+  transform: rotate(-4deg); border:2px solid var(--ink);
+  box-shadow: 4px 4px 0 var(--ink);
+}
+.hero-bar {
+  grid-column: 1 / 13; margin-top: clamp(28px, 4vw, 48px);
+  display:grid; grid-template-columns: 1fr auto 1fr; gap:24px; align-items:center;
+  border-top:2px solid var(--ink); padding-top:24px;
+}
+.hero-bar .col p { font-family:var(--display); font-weight:400; font-size:clamp(18px,1.6vw,24px); line-height:1.2; max-width:30ch; margin:0;}
+.hero-bar .ctas { display:flex; gap:12px; justify-self:end;}
+.btn {
+  font-family:var(--sans); font-size:13px; font-weight:700; letter-spacing:0.06em; text-transform:uppercase;
+  padding:18px 28px; border:2px solid var(--ink); background:var(--ink); color:var(--paper);
+  display:inline-flex; align-items:center; gap:10px;
+  transition: all .25s ease; border-radius:0; cursor:pointer;
+}
+.btn:hover { transform: translate(-3px,-3px); box-shadow:6px 6px 0 var(--ink);}
+.btn-red { background:var(--red); border-color:var(--ink); color:var(--paper);}
+.btn-red:hover { background:var(--ink);}
+.btn-outline { background:transparent; color:var(--ink);}
+.btn-outline:hover { background:var(--ink); color:var(--paper);}
+
+.boroughs {
+  margin-top: clamp(40px, 5vw, 72px);
+  border: 2px solid var(--ink); background: var(--paper-deep);
+  padding: 16px clamp(20px,3vw,40px);
+  display:flex; align-items:center; justify-content:space-between; gap:24px;
+  flex-wrap:wrap; font-family:var(--display); font-weight:700; text-transform:uppercase; letter-spacing:0.02em; font-size:clamp(16px,1.4vw,22px);
+}
+.boroughs span { display:inline-flex; align-items:center; gap:14px;}
+.boroughs .count { background:var(--red); color:var(--paper); padding:2px 8px; font-size:12px; font-weight:700; letter-spacing:0.1em;}
+
+/* Section */
+.section { padding: clamp(80px, 9vw, 140px) 0; position:relative;}
+.section-bar {
+  display:flex; align-items:center; gap:16px; margin-bottom: clamp(32px,4vw,64px);
+  border-top:2px solid var(--ink); border-bottom:2px solid var(--ink); padding:10px 0;
+  font-family:var(--display); font-weight:700; text-transform:uppercase; font-size:14px; letter-spacing:0.05em;
+}
+.section-bar .n { background:var(--ink); color:var(--paper); padding:4px 10px; font-size:12px;}
+.section-bar .spacer { flex:1; border-top: 1px dashed var(--ink); height:0;}
+
+/* Services */
+.services-wrap { display:grid; grid-template-columns:repeat(12,1fr); gap:12px;}
+.services-wrap .head { grid-column: span 12; display:grid; grid-template-columns: 1.3fr 1fr; gap: clamp(24px,4vw,80px); align-items:end; margin-bottom: clamp(20px,3vw,40px);}
+.services-wrap .head h2 { margin:0;}
+.services-wrap .head p { max-width:42ch; font-size:17px; color:var(--ink-soft); margin:0;}
+.svc-card {
+  grid-column: span 4;
+  border: 2px solid var(--ink);
+  background: var(--paper);
+  padding: clamp(24px,2.4vw,40px);
+  min-height: 460px;
+  display:flex; flex-direction:column; justify-content:space-between;
+  position:relative; transition: all .3s ease;
+  overflow:hidden;
+}
+.svc-card:nth-child(2) { background:var(--ink); color:var(--paper);}
+.svc-card:nth-child(2) .svc-num { color:var(--red);}
+.svc-card:nth-child(3) { background:var(--red); color:var(--paper); border-color:var(--ink);}
+.svc-card:nth-child(3) .svc-num { color:var(--paper);}
+
+.svc-card:hover { transform: translate(-4px,-4px); box-shadow:8px 8px 0 var(--ink);}
+.svc-num {
+  font-family:var(--display); font-weight:800; font-size:80px; line-height:0.8; letter-spacing:-0.05em;
+  color:var(--red);
+}
+.svc-card h3 { margin: auto 0 16px; }
+.svc-card p { max-width: 32ch; font-size:15px;}
+.svc-card .arrow {
+  position:absolute; right:24px; bottom:24px; width:44px; height:44px;
+  border:2px solid currentColor; border-radius:50%;
+  display:grid; place-items:center; font-size:18px;
+  transition: transform .4s cubic-bezier(.2,.8,.2,1);
+}
+.svc-card:hover .arrow { transform: rotate(-45deg);}
+
+/* About */
+.about { display:grid; grid-template-columns: 5fr 7fr; gap:clamp(32px,4vw,64px); align-items:stretch; border:2px solid var(--ink); background:var(--paper);}
+.about-left {
+  background:var(--ink); color:var(--paper); padding: clamp(32px,3.5vw,56px); position:relative;
+  display:flex; flex-direction:column; justify-content:space-between;
+}
+.about-left::before {
+  content:""; position:absolute; inset:0;
+  background-image:
+    linear-gradient(to bottom, transparent 29%, rgba(222,222,216,0.08) 30%, rgba(222,222,216,0.08) 31%, transparent 32%),
+    linear-gradient(to right, transparent 29%, rgba(222,222,216,0.08) 30%, rgba(222,222,216,0.08) 31%, transparent 32%);
+  background-size: 60px 60px; pointer-events:none;
+}
+.about-left .LE {
+  font-family:var(--display); font-weight:800; font-size:clamp(120px,18vw,280px); line-height:0.8; color:var(--red); letter-spacing:-0.06em; margin:0;
+}
+.about-left .cap { font-family:var(--display); font-weight:600; font-size:clamp(16px,1.4vw,22px); letter-spacing:-0.01em; text-transform:uppercase; margin-top:24px;}
+.about-left .cap .y { color:var(--red);}
+.about-right { padding: clamp(32px,3.5vw,56px); display:flex; flex-direction:column; justify-content:center;}
+.about-right h2 { margin:0 0 24px;}
+.about-right p { font-size:17px; color:var(--ink-soft); max-width:52ch;}
+.about-right p + p { margin-top:14px;}
+.about-right .facts { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; margin-top:40px; padding-top:28px; border-top:2px solid var(--ink);}
+.about-right .facts > div span:first-child { font-family:var(--display); font-weight:800; color:var(--red); font-size:36px; line-height:1;}
+.about-right .facts > div span:last-child { display:block; margin-top:6px; font-size:11px; letter-spacing:0.18em; text-transform:uppercase; font-weight:600;}
+
+/* Stats */
+.stat-row {
+  display:grid; grid-template-columns: repeat(3,1fr); gap:0;
+  border-top:2px solid var(--ink); border-bottom:2px solid var(--ink); background:var(--paper);
+}
+.stat-row > div { padding: clamp(40px,5vw,80px) clamp(20px,3vw,40px); border-right:2px solid var(--ink); display:flex; flex-direction:column; gap:18px; position:relative; overflow:hidden;}
+.stat-row > div:last-child { border-right:0;}
+.stat-row > div:nth-child(2) { background:var(--paper-deep);}
+.stat-row .big { font-family:var(--display); font-weight:800; font-size:clamp(72px, 12vw, 180px); line-height:0.82; letter-spacing:-0.05em;}
+.stat-row .big span { color:var(--red);}
+.stat-row .lbl { font-family:var(--display); font-weight:700; font-size:18px; text-transform:uppercase; letter-spacing:-0.01em;}
+.stat-row .d { font-size:15px; color:var(--ink-soft); max-width:32ch;}
+
+/* Testimonials */
+.tests { display:grid; grid-template-columns:1fr 1fr; gap:0; border:2px solid var(--ink); background:var(--paper);}
+.test { padding: clamp(28px,3vw,52px); position:relative; transition:background .3s ease;}
+.test:first-child { border-right:2px solid var(--ink);}
+.test:hover { background:var(--paper-deep);}
+.test .big-q { font-family:var(--display); font-weight:800; font-size:96px; line-height:0.6; color:var(--red); margin-bottom:20px;}
+.test blockquote {
+  font-family:var(--display); font-weight:500; font-size:clamp(20px, 2vw, 28px); line-height:1.2; letter-spacing:-0.015em;
+  margin:0 0 28px; max-width:28ch;
+}
+.test-foot { display:flex; justify-content:space-between; align-items:flex-end; gap:16px; padding-top:24px; border-top:2px solid var(--ink);}
+.test-foot .name { font-family:var(--display); font-weight:700; font-size:16px; text-transform:uppercase; letter-spacing:-0.01em;}
+.test-foot .role { font-size:12px; letter-spacing:0.12em; text-transform:uppercase; color:var(--ink-soft); margin-top:4px;}
+.test-foot .tag { font-family:var(--display); font-weight:800; font-size:14px; background:var(--ink); color:var(--paper); padding:4px 10px; letter-spacing:0.06em;}
+
+/* Video */
+.video-frame {
+  position:relative; aspect-ratio:16/9; border:2px solid var(--ink);
+  background: repeating-linear-gradient(45deg, var(--ink) 0 2px, transparent 2px 18px) var(--paper-deep);
+  overflow:hidden;
+}
+.video-frame .inner {
+  position:absolute; inset:16px; background:var(--ink); color:var(--paper);
+  display:grid; place-items:center; gap:24px;
+  border: 2px solid var(--ink);
+}
+.video-frame .badge { background:var(--red); padding:10px 22px; font-size:11px; font-weight:700; letter-spacing:0.22em; text-transform:uppercase; border:2px solid var(--ink);}
+.video-frame .play {
+  width:96px; height:96px; border-radius:50%; border:3px solid var(--red); color:var(--red);
+  display:grid; place-items:center; padding-left:6px; font-size:32px;
+  transition:all .3s ease;
+}
+.video-frame:hover .play { background:var(--red); color:var(--paper); transform:scale(1.05);}
+.video-frame .subtitle { font-family:var(--display); font-weight:500; font-size:18px; max-width:44ch; text-align:center; padding:0 24px; color:var(--paper-deep);}
+
+/* Contact */
+.contact-wrap { display:grid; grid-template-columns: 1fr 1fr; gap:0; border:2px solid var(--ink);}
+.contact-left {
+  background:var(--ink); color:var(--paper); padding: clamp(32px,4vw,64px);
+}
+.contact-left h2 { margin:20px 0 24px;}
+.contact-left h2 .accent { color:var(--gold);}
+.contact-left p { font-size:17px; color:var(--paper-deep); max-width:40ch;}
+.contact-left .info { margin-top:40px; display:flex; flex-direction:column; gap:0;}
+.contact-left .info > div {
+  display:flex; justify-content:space-between; align-items:center;
+  padding:18px 0; border-bottom:1px dashed rgba(238,237,230,0.3); gap:16px;
+}
+.contact-left .info span:first-child { font-size:11px; font-weight:600; letter-spacing:0.2em; text-transform:uppercase; color:var(--gold);}
+.contact-left .info span:last-child { font-family:var(--display); font-weight:500; font-size:18px;}
+
+.contact-form-wild { padding: clamp(32px,4vw,64px); display:grid; gap:20px; align-content:start; background:var(--paper);}
+.contact-form-wild .row { display:grid; grid-template-columns:1fr 1fr; gap:20px;}
+.contact-form-wild .f label { font-size:11px; font-weight:700; letter-spacing:0.18em; text-transform:uppercase; display:block; margin-bottom:8px; color:var(--ink);}
+.contact-form-wild .f input, .contact-form-wild .f textarea, .contact-form-wild .f select {
+  width:100%; background:var(--paper); border:2px solid var(--ink); padding:12px 14px;
+  font-family:var(--sans); font-size:15px; color:var(--ink);
+  transition: all .25s ease; border-radius:0;
+}
+.contact-form-wild .f input:focus, .contact-form-wild .f textarea:focus, .contact-form-wild .f select:focus { outline:0; box-shadow:3px 3px 0 var(--red); transform:translate(-1px,-1px); border-color:var(--red);}
+.contact-form-wild textarea { min-height:120px; resize:vertical;}
+.contact-form-wild button { justify-self:start; margin-top:8px;}
+
+/* Footer */
+footer { background:var(--ink); color:var(--paper); padding: clamp(56px, 7vw, 100px) 0 32px; border-top:2px solid var(--ink);}
+.foot-main {
+  display:grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap:clamp(24px,4vw,56px);
+  padding-bottom:48px; border-bottom:2px solid rgba(238,237,230,0.2);
+}
+.foot-main h4 { font-family:var(--display); font-weight:800; font-size:14px; letter-spacing:0.04em; text-transform:uppercase; color:var(--red); margin:0 0 18px;}
+.foot-main a { display:block; color:var(--paper-deep); font-size:14px; padding:6px 0; transition:color .3s ease; position:relative;}
+.foot-main a:hover { color:var(--red); padding-left:10px;}
+.foot-col-main p { margin:20px 0 24px; color:var(--paper-deep); max-width:34ch;}
+.foot-socials { display:flex; gap:10px;}
+.foot-socials a {
+  width:44px; height:44px; border:2px solid var(--paper); display:grid; place-items:center; padding:0;
+  font-size:18px; transition: all .25s ease; color:var(--paper);
+}
+.foot-socials a:hover { background:var(--red); border-color:var(--red); color:var(--paper); padding-left:0; transform: translate(-2px,-2px); box-shadow: 4px 4px 0 var(--paper);}
+.foot-bottom { padding-top:28px; display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap; font-size:12px; letter-spacing:0.14em; text-transform:uppercase; font-weight:600; color:var(--paper-deep);}
+
+/* Reveal */
+.reveal { opacity:0; transform:translateY(24px); transition: opacity .8s cubic-bezier(.2,.8,.2,1), transform .8s cubic-bezier(.2,.8,.2,1);}
+.reveal.in { opacity:1; transform:none;}
+
+/* Responsive */
+@media (max-width: 1024px){
+  .hero-bar { grid-template-columns:1fr; }
+  .hero-bar .ctas { justify-self:start;}
+  .services-wrap .head { grid-template-columns:1fr;}
+  .svc-card { grid-column: span 12; min-height:auto;}
+  .about { grid-template-columns:1fr;}
+  .stat-row { grid-template-columns:1fr;}
+  .stat-row > div { border-right:0; border-bottom:2px solid var(--ink);}
+  .stat-row > div:last-child { border-bottom:0;}
+  .tests { grid-template-columns:1fr;}
+  .test:first-child { border-right:0; border-bottom:2px solid var(--ink);}
+  .contact-wrap { grid-template-columns:1fr;}
+  .foot-main { grid-template-columns:1fr 1fr;}
+  .nav-links { display:none;}
+  .menu-btn { display:block;}
+  .contact-form-wild .row { grid-template-columns:1fr;}
+  .about-right .facts { grid-template-columns:1fr 1fr;}
+}
+@media (prefers-reduced-motion: reduce){
+  * { animation: none !important; transition: none !important;}
+  html { scroll-behavior:auto;}
+}
+</style>
+</head>
+<body>
+
+<div class="ticker">
+  <div class="ticker-track">
+    <span>New York, NY</span>
+    <span>Residential · Commercial · Investment</span>
+    <span>Est. 2014</span>
+    <span>All Five Boroughs</span>
+    <span>Licensed NYS</span>
+    <span>+1 (516) 567-8715</span>
+    <span>New York, NY</span>
+    <span>Residential · Commercial · Investment</span>
+    <span>Est. 2014</span>
+    <span>All Five Boroughs</span>
+    <span>Licensed NYS</span>
+    <span>+1 (516) 567-8715</span>
+  </div>
+</div>
+
+<nav class="nav">
+  <div class="wrap nav-inner">
+    <a class="logo" href="#" aria-label="Lee Eliyahu home">
+      <span class="logo-mark" aria-hidden="true">LE</span>
+      <span class="logo-word">LEE<span class="k">/</span>ELIYAHU</span>
+    </a>
+    <div class="nav-links">
+      <a href="#">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Real Estate</a>
+      <a href="#">Financial</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <button class="nav-cta">Call Now <i class="lucide lucide-phone"></i></button>
+    <button class="menu-btn" aria-label="Open menu"><i class="lucide lucide-menu"></i></button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="hero-headline reveal">
+        <span class="hero-shout">Ask for<br>the off-market</span>
+        <h1 class="display">
+          Buy. Sell. Lease.<br>
+          <span class="accent">Without the</span><br>
+          <span class="outline">runaround.</span>
+        </h1>
+      </div>
+
+      <div class="hero-bar reveal">
+        <div class="col">
+          <p>Ten years working every borough. A broker you can actually reach, with deals that close on the first call.</p>
+        </div>
+        <div class="col" style="text-align:center;">
+          <span class="kicker">Est. 2014 · NY · NY</span>
+        </div>
+        <div class="ctas">
+          <a class="btn btn-red" href="#contact">Work with Lee <i class="lucide lucide-arrow-up-right"></i></a>
+          <a class="btn btn-outline" href="#listings">See Listings</a>
+        </div>
+      </div>
+
+      <div class="boroughs reveal" style="grid-column:1/13;">
+        <span><span class="count">01</span> Manhattan</span>
+        <span><span class="count">02</span> Brooklyn</span>
+        <span><span class="count">03</span> Queens</span>
+        <span><span class="count">04</span> The Bronx</span>
+        <span><span class="count">05</span> Staten Island</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- SERVICES -->
+<section id="services" class="section">
+  <div class="wrap">
+    <div class="section-bar"><span class="n">01</span> <span>Services</span> <span class="spacer"></span> <span>NY · NY</span></div>
+    <div class="services-wrap">
+      <div class="head reveal">
+        <h2 class="h2">Three lanes.<br><span class="accent">One broker.</span></h2>
+        <p>Apartments, storefronts, and deals the banks don't want to touch. No script, no hand-off, no "let me get back to you." You call Lee, you get Lee.</p>
+      </div>
+      <article class="svc-card reveal">
+        <div class="svc-num">01</div>
+        <h3 class="h3">Residential<br>Sales &amp; Rentals</h3>
+        <p>Townhouses, condos, co-ops, rentals. The walk-throughs, the negotiations, the title work — all handled.</p>
+        <span class="arrow" aria-hidden="true"><i class="lucide lucide-arrow-right"></i></span>
+      </article>
+      <article class="svc-card reveal">
+        <div class="svc-num">02</div>
+        <h3 class="h3">Commercial<br>Leasing</h3>
+        <p>Retail, office, mixed-use. Tenant-side or landlord-side — the structure of the deal matters as much as the rent.</p>
+        <span class="arrow" aria-hidden="true"><i class="lucide lucide-arrow-right"></i></span>
+      </article>
+      <article class="svc-card reveal">
+        <div class="svc-num">03</div>
+        <h3 class="h3">Investment<br>&amp; Capital</h3>
+        <p>Off-market deals, hard-money lending, merchant processing. When the numbers have to pencil yesterday.</p>
+        <span class="arrow" aria-hidden="true"><i class="lucide lucide-arrow-right"></i></span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section" style="padding-top:0;">
+  <div class="wrap">
+    <div class="section-bar"><span class="n">02</span> <span>Principal</span> <span class="spacer"></span> <span>Lee Eliyahu</span></div>
+    <div class="about reveal">
+      <div class="about-left">
+        <div>
+          <span class="kicker" style="color:var(--red);">Since 2014</span>
+          <h3 class="LE">LE.</h3>
+        </div>
+        <div class="cap">Ten Years.<br>Five Boroughs.<br><span class="y">Zero BS.</span></div>
+      </div>
+      <div class="about-right">
+        <h2 class="h2">The broker<br>who <span class="accent">answers.</span></h2>
+        <p>A decade brokering residential, commercial, and investment real estate across New York — with a client list built almost entirely on referrals.</p>
+        <p>The practice stays small on purpose. Every deal runs through Lee, not a team of associates you've never met. It's the reason the same clients keep coming back.</p>
+        <div class="facts">
+          <div><span>10+</span><span>Years</span></div>
+          <div><span>5/5</span><span>Boroughs</span></div>
+          <div><span>3</span><span>Languages</span></div>
+          <div><span>1</span><span>Phone Line</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="section" style="padding-top:0;">
+  <div class="wrap">
+    <div class="section-bar"><span class="n">03</span> <span>Record</span> <span class="spacer"></span> <span>2014 — 2026</span></div>
+    <div class="stat-row">
+      <div class="reveal">
+        <span class="kicker">Closed Volume</span>
+        <div class="big">$<span>420</span>M</div>
+        <p class="d">Residential, commercial, and investment transactions since opening the shop.</p>
+      </div>
+      <div class="reveal">
+        <span class="kicker">Doors Closed</span>
+        <div class="big"><span>1,200</span>+</div>
+        <p class="d">Units leased and sold — from studios in the Financial District to multi-family in Bay Ridge.</p>
+      </div>
+      <div class="reveal">
+        <span class="kicker">Boroughs Worked</span>
+        <div class="big"><span>5</span>/5</div>
+        <p class="d">No discounts on the outer boroughs. A New York broker works New York, all of it.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section" style="padding-top:0;">
+  <div class="wrap">
+    <div class="section-bar"><span class="n">04</span> <span>Testimony</span> <span class="spacer"></span> <span>On the record</span></div>
+    <div class="tests reveal">
+      <figure class="test">
+        <div class="big-q" aria-hidden="true">&ldquo;</div>
+        <blockquote>Off-market two-bed in the West Village we were never gonna find on the MLS. He walked the building with my contractor before we even offered.</blockquote>
+        <figcaption class="test-foot">
+          <div>
+            <div class="name">Maya R.</div>
+            <div class="role">Buyer · West Village</div>
+          </div>
+          <span class="tag">Closed '26</span>
+        </figcaption>
+      </figure>
+      <figure class="test">
+        <div class="big-q" aria-hidden="true">&ldquo;</div>
+        <blockquote>Retail lease in SoHo. His read on the TI package saved us six figures. Negotiated like it was his rent on the hook.</blockquote>
+        <figcaption class="test-foot">
+          <div>
+            <div class="name">David K.</div>
+            <div class="role">Tenant · SoHo</div>
+          </div>
+          <span class="tag">Closed '25</span>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- VIDEO -->
+<section class="section" style="padding-top:0;">
+  <div class="wrap">
+    <div class="section-bar"><span class="n">05</span> <span>Reel</span> <span class="spacer"></span> <span>The city, moving</span></div>
+    <div class="video-frame reveal">
+      <div class="inner">
+        <span class="badge">Video Section · Preserved From Existing Site</span>
+        <span class="play" aria-hidden="true"><i class="lucide lucide-play"></i></span>
+        <span class="subtitle">Existing hero reel (<code>/wp-content/uploads/2026/02/7.mp4</code>) plays here — autoplay, muted, looped.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section" style="padding-top:0;">
+  <div class="wrap">
+    <div class="section-bar"><span class="n">06</span> <span>Contact</span> <span class="spacer"></span> <span>Start the conversation</span></div>
+    <div class="contact-wrap reveal">
+      <div class="contact-left">
+        <span class="kicker" style="color:var(--red);">Don't be shy</span>
+        <h2 class="h2">Pick up<br>the <span class="accent">phone.</span></h2>
+        <p>Pricing an apartment, walking a lease, sizing a bridge — the first call is a conversation, not a sales pitch. And Lee actually picks up.</p>
+        <div class="info">
+          <div><span>Phone</span><span>+1 (516) 567-8715</span></div>
+          <div><span>Email</span><span>lee@leeeliyahu.com</span></div>
+          <div><span>Office</span><span>NY · NY · By Appt.</span></div>
+        </div>
+      </div>
+      <form class="contact-form-wild" onsubmit="event.preventDefault(); const b=this.querySelector('button'); b.innerHTML='Message sent <i class=&quot;lucide lucide-check&quot;></i>'; b.style.background='var(--red)'; b.style.borderColor='var(--ink)';">
+        <div class="row">
+          <div class="f"><label for="n">Name</label><input id="n" type="text" required></div>
+          <div class="f"><label for="e">Email</label><input id="e" type="email" required></div>
+        </div>
+        <div class="row">
+          <div class="f"><label for="p">Phone</label><input id="p" type="tel"></div>
+          <div class="f"><label for="i">Interest</label>
+            <select id="i">
+              <option>Residential Sales</option>
+              <option>Commercial Leasing</option>
+              <option>Investment / Capital</option>
+              <option>Property Management</option>
+            </select>
+          </div>
+        </div>
+        <div class="f"><label for="m">Message</label><textarea id="m" rows="4"></textarea></div>
+        <button type="submit" class="btn">Send it <i class="lucide lucide-arrow-right"></i></button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-main">
+      <div class="foot-col-main">
+        <a class="logo" href="#" style="color:var(--paper)">
+          <span class="logo-mark" style="background:var(--paper); color:var(--ink); border-color:var(--paper)" aria-hidden="true">LE</span>
+          <span class="logo-word" style="color:var(--paper)">LEE<span class="k" style="color:var(--red)">/</span>ELIYAHU</span>
+        </a>
+        <p>Residential, commercial, and investment real estate across the five boroughs. Since 2014.</p>
+        <div class="foot-socials">
+          <a href="#" aria-label="Instagram"><i class="lucide lucide-instagram"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="lucide lucide-linkedin"></i></a>
+          <a href="#" aria-label="YouTube"><i class="lucide lucide-youtube"></i></a>
+        </div>
+      </div>
+      <div>
+        <h4>Real Estate</h4>
+        <a href="#">Residential Sales</a>
+        <a href="#">Active Listings</a>
+        <a href="#">Commercial Leasing</a>
+        <a href="#">Property Management</a>
+      </div>
+      <div>
+        <h4>Financial</h4>
+        <a href="#">Hard Money Lending</a>
+        <a href="#">Merchant Processing</a>
+        <a href="#">Business Funding</a>
+        <a href="#">Broker Opinion of Value</a>
+      </div>
+      <div>
+        <h4>Office</h4>
+        <a href="tel:+15165678715">+1 (516) 567-8715</a>
+        <a href="mailto:lee@leeeliyahu.com">lee@leeeliyahu.com</a>
+        <a href="#">New York, NY</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Lee Eliyahu · NY Licensed</span>
+      <span>Privacy · Terms · Fair Housing</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e => { if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);}});
+  },{ threshold:0.1 });
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

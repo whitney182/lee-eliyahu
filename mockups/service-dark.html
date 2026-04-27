@@ -1,0 +1,544 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Active Listings — Lee Eliyahu</title>
+<meta name="description" content="Active listings across the five boroughs — curated quietly, closed decisively." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lucide-static@0.460.0/font/lucide.css">
+<style>
+:root{
+  --black: #0B0A08;
+  --obsidian: #131210;
+  --coal: #1C1A17;
+  --fog: #26231E;
+  --ivory: #EFEADB;
+  --ivory-soft: #C9C3B4;
+  --mute: #8A8479;
+  --rule: rgba(239,234,219,0.09);
+  --rule-bright: rgba(239,234,219,0.18);
+  --gold: #D4A94A;
+  --gold-deep: #B5863A;
+  --gold-soft: #E6C572;
+  --serif: 'Instrument Serif', 'Iowan Old Style', Georgia, serif;
+  --sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+  --c-max: 1400px;
+  --pad: clamp(20px, 4vw, 56px);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth; -webkit-font-smoothing:antialiased;}
+body{
+  margin:0; background:var(--black); color:var(--ivory);
+  font-family:var(--sans); font-size:16px; line-height:1.55;
+  position:relative; overflow-x:hidden;
+}
+body::before {
+  content:""; position:fixed; inset:0; pointer-events:none; z-index:1;
+  opacity:0.06; mix-blend-mode:overlay;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.9 0 0 0 0 0.88 0 0 0 0 0.78 0 0 0 1 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+}
+img{display:block; max-width:100%; height:auto}
+a{color:inherit; text-decoration:none}
+button{font-family:inherit; cursor:pointer}
+
+.wrap { max-width:var(--c-max); margin:0 auto; padding:0 var(--pad); position:relative; z-index:2;}
+
+/* Type */
+.display {
+  font-family:var(--serif); font-weight:400;
+  font-size: clamp(56px, 10vw, 180px);
+  line-height:0.94; letter-spacing:-0.02em;
+}
+.display em { font-style:italic; color:var(--gold); font-weight:400;}
+.h2 { font-family:var(--serif); font-weight:400; font-size:clamp(36px, 5vw, 76px); line-height:1; letter-spacing:-0.015em;}
+.h2 em { font-style:italic; color:var(--gold);}
+.h3 { font-family:var(--serif); font-weight:400; font-size:clamp(22px,2.2vw,30px); line-height:1.1; letter-spacing:-0.01em;}
+.eyebrow {
+  font-family:var(--sans); font-size:11px; font-weight:500;
+  letter-spacing:0.28em; text-transform:uppercase; color:var(--gold-soft);
+}
+
+/* Nav */
+.nav {
+  position:sticky; top:0; z-index:50;
+  backdrop-filter: blur(18px) saturate(160%);
+  background: color-mix(in oklab, var(--black) 78%, transparent);
+  border-bottom:1px solid var(--rule);
+}
+.nav-inner { display:flex; align-items:center; justify-content:space-between; height:78px;}
+.logo { display:flex; align-items:center; gap:14px;}
+.logo-mark {
+  width:40px; height:40px; border-radius:50%; border:1px solid var(--gold);
+  display:grid; place-items:center; font-family:var(--serif); font-weight:400; font-size:15px; color:var(--gold); font-style:italic;
+  position:relative;
+}
+.logo-mark::after { content:""; position:absolute; inset:4px; border-radius:50%; border:1px solid rgba(212,169,74,0.3);}
+.logo-word { font-family:var(--serif); font-size:22px; letter-spacing:0.005em;}
+.logo-word em { font-style:italic; color:var(--gold);}
+
+.nav-links { display:flex; gap:36px; align-items:center;}
+.nav-links a { font-size:13px; color:var(--ivory-soft); letter-spacing:0.03em; position:relative;}
+.nav-links a:hover, .nav-links a.active { color:var(--gold);}
+.nav-links .has-dd { display:inline-flex; align-items:center; gap:4px;}
+.nav-cta {
+  font-family:var(--sans); font-size:12px; letter-spacing:0.14em; text-transform:uppercase;
+  padding:12px 22px; background:var(--gold); color:var(--black);
+  border:1px solid var(--gold); border-radius:0;
+  transition: all .4s cubic-bezier(.2,.8,.2,1);
+  display:inline-flex; align-items:center; gap:8px;
+}
+.nav-cta:hover { background:transparent; color:var(--gold);}
+.menu-btn { display:none; background:transparent; border:0; color:var(--ivory); font-size:22px;}
+
+/* Hero */
+.hero { padding: clamp(56px, 9vw, 120px) 0 clamp(40px, 6vw, 80px); position:relative;}
+.hero::before {
+  content:""; position:absolute; inset:0;
+  background: radial-gradient(ellipse 70% 60% at 80% 15%, rgba(212,169,74,0.08), transparent 70%);
+  pointer-events:none;
+}
+.hero-index { display:flex; align-items:center; gap:18px; border-bottom:1px solid var(--rule); padding-bottom:24px; margin-bottom:clamp(48px, 7vw, 88px);}
+.hero-index .dot { width:6px; height:6px; border-radius:50%; background:var(--gold);}
+.hero-index span { font-size:11px; letter-spacing:0.24em; text-transform:uppercase; color:var(--mute);}
+.hero-index .spacer { flex:1; height:1px;}
+.hero h1 { margin:0; max-width:18ch;}
+.hero-body { display:grid; grid-template-columns: 1fr 1fr; gap: clamp(32px,5vw,80px); margin-top:clamp(48px, 7vw, 88px); align-items:end; border-top:1px solid var(--rule); padding-top: clamp(40px,5vw, 72px);}
+.hero-body .lede { font-family:var(--serif); font-size:clamp(22px, 1.9vw, 28px); line-height:1.3; color:var(--ivory); font-style:italic; max-width:42ch; margin:0;}
+.hero-meta { display:flex; flex-direction:column; gap:12px; color:var(--ivory-soft); font-size:14px; letter-spacing:0.14em; text-transform:uppercase;}
+.hero-meta div { display:flex; justify-content:space-between; border-bottom:1px solid var(--rule); padding:14px 0;}
+.hero-meta div span:last-child { color:var(--gold); font-family:var(--serif); font-style:italic; font-size:18px; letter-spacing:0; text-transform:none;}
+
+/* Filter bar */
+.filters {
+  border-top:1px solid var(--rule-bright); border-bottom:1px solid var(--rule-bright);
+  background: color-mix(in oklab, var(--black) 94%, transparent);
+  position:sticky; top:78px; z-index:40; backdrop-filter: blur(12px);
+}
+.filter-row { display:flex; justify-content:space-between; align-items:center; padding:22px 0; gap:20px; flex-wrap:wrap;}
+.filter-group { display:flex; gap:4px; flex-wrap:wrap;}
+.filter-btn {
+  font-family:var(--sans); font-size:11px; letter-spacing:0.22em; text-transform:uppercase;
+  padding:12px 22px; border-radius:0;
+  border:1px solid var(--rule-bright); background:transparent; color:var(--ivory-soft);
+  transition: all .4s cubic-bezier(.2,.8,.2,1);
+}
+.filter-btn:hover { border-color:var(--gold); color:var(--gold);}
+.filter-btn.on { background:var(--gold); color:var(--black); border-color:var(--gold);}
+.filter-count {
+  font-family:var(--serif); font-style:italic; color:var(--ivory); font-size:17px;
+}
+.filter-count b { color:var(--gold); font-weight:400;}
+.filter-count small { color:var(--mute); font-style:normal; font-family:var(--sans); font-size:11px; letter-spacing:0.2em; text-transform:uppercase; margin-left:14px;}
+
+/* Listings */
+.listings { padding: clamp(72px,9vw,140px) 0;}
+.listings-head { display:grid; grid-template-columns:1fr 1fr; gap:clamp(32px,5vw,80px); align-items:end; margin-bottom: clamp(48px,6vw,80px);}
+.listings-head .tag-line { display:flex; align-items:center; gap:12px;}
+.listings-head .tag-line::before { content:""; width:32px; height:1px; background:var(--gold);}
+.listings-head h2 { margin:14px 0 0; max-width:14ch;}
+.listings-head p { color:var(--ivory-soft); font-size:17px; max-width:44ch;}
+
+.grid { display:grid; grid-template-columns: repeat(3, 1fr); gap:0; border-top:1px solid var(--rule-bright); border-left:1px solid var(--rule-bright);}
+.card {
+  position:relative; border-right:1px solid var(--rule-bright); border-bottom:1px solid var(--rule-bright);
+  padding: clamp(22px,2.5vw,36px);
+  display:flex; flex-direction:column; gap:22px;
+  transition: background .5s ease;
+}
+.card:hover { background: var(--obsidian);}
+.card::after {
+  content:""; position:absolute; bottom:0; left:0; right:0; height:2px; background:var(--gold);
+  transform: scaleX(0); transform-origin:left; transition: transform .55s cubic-bezier(.2,.8,.2,1);
+}
+.card:hover::after { transform: scaleX(1);}
+.card-frame {
+  aspect-ratio: 4/3; position:relative; overflow:hidden;
+  background: linear-gradient(180deg, var(--coal) 0%, var(--black) 100%);
+  border:1px solid var(--rule-bright);
+}
+.card-frame::before {
+  content:""; position:absolute; inset:0;
+  background:
+    radial-gradient(circle at 30% 30%, rgba(212,169,74,0.18) 0%, transparent 55%),
+    linear-gradient(135deg, transparent 45%, rgba(212,169,74,0.06) 50%, transparent 55%);
+}
+.card-frame::after {
+  content: attr(data-m); position:absolute; right:-10px; bottom:-26px;
+  font-family:var(--serif); font-style:italic; font-size:190px; line-height:0.75;
+  color:rgba(239,234,219,0.05); letter-spacing:-0.05em;
+}
+.card-frame .tag {
+  position:absolute; top:14px; left:14px;
+  font-size:10px; letter-spacing:0.22em; text-transform:uppercase;
+  padding:6px 12px; color:var(--ivory); border:1px solid var(--rule-bright);
+  background: color-mix(in oklab, var(--black) 70%, transparent); backdrop-filter:blur(6px);
+}
+.card-frame .tag.new { color:var(--black); background:var(--gold); border-color:var(--gold);}
+.card-frame .tag.inv { color:var(--gold); border-color:var(--gold);}
+.card-frame .city {
+  position:absolute; bottom:14px; right:14px;
+  font-family:var(--serif); font-style:italic; font-size:13px; color:var(--gold);
+}
+.card .price-row { display:flex; align-items:baseline; justify-content:space-between; gap:14px; padding-bottom:14px; border-bottom:1px solid var(--rule);}
+.card .price { font-family:var(--serif); font-size:clamp(30px,3vw,42px); line-height:1; letter-spacing:-0.02em; color:var(--ivory);}
+.card .price em { color:var(--gold); font-style:italic;}
+.card .idx { font-family:var(--serif); font-style:italic; color:var(--gold); font-size:15px;}
+.card address {
+  font-style:normal; font-family:var(--serif); font-size:20px; line-height:1.25; color:var(--ivory); max-width:24ch;
+}
+.card .specs { display:flex; gap:20px; color:var(--ivory-soft); font-size:13px; padding-top:14px; border-top:1px solid var(--rule);}
+.card .specs span { display:inline-flex; align-items:center; gap:6px;}
+.card .specs i { color:var(--gold); font-size:14px;}
+.card .view {
+  margin-top:auto; font-size:11px; letter-spacing:0.22em; text-transform:uppercase;
+  color:var(--gold); display:inline-flex; align-items:center; gap:10px;
+}
+.card .view i { transition: transform .45s cubic-bezier(.2,.8,.2,1);}
+.card:hover .view i { transform: translateX(8px);}
+
+.listings-foot {
+  margin-top: clamp(56px,7vw,96px);
+  display:flex; justify-content:space-between; align-items:center;
+  border-top:1px solid var(--rule); padding-top:36px;
+  flex-wrap:wrap; gap:24px;
+}
+.listings-foot p { font-family:var(--serif); font-style:italic; font-size:20px; color:var(--ivory); max-width:42ch; margin:0;}
+.btn {
+  font-family:var(--sans); font-size:12px; letter-spacing:0.18em; text-transform:uppercase;
+  padding:18px 30px; border:1px solid var(--ivory);
+  background:transparent; color:var(--ivory);
+  display:inline-flex; align-items:center; gap:20px;
+  transition: all .4s cubic-bezier(.2,.8,.2,1); border-radius:0;
+}
+.btn:hover { background:var(--ivory); color:var(--black);}
+.btn-gold { border-color:var(--gold); color:var(--gold);}
+.btn-gold:hover { background:var(--gold); color:var(--black);}
+
+/* Lead */
+.lead { background:var(--obsidian); border-top:1px solid var(--rule-bright); border-bottom:1px solid var(--rule-bright); padding: clamp(72px,9vw,140px) 0;}
+.lead-inner { display:grid; grid-template-columns:1fr 1fr; gap:clamp(48px,6vw,96px);}
+.lead-left h2 { margin:18px 0 32px;}
+.lead-left .lede { font-family:var(--serif); font-style:italic; font-size:clamp(20px,1.7vw,26px); color:var(--ivory); line-height:1.35; max-width:38ch;}
+.lead-info { margin-top:48px; border-top:1px solid var(--rule);}
+.lead-info div { display:flex; justify-content:space-between; align-items:center; padding:20px 0; border-bottom:1px solid var(--rule); gap:24px;}
+.lead-info span:first-child { font-size:11px; letter-spacing:0.22em; text-transform:uppercase; color:var(--mute);}
+.lead-info span:last-child { font-family:var(--serif); font-style:italic; font-size:20px; color:var(--gold);}
+
+form.dark-form { display:grid; gap:24px; align-content:start;}
+.dark-form .row { display:grid; grid-template-columns:1fr 1fr; gap:24px;}
+.dark-form .f label { font-size:10px; letter-spacing:0.24em; text-transform:uppercase; color:var(--mute); display:block; margin-bottom:12px;}
+.dark-form .f input, .dark-form .f textarea {
+  width:100%; background:transparent; border:0; border-bottom:1px solid var(--rule-bright);
+  padding:14px 0; color:var(--ivory); font-family:var(--sans); font-size:17px;
+  transition:border-color .3s ease;
+}
+.dark-form .f input:focus, .dark-form .f textarea:focus { outline:0; border-color:var(--gold);}
+.dark-form textarea { resize:vertical; min-height:100px;}
+.dark-form button { justify-self:start;}
+
+/* Footer */
+footer { background:var(--black); padding: clamp(72px,8vw,120px) 0 40px;}
+.foot { display:grid; grid-template-columns: 1.6fr repeat(3, 1fr); gap:clamp(32px,4vw,72px); padding-bottom:56px; border-bottom:1px solid var(--rule);}
+.foot h4 { font-family:var(--serif); font-style:italic; font-size:16px; color:var(--gold); margin:0 0 22px;}
+.foot a { display:block; color:var(--ivory-soft); font-size:14px; padding:7px 0; transition:color .3s ease;}
+.foot a:hover { color:var(--gold);}
+.foot-top p { color:var(--ivory-soft); margin:22px 0 28px; max-width:36ch;}
+.socials { display:flex; gap:10px;}
+.socials a {
+  width:42px; height:42px; border:1px solid var(--rule-bright); display:grid; place-items:center; padding:0;
+  transition: all .3s ease;
+}
+.socials a:hover { border-color:var(--gold); color:var(--gold);}
+.foot-bottom { display:flex; justify-content:space-between; align-items:center; padding-top:32px; flex-wrap:wrap; gap:16px; font-size:12px; letter-spacing:0.12em; text-transform:uppercase; color:var(--mute);}
+
+.reveal { opacity:0; transform:translateY(24px); transition: opacity .9s cubic-bezier(.2,.8,.2,1), transform .9s cubic-bezier(.2,.8,.2,1);}
+.reveal.in { opacity:1; transform:none;}
+
+@media (max-width: 1100px){
+  .grid { grid-template-columns: repeat(2, 1fr);}
+}
+@media (max-width: 980px){
+  .hero-body, .listings-head, .lead-inner { grid-template-columns: 1fr;}
+  .foot { grid-template-columns: 1fr 1fr;}
+  .nav-links { display:none;}
+  .menu-btn { display:block;}
+  .dark-form .row { grid-template-columns:1fr;}
+  .filters { position:static;}
+}
+@media (max-width: 640px){
+  .grid { grid-template-columns:1fr;}
+  .listings-foot { flex-direction:column; align-items:flex-start;}
+}
+@media (prefers-reduced-motion: reduce){
+  *{animation:none !important; transition:none !important;}
+  html{scroll-behavior:auto;}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap nav-inner">
+    <a class="logo" href="homepage-dark.html" aria-label="Lee Eliyahu home">
+      <span class="logo-mark" aria-hidden="true">LE</span>
+      <span class="logo-word">Lee <em>Eliyahu</em></span>
+    </a>
+    <div class="nav-links">
+      <a href="homepage-dark.html">Home</a>
+      <a href="homepage-dark.html#about">About</a>
+      <a href="#" class="has-dd active">Real Estate <i class="lucide lucide-chevron-down" style="font-size:13px"></i></a>
+      <a href="#">Financial</a>
+      <a href="#lead">Contact</a>
+    </div>
+    <button class="nav-cta">+1 (516) 567-8715 <i class="lucide lucide-arrow-up-right"></i></button>
+    <button class="menu-btn" aria-label="Open menu"><i class="lucide lucide-menu"></i></button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="wrap">
+    <div class="hero-index">
+      <span>Real Estate</span>
+      <span class="dot"></span>
+      <span>Active Inventory</span>
+      <span class="spacer"></span>
+      <span>Index — 004 / Listings</span>
+    </div>
+    <h1 class="display reveal">
+      Active<br>
+      <em>listings.</em>
+    </h1>
+    <div class="hero-body reveal">
+      <p class="lede">A short list of what's on market this week &mdash; residential, commercial, investment. The rest moves quietly.</p>
+      <div class="hero-meta">
+        <div><span>On Market</span><span>24 properties</span></div>
+        <div><span>Price range</span><span>$650K &mdash; $14M</span></div>
+        <div><span>Updated</span><span>April 2026</span></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- FILTERS -->
+<div class="filters">
+  <div class="wrap">
+    <div class="filter-row">
+      <div class="filter-group" role="tablist">
+        <button class="filter-btn on">All</button>
+        <button class="filter-btn">Manhattan</button>
+        <button class="filter-btn">Brooklyn</button>
+        <button class="filter-btn">Queens</button>
+        <button class="filter-btn">Bronx</button>
+        <button class="filter-btn">Staten Island</button>
+      </div>
+      <span class="filter-count"><b>24</b> showing <small>of 37 total</small></span>
+    </div>
+  </div>
+</div>
+
+<!-- LISTINGS -->
+<section class="listings">
+  <div class="wrap">
+    <div class="listings-head reveal">
+      <div>
+        <div class="tag-line"><span class="eyebrow">Selection</span></div>
+        <h2 class="h2">Six to <em>see.</em></h2>
+      </div>
+      <p>A representative cross-section across Manhattan, Brooklyn, Queens, and a multi-family play in Bay Ridge. Full inventory by request.</p>
+    </div>
+
+    <div class="grid">
+
+      <article class="card reveal">
+        <div class="card-frame" data-m="01">
+          <span class="tag new">Just Listed</span>
+          <span class="city">Tribeca</span>
+        </div>
+        <div class="price-row"><span class="price">$2.<em>4</em>M</span><span class="idx">01</span></div>
+        <address>148 Franklin Street<br>Unit 4A</address>
+        <div class="specs">
+          <span><i class="lucide lucide-bed-double"></i>2 bd</span>
+          <span><i class="lucide lucide-bath"></i>2 ba</span>
+          <span><i class="lucide lucide-square"></i>1,420 sf</span>
+        </div>
+        <a class="view" href="#">View Listing <i class="lucide lucide-arrow-up-right"></i></a>
+      </article>
+
+      <article class="card reveal">
+        <div class="card-frame" data-m="02">
+          <span class="tag">Residential</span>
+          <span class="city">Park Slope</span>
+        </div>
+        <div class="price-row"><span class="price">$1.<em>185</em>M</span><span class="idx">02</span></div>
+        <address>422 3rd Street<br>Garden Duplex</address>
+        <div class="specs">
+          <span><i class="lucide lucide-bed-double"></i>3 bd</span>
+          <span><i class="lucide lucide-bath"></i>2 ba</span>
+          <span><i class="lucide lucide-square"></i>1,780 sf</span>
+        </div>
+        <a class="view" href="#">View Listing <i class="lucide lucide-arrow-up-right"></i></a>
+      </article>
+
+      <article class="card reveal">
+        <div class="card-frame" data-m="03">
+          <span class="tag inv">Commercial</span>
+          <span class="city">Soho</span>
+        </div>
+        <div class="price-row"><span class="price">$<em>14</em>M</span><span class="idx">03</span></div>
+        <address>81 Greene Street<br>Full Retail Condo</address>
+        <div class="specs">
+          <span><i class="lucide lucide-store"></i>Retail</span>
+          <span><i class="lucide lucide-square"></i>4,200 sf</span>
+          <span><i class="lucide lucide-ruler"></i>40 ft</span>
+        </div>
+        <a class="view" href="#">View Listing <i class="lucide lucide-arrow-up-right"></i></a>
+      </article>
+
+      <article class="card reveal">
+        <div class="card-frame" data-m="04">
+          <span class="tag">Residential</span>
+          <span class="city">Astoria</span>
+        </div>
+        <div class="price-row"><span class="price">$<em>985</em>K</span><span class="idx">04</span></div>
+        <address>31-44 34th Street<br>Two-Family</address>
+        <div class="specs">
+          <span><i class="lucide lucide-bed-double"></i>5 bd</span>
+          <span><i class="lucide lucide-bath"></i>3 ba</span>
+          <span><i class="lucide lucide-square"></i>2,560 sf</span>
+        </div>
+        <a class="view" href="#">View Listing <i class="lucide lucide-arrow-up-right"></i></a>
+      </article>
+
+      <article class="card reveal">
+        <div class="card-frame" data-m="05">
+          <span class="tag new">Just Listed</span>
+          <span class="city">UWS</span>
+        </div>
+        <div class="price-row"><span class="price">$3.<em>75</em>M</span><span class="idx">05</span></div>
+        <address>225 West 83rd Street<br>Penthouse A</address>
+        <div class="specs">
+          <span><i class="lucide lucide-bed-double"></i>3 bd</span>
+          <span><i class="lucide lucide-bath"></i>2.5 ba</span>
+          <span><i class="lucide lucide-square"></i>2,100 sf</span>
+        </div>
+        <a class="view" href="#">View Listing <i class="lucide lucide-arrow-up-right"></i></a>
+      </article>
+
+      <article class="card reveal">
+        <div class="card-frame" data-m="06">
+          <span class="tag inv">Investment</span>
+          <span class="city">Bay Ridge</span>
+        </div>
+        <div class="price-row"><span class="price">$<em>6.2</em>M</span><span class="idx">06</span></div>
+        <address>8602 4th Avenue<br>12-Unit Multi-Family</address>
+        <div class="specs">
+          <span><i class="lucide lucide-building-2"></i>12 units</span>
+          <span><i class="lucide lucide-percent"></i>6.1 cap</span>
+          <span><i class="lucide lucide-square"></i>9,800 sf</span>
+        </div>
+        <a class="view" href="#">View Listing <i class="lucide lucide-arrow-up-right"></i></a>
+      </article>
+
+    </div>
+
+    <div class="listings-foot reveal">
+      <p><em style="color:var(--gold);">About a third</em> of the pipeline never hits the board.</p>
+      <a class="btn btn-gold" href="#lead">Request Off-Market Inventory <i class="lucide lucide-arrow-up-right"></i></a>
+    </div>
+
+  </div>
+</section>
+
+<!-- LEAD -->
+<section id="lead" class="lead">
+  <div class="wrap">
+    <div class="lead-inner">
+      <div class="lead-left reveal">
+        <span class="eyebrow">The First Call</span>
+        <h2 class="h2">Interested in a<br><em>property?</em></h2>
+        <p class="lede">Tell Lee what you're looking for &mdash; neighborhood, budget, timeline. Replies within the day with three honest options.</p>
+        <div class="lead-info">
+          <div><span>Direct</span><span>+1 (516) 567-8715</span></div>
+          <div><span>Email</span><span>lee@leeeliyahu.com</span></div>
+          <div><span>Office</span><span>By appointment</span></div>
+        </div>
+      </div>
+      <form class="dark-form reveal" onsubmit="event.preventDefault(); this.querySelector('button').innerHTML='Sent &mdash; expect a reply within the day <i class=\'lucide lucide-check\'></i>';">
+        <div class="row">
+          <div class="f"><label for="dname">Name</label><input id="dname" type="text" required></div>
+          <div class="f"><label for="demail">Email</label><input id="demail" type="email" required></div>
+        </div>
+        <div class="row">
+          <div class="f"><label for="dphone">Phone</label><input id="dphone" type="tel"></div>
+          <div class="f"><label for="dint">Interested in</label><input id="dint" type="text" placeholder="2bd Tribeca, retail Soho..."></div>
+        </div>
+        <div class="f"><label for="dmsg">Note for Lee</label><textarea id="dmsg" rows="3" placeholder="Budget, timeline, anything off-the-record"></textarea></div>
+        <button type="submit" class="btn btn-gold">Send Inquiry <i class="lucide lucide-arrow-up-right"></i></button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div class="foot-top">
+        <a class="logo" href="homepage-dark.html">
+          <span class="logo-mark" aria-hidden="true">LE</span>
+          <span class="logo-word">Lee <em>Eliyahu</em></span>
+        </a>
+        <p>Residential, commercial, and investment real estate across the five boroughs since 2014.</p>
+        <div class="socials">
+          <a href="#" aria-label="Instagram"><i class="lucide lucide-instagram"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="lucide lucide-linkedin"></i></a>
+          <a href="#" aria-label="YouTube"><i class="lucide lucide-youtube"></i></a>
+        </div>
+      </div>
+      <div>
+        <h4>Real Estate</h4>
+        <a href="#">Residential Sales</a>
+        <a href="#">Active Listings</a>
+        <a href="#">Commercial Leasing</a>
+        <a href="#">Property Management</a>
+      </div>
+      <div>
+        <h4>Financial</h4>
+        <a href="#">Hard Money Lending</a>
+        <a href="#">Merchant Processing</a>
+        <a href="#">Business Funding</a>
+        <a href="#">Broker Opinion of Value</a>
+      </div>
+      <div>
+        <h4>Office</h4>
+        <a href="tel:+15165678715">+1 (516) 567-8715</a>
+        <a href="mailto:lee@leeeliyahu.com">lee@leeeliyahu.com</a>
+        <a href="#">New York, NY</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Lee Eliyahu · Licensed in NY</span>
+      <span>Privacy · Terms · Fair Housing</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e => { if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);}});
+  },{ threshold:0.1 });
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+  document.querySelectorAll('.filter-btn').forEach(b=>{
+    b.addEventListener('click', ()=>{
+      document.querySelectorAll('.filter-btn').forEach(x=>x.classList.remove('on'));
+      b.classList.add('on');
+    });
+  });
+</script>
+</body>
+</html>

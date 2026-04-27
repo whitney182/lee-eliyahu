@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm list *)",
+      "Bash(npm root *)",
+      "Bash(NODE_PATH=$\\(npm root -g\\) node build-guide.js)",
+      "Bash(python \"/Users/evantaylor/Library/Application Support/Claude/local-agent-mode-sessions/skills-plugin/7579ae56-061a-424a-8fff-798f968a3438/cc1db401-fe33-4382-a433-be2e4c6fd3d3/skills/docx/scripts/office/validate.py\" \"/Users/evantaylor/Desktop 2/Claude Working Folder - Whiteny/Your-Website-Explained.docx\")",
+      "Bash(python3 \"/Users/evantaylor/Library/Application Support/Claude/local-agent-mode-sessions/skills-plugin/7579ae56-061a-424a-8fff-798f968a3438/cc1db401-fe33-4382-a433-be2e4c6fd3d3/skills/docx/scripts/office/validate.py\" \"/Users/evantaylor/Desktop 2/Claude Working Folder - Whiteny/Your-Website-Explained.docx\")"
+    ]
+  }
+}

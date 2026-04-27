@@ -1,0 +1,735 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Hard Money for Real Estate | Lee Eliyahu · New York</title>
+<meta name="description" content="Private hard money lending for real estate investors — fix & flip, land acquisition, ground-up construction, and bridge loans. Same-day rate commitments, closings in as few as 5 days."/>
+<meta property="og:title" content="Hard Money for Real Estate | Lee Eliyahu"/>
+<meta property="og:description" content="Fast private lending for real estate investors. Fix & flip, land, construction, and bridge loans through Flatiron Realty Capital — same-day rate commitments."/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://leeeliyahu.com/hard-money-for-real-estate/"/>
+<meta property="og:image" content="https://leeeliyahu.com/wp-content/uploads/2026/02/Logo-Lee-2.png"/>
+<link rel="icon" href="https://leeeliyahu.com/wp-content/uploads/2026/02/cropped-Logo-Lee-3-32x32.png" sizes="32x32"/>
+<link rel="apple-touch-icon" href="https://leeeliyahu.com/wp-content/uploads/2026/02/cropped-Logo-Lee-3-180x180.png"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@1&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lucide-static@0.460.0/font/lucide.css"/>
+<style>
+/* ── TOKENS ── */
+:root {
+  --black:       #0B0A08;
+  --obsidian:    #131210;
+  --coal:        #1C1A17;
+  --fog:         #26231E;
+  --ivory:       #EFEADB;
+  --ivory-soft:  #C9C3B4;
+  --mute:        #8A8479;
+  --rule:        rgba(239,234,219,.09);
+  --rule-hi:     rgba(239,234,219,.18);
+  --gold:        #D4A94A;
+  --gold-deep:   #B5863A;
+  --gold-soft:   #E6C572;
+  --serif:       'Instrument Serif','Iowan Old Style',Georgia,serif;
+  --sans:        'Plus Jakarta Sans',system-ui,sans-serif;
+  --cmax:        1400px;
+  --pad:         clamp(20px,4vw,56px);
+  --ease:        cubic-bezier(.2,.8,.2,1);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+body{margin:0;background:var(--black);color:var(--ivory);font-family:var(--sans);font-size:16px;line-height:1.55;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:9999;opacity:.06;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.9 0 0 0 0 0.88 0 0 0 0 0.78 0 0 0 1 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer}
+figure,blockquote{margin:0;padding:0}
+.wrap{max-width:var(--cmax);margin:0 auto;padding:0 var(--pad);position:relative;z-index:2}
+
+/* ── TYPOGRAPHY ── */
+.display{font-family:var(--serif);font-weight:400;font-size:clamp(52px,9.5vw,160px);line-height:.95;letter-spacing:-.02em;margin:0}
+.display em{font-style:italic;color:var(--gold);font-weight:400}
+.h2{font-family:var(--serif);font-weight:400;font-size:clamp(36px,5.4vw,84px);line-height:1;letter-spacing:-.015em;margin:16px 0 0}
+.h2 em{font-style:italic;color:var(--gold)}
+.eyebrow{font-family:var(--sans);font-size:11px;font-weight:500;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-soft)}
+
+/* ── LOGO ── */
+.logo{display:flex;align-items:center;gap:12px;flex-shrink:0}
+.logo-mark{width:38px;height:38px;border-radius:50%;border:1px solid var(--gold);display:grid;place-items:center;font-family:var(--serif);font-weight:400;font-size:14px;color:var(--gold);font-style:italic;position:relative;flex-shrink:0}
+.logo-mark::after{content:"";position:absolute;inset:4px;border-radius:50%;border:1px solid rgba(212,169,74,.3)}
+.logo-word{font-family:var(--serif);font-size:20px;letter-spacing:.005em;white-space:nowrap}
+.logo-word em{font-style:italic;color:var(--gold)}
+
+/* ── NAV ── */
+.nav{position:sticky;top:0;z-index:200;backdrop-filter:blur(18px) saturate(160%);background:color-mix(in oklab,var(--black) 78%,transparent);border-bottom:1px solid var(--rule)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:78px;gap:16px}
+.nav-links{display:flex;align-items:stretch;flex:1;justify-content:center}
+.nav-links > a,
+.nav-dd > button{font-size:13px;color:var(--ivory-soft);letter-spacing:.03em;padding:0 15px;height:78px;display:inline-flex;align-items:center;gap:5px;background:transparent;border:0;transition:color .3s var(--ease);white-space:nowrap}
+.nav-links > a:hover,.nav-dd:hover > button{color:var(--gold)}
+.nav-links > a.active,.nav-dd > button.active{color:var(--gold)}
+.nav-dd{position:relative;display:flex;align-items:center}
+.nav-dd-panel{position:absolute;top:100%;left:0;min-width:220px;background:var(--obsidian);border:1px solid var(--rule-hi);border-top:2px solid var(--gold);padding:8px 0;opacity:0;pointer-events:none;transform:translateY(-6px);transition:opacity .25s var(--ease),transform .25s var(--ease);z-index:100}
+.nav-dd:hover .nav-dd-panel,.nav-dd:focus-within .nav-dd-panel{opacity:1;pointer-events:auto;transform:none}
+.nav-dd-panel a{display:block;padding:11px 20px;font-size:13px;color:var(--ivory-soft);border-left:2px solid transparent;transition:color .2s ease,background .2s ease,border-color .2s ease}
+.nav-dd-panel a:hover{color:var(--gold);background:var(--coal);border-left-color:var(--gold)}
+.nav-dd-panel .sub-lbl{font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--mute);padding:14px 20px 6px;display:block}
+.nav-dd-panel .dd-rule{height:1px;background:var(--rule);margin:6px 0}
+.nav-dd-wide .nav-dd-panel{min-width:460px;display:grid;grid-template-columns:1fr 1fr}
+.nav-dd-wide .dd-col:first-child{border-right:1px solid var(--rule)}
+.dd-col{display:flex;flex-direction:column}
+.nav-cta{font-family:var(--sans);font-size:12px;letter-spacing:.14em;text-transform:uppercase;padding:12px 20px;background:var(--gold);color:var(--black);border:1px solid var(--gold);border-radius:0;transition:all .4s var(--ease);display:inline-flex;align-items:center;gap:8px;white-space:nowrap;flex-shrink:0}
+.nav-cta:hover{background:transparent;color:var(--gold)}
+.menu-btn{display:none;background:transparent;border:0;color:var(--ivory);font-size:22px;padding:8px;flex-shrink:0}
+
+/* ── MOBILE NAV ── */
+.mob-nav{display:none;position:fixed;inset:0;background:var(--obsidian);z-index:300;overflow-y:auto;padding:100px var(--pad) 60px}
+.mob-nav.open{display:block}
+.mob-nav > a,.mob-dd-toggle{display:flex;justify-content:space-between;align-items:center;font-size:17px;color:var(--ivory-soft);padding:16px 0;border-bottom:1px solid var(--rule);background:transparent;border-left:0;border-right:0;border-top:0;text-align:left;width:100%;letter-spacing:.02em;transition:color .2s ease}
+.mob-nav > a:hover,.mob-dd-toggle:hover{color:var(--gold)}
+.mob-sub{display:none;padding-left:20px}
+.mob-sub.open{display:block}
+.mob-sub a{display:block;font-size:14px;color:var(--ivory-soft);padding:12px 0;border-bottom:1px solid var(--rule);transition:color .2s ease}
+.mob-sub a:hover{color:var(--gold)}
+.mob-cta-link{display:inline-flex;margin-top:32px;padding:16px 28px;background:var(--gold);color:var(--black);font-size:13px;letter-spacing:.14em;text-transform:uppercase;border-bottom:none !important;width:auto !important}
+.mob-close{position:fixed;top:18px;right:var(--pad);background:transparent;border:1px solid var(--rule-hi);color:var(--ivory);width:44px;height:44px;display:flex;align-items:center;justify-content:center;font-size:20px;cursor:pointer;z-index:301}
+
+/* ── PAGE HERO ── */
+.pg-hero{position:relative;padding:clamp(72px,10vw,140px) 0 clamp(56px,8vw,100px);overflow:hidden;background-image:url('/New york 1.png');background-size:cover;background-position:center 45%}
+.pg-hero::before{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,rgba(11,10,8,.72) 0%,rgba(11,10,8,.55) 40%,rgba(11,10,8,.90) 100%),radial-gradient(ellipse 70% 60% at 80% 20%,rgba(212,169,74,.07),transparent 70%);pointer-events:none}
+.pg-hero-index{display:flex;align-items:center;gap:18px;border-bottom:1px solid var(--rule-hi);padding-bottom:24px;margin-bottom:clamp(48px,7vw,88px)}
+.pg-hero-index .dot{width:6px;height:6px;border-radius:50%;background:var(--gold);flex-shrink:0}
+.pg-hero-index span{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--mute)}
+.pg-hero-index .spacer{flex:1}
+.pg-hero-body{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,80px);margin-top:clamp(48px,7vw,88px);align-items:end;border-top:1px solid var(--rule);padding-top:clamp(40px,5vw,72px)}
+.pg-hero-lede{font-family:var(--serif);font-style:italic;font-size:clamp(20px,1.9vw,28px);line-height:1.35;color:var(--ivory);max-width:42ch;margin:0}
+.pg-hero-meta{display:flex;flex-direction:column;gap:0}
+.pg-hero-meta div{display:flex;justify-content:space-between;align-items:center;padding:16px 0;border-bottom:1px solid var(--rule);gap:24px}
+.pg-hero-meta div:first-child{border-top:1px solid var(--rule)}
+.pg-hero-meta .ml{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--mute)}
+.pg-hero-meta .mv{font-family:var(--serif);font-style:italic;font-size:19px;color:var(--gold);letter-spacing:0;text-transform:none}
+
+/* ── INTRO ── */
+.hm-intro{padding:clamp(80px,10vw,160px) 0;border-bottom:1px solid var(--rule)}
+.hm-intro-inner{display:grid;grid-template-columns:1fr 1fr;gap:clamp(48px,7vw,120px);align-items:start}
+.hm-intro-left .eyebrow-row{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.hm-intro-left .eyebrow-row::before{content:"";width:32px;height:1px;background:var(--gold)}
+.hm-intro-left p{color:var(--ivory-soft);font-size:17px;line-height:1.65;margin:20px 0 0;max-width:44ch}
+.hm-intro-right{display:flex;flex-direction:column;gap:0;border-top:1px solid var(--rule)}
+.hm-stat{display:flex;justify-content:space-between;align-items:center;padding:22px 0;border-bottom:1px solid var(--rule);gap:24px}
+.hm-stat-lbl{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--mute);flex-shrink:0}
+.hm-stat-val{font-family:var(--serif);font-style:italic;font-size:clamp(16px,1.4vw,20px);color:var(--ivory);text-align:right}
+.hm-stat-val em{color:var(--gold)}
+
+/* ── LOAN TYPES ── */
+.loan-sec{padding:clamp(80px,10vw,160px) 0;background:var(--obsidian);border-top:1px solid var(--rule-hi);border-bottom:1px solid var(--rule-hi)}
+.loan-hd{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,80px);align-items:end;margin-bottom:clamp(56px,7vw,96px)}
+.loan-hd-left .tag-row{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.loan-hd-left .tag-row::before{content:"";width:32px;height:1px;background:var(--gold)}
+.loan-hd p{color:var(--ivory-soft);font-size:17px;max-width:44ch;margin:0}
+.loan-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--rule-hi);border-left:1px solid var(--rule-hi)}
+.loan-item{border-right:1px solid var(--rule-hi);border-bottom:1px solid var(--rule-hi);padding:clamp(28px,3vw,44px);display:flex;flex-direction:column;gap:18px;transition:background .4s ease;position:relative}
+.loan-item:hover{background:var(--coal)}
+.loan-item::after{content:"";position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .5s var(--ease)}
+.loan-item:hover::after{transform:scaleX(1)}
+.loan-icon{width:44px;height:44px;border:1px solid var(--rule-hi);display:grid;place-items:center;color:var(--gold);flex-shrink:0;transition:border-color .3s ease,background .3s ease}
+.loan-item:hover .loan-icon{border-color:var(--gold);background:rgba(212,169,74,.08)}
+.loan-icon svg{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.loan-item h3{font-family:var(--serif);font-weight:400;font-size:clamp(18px,1.6vw,22px);line-height:1.15;letter-spacing:-.01em;margin:0;color:var(--ivory)}
+.loan-item p{font-size:14px;color:var(--ivory-soft);line-height:1.6;margin:0}
+
+/* ── HOW IT WORKS ── */
+.how-sec{padding:clamp(80px,10vw,160px) 0;border-bottom:1px solid var(--rule)}
+.how-hd{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,80px);align-items:end;margin-bottom:clamp(56px,7vw,96px)}
+.how-hd-left .tag-row{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.how-hd-left .tag-row::before{content:"";width:32px;height:1px;background:var(--gold)}
+.how-hd p{color:var(--ivory-soft);font-size:17px;max-width:44ch;margin:0}
+.how-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--rule-hi);border-left:1px solid var(--rule-hi)}
+.how-step{border-right:1px solid var(--rule-hi);border-bottom:1px solid var(--rule-hi);padding:clamp(28px,3vw,44px);display:flex;flex-direction:column;gap:20px}
+.how-num{font-family:var(--serif);font-style:italic;font-size:clamp(48px,5vw,72px);color:var(--gold);line-height:1;opacity:.35}
+.how-step h3{font-family:var(--serif);font-weight:400;font-size:clamp(20px,1.8vw,26px);line-height:1.1;letter-spacing:-.01em;margin:0;color:var(--ivory)}
+.how-step p{font-size:14px;color:var(--ivory-soft);line-height:1.6;margin:0}
+
+/* ── PARTNER CALLOUT ── */
+.partner-sec{padding:clamp(56px,7vw,100px) 0;background:var(--coal);border-top:1px solid var(--rule-hi);border-bottom:1px solid var(--rule-hi)}
+.partner-inner{display:flex;align-items:center;justify-content:space-between;gap:clamp(32px,5vw,80px);flex-wrap:wrap}
+.partner-copy .eyebrow-row{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+.partner-copy .eyebrow-row::before{content:"";width:32px;height:1px;background:var(--gold)}
+.partner-copy h2{margin:0 0 16px}
+.partner-copy p{color:var(--ivory-soft);font-size:17px;max-width:52ch;margin:0}
+.partner-badge{border:1px solid var(--rule-hi);padding:clamp(24px,3vw,40px) clamp(28px,4vw,56px);display:flex;flex-direction:column;align-items:center;gap:10px;flex-shrink:0;min-width:220px}
+.partner-badge-name{font-family:var(--serif);font-style:italic;font-size:clamp(18px,1.8vw,24px);color:var(--gold);text-align:center}
+.partner-badge-sub{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--mute);text-align:center}
+
+/* ── CONTACT ── */
+.contact-sec{background:var(--black);border-top:1px solid var(--rule-hi)}
+.contact-inner{display:grid;grid-template-columns:1fr 1fr;gap:clamp(48px,6vw,96px)}
+.contact-info h2{margin:16px 0 28px}
+.contact-info .lede{font-size:17px;color:var(--ivory-soft);max-width:44ch;margin:0 0 20px}
+.clist{margin-top:40px;display:flex;flex-direction:column;border-top:1px solid var(--rule)}
+.cli{display:flex;justify-content:space-between;align-items:center;padding:20px 0;border-bottom:1px solid var(--rule);gap:24px}
+.cli-lbl{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--mute)}
+.cli-val{font-family:var(--serif);font-style:italic;font-size:19px;color:var(--gold)}
+a.cli-val{transition:color .3s ease}
+a.cli-val:hover{color:var(--gold-soft)}
+.dark-form{display:grid;gap:22px;align-content:start}
+.dark-form .row{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.dark-form .f label{font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--mute);display:block;margin-bottom:10px}
+.dark-form .f input,
+.dark-form .f select,
+.dark-form .f textarea{width:100%;background:transparent;border:0;border-bottom:1px solid var(--rule-hi);padding:12px 0;color:var(--ivory);font-family:var(--sans);font-size:16px;transition:border-color .3s ease;appearance:none;border-radius:0}
+.dark-form .f input:focus,
+.dark-form .f textarea:focus,
+.dark-form .f select:focus{outline:0;border-color:var(--gold)}
+.dark-form textarea{resize:vertical;min-height:110px}
+.dark-form button{justify-self:start}
+.f-status{font-size:14px;color:var(--gold-soft);display:none;margin-top:4px}
+
+/* ── BUTTONS ── */
+.btn{font-family:var(--sans);font-size:12px;letter-spacing:.18em;text-transform:uppercase;padding:17px 28px;border:1px solid var(--ivory);background:transparent;color:var(--ivory);display:inline-flex;align-items:center;justify-content:space-between;gap:24px;transition:all .4s var(--ease);border-radius:0;min-width:260px}
+.btn:hover{background:var(--ivory);color:var(--black)}
+.btn-gold{border-color:var(--gold);color:var(--gold)}
+.btn-gold:hover{background:var(--gold);color:var(--black)}
+.btn i{font-size:14px}
+
+/* ── FOOTER ── */
+footer{background:var(--black);padding:clamp(72px,8vw,120px) 0 40px;border-top:1px solid var(--rule)}
+.foot{display:grid;grid-template-columns:1.6fr repeat(3,1fr);gap:clamp(32px,4vw,72px);padding-bottom:56px;border-bottom:1px solid var(--rule)}
+.foot h4{font-family:var(--serif);font-style:italic;font-size:16px;color:var(--gold);margin:0 0 20px}
+.foot a{display:block;color:var(--ivory-soft);font-size:14px;padding:6px 0;transition:color .3s ease}
+.foot a:hover{color:var(--gold)}
+.foot-brand p{color:var(--ivory-soft);font-size:14px;margin:20px 0 24px;max-width:36ch;line-height:1.55}
+.socials{display:flex;gap:10px}
+.socials a{width:40px;height:40px;border:1px solid var(--rule-hi);display:grid;place-items:center;font-size:16px;padding:0;transition:border-color .3s ease,color .3s ease}
+.socials a:hover{border-color:var(--gold);color:var(--gold)}
+.foot-btm{display:flex;justify-content:space-between;align-items:center;padding-top:28px;flex-wrap:wrap;gap:16px;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--mute)}
+.foot-btm a{color:var(--mute);font-size:12px;letter-spacing:.1em;text-transform:uppercase;padding:0;transition:color .3s ease}
+.foot-btm a:hover{color:var(--gold-soft)}
+
+/* ── SECTIONS ── */
+.sec{padding:clamp(80px,10vw,160px) 0;position:relative}
+
+/* ── REVEAL ── */
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+
+/* ── RESPONSIVE ── */
+@media(max-width:1024px){
+  .nav-links,.nav-cta{display:none}
+  .menu-btn{display:flex}
+  .pg-hero-body,.contact-inner,.hm-intro-inner,.loan-hd,.how-hd{grid-template-columns:1fr}
+  .loan-grid,.how-steps{grid-template-columns:1fr 1fr}
+  .foot{grid-template-columns:1fr 1fr}
+  .dark-form .row{grid-template-columns:1fr}
+  .btn{min-width:auto;width:100%}
+  .partner-inner{flex-direction:column}
+}
+@media(max-width:640px){
+  .foot{grid-template-columns:1fr}
+  .loan-grid,.how-steps{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none !important;transition:none !important}
+  html{scroll-behavior:auto}
+  .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" aria-label="Primary navigation">
+  <div class="wrap nav-inner">
+    <a href="/" class="logo" aria-label="Lee Eliyahu — home">
+      <span class="logo-mark" aria-hidden="true">LE</span>
+      <span class="logo-word">Lee <em>Eliyahu</em></span>
+    </a>
+    <div class="nav-links" id="desktop-nav" role="list">
+      <a href="/" role="listitem">Home</a>
+      <a href="/about-us/" role="listitem">About</a>
+      <div class="nav-dd nav-dd-wide" role="listitem">
+        <button aria-haspopup="true" aria-expanded="false">Real Estate <i class="lucide lucide-chevron-down" style="font-size:12px" aria-hidden="true"></i></button>
+        <div class="nav-dd-panel" role="menu">
+          <div class="dd-col">
+            <span class="sub-lbl">Residential</span>
+            <a href="/active-listings/" role="menuitem">Active Listings</a>
+            <div class="dd-rule"></div>
+            <span class="sub-lbl">Commercial</span>
+            <a href="/commercial-active-listing/" role="menuitem">Active Listings</a>
+          </div>
+          <div class="dd-col">
+            <span class="sub-lbl">Services</span>
+            <a href="/property-management/" role="menuitem">Property Management</a>
+            <a href="/broker-opinion-value/" role="menuitem">Broker Opinion of Value</a>
+            <a href="/mortgages/" role="menuitem">Mortgages</a>
+          </div>
+        </div>
+      </div>
+      <div class="nav-dd" role="listitem">
+        <button class="active" aria-haspopup="true" aria-expanded="false">Financial <i class="lucide lucide-chevron-down" style="font-size:12px" aria-hidden="true"></i></button>
+        <div class="nav-dd-panel" role="menu">
+          <a href="/merchant-processing/" role="menuitem">Merchant Processing</a>
+          <a href="/business-funding/" role="menuitem">Business Funding</a>
+          <a href="/hard-money-for-real-estate/" role="menuitem" style="color:var(--gold)">Hard Money</a>
+        </div>
+      </div>
+      <div class="nav-dd" role="listitem">
+        <button aria-haspopup="true" aria-expanded="false">Affiliate <i class="lucide lucide-chevron-down" style="font-size:12px" aria-hidden="true"></i></button>
+        <div class="nav-dd-panel" role="menu">
+          <a href="/billboards/" role="menuitem">Billboards</a>
+          <a href="/5g-antennas/" role="menuitem">Antennas</a>
+          <a href="/electrical-storage/" role="menuitem">Electrical Storage</a>
+          <a href="/security-and-surveillance/" role="menuitem">Security &amp; Surveillance</a>
+        </div>
+      </div>
+      <a href="/contact/" role="listitem">Contact</a>
+    </div>
+    <a class="nav-cta" href="tel:+13478524446">+1 (347) 852-4446 <i class="lucide lucide-arrow-up-right" aria-hidden="true"></i></a>
+    <button class="menu-btn" id="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="mob-nav">
+      <i class="lucide lucide-menu" aria-hidden="true"></i>
+    </button>
+  </div>
+</nav>
+
+<!-- MOBILE NAV -->
+<nav class="mob-nav" id="mob-nav" aria-label="Mobile navigation" aria-hidden="true">
+  <button class="mob-close" id="mob-close" aria-label="Close menu"><i class="lucide lucide-x" aria-hidden="true"></i></button>
+  <a href="/">Home</a>
+  <a href="/about-us/">About</a>
+  <button class="mob-dd-toggle" aria-expanded="false" data-target="mob-re">Real Estate <i class="lucide lucide-chevron-down" aria-hidden="true"></i></button>
+  <div class="mob-sub" id="mob-re">
+    <a href="/active-listings/">Active Listings (Residential)</a>
+    <a href="/commercial-active-listing/">Active Listings (Commercial)</a>
+    <a href="/property-management/">Property Management</a>
+    <a href="/broker-opinion-value/">Broker Opinion of Value</a>
+    <a href="/mortgages/">Mortgages</a>
+  </div>
+  <button class="mob-dd-toggle" aria-expanded="false" data-target="mob-fin">Financial <i class="lucide lucide-chevron-down" aria-hidden="true"></i></button>
+  <div class="mob-sub" id="mob-fin">
+    <a href="/merchant-processing/">Merchant Processing</a>
+    <a href="/business-funding/">Business Funding</a>
+    <a href="/hard-money-for-real-estate/" style="color:var(--gold)">Hard Money</a>
+  </div>
+  <button class="mob-dd-toggle" aria-expanded="false" data-target="mob-aff">Affiliate <i class="lucide lucide-chevron-down" aria-hidden="true"></i></button>
+  <div class="mob-sub" id="mob-aff">
+    <a href="/billboards/">Billboards</a>
+    <a href="/5g-antennas/">Antennas</a>
+    <a href="/electrical-storage/">Electrical Storage</a>
+    <a href="/security-and-surveillance/">Security &amp; Surveillance</a>
+  </div>
+  <a href="/contact/">Contact</a>
+  <a href="tel:+13478524446" class="mob-cta-link">+1 (347) 852-4446</a>
+</nav>
+
+<!-- PAGE HERO -->
+<header class="pg-hero" aria-label="Hard money lending hero">
+  <div class="wrap">
+    <div class="pg-hero-index reveal">
+      <span>Financial</span>
+      <span class="dot" aria-hidden="true"></span>
+      <span>Hard Money</span>
+      <span class="spacer"></span>
+      <span>Private Lending</span>
+    </div>
+    <h1 class="display reveal">Hard money<br><em>lending.</em></h1>
+    <div class="pg-hero-body reveal">
+      <p class="pg-hero-lede">Private capital for real estate investors who need to move fast — when traditional banks won't, or simply can't move quick enough.</p>
+      <div class="pg-hero-meta">
+        <div><span class="ml">Closing Time</span><span class="mv">As Fast as 5 Days</span></div>
+        <div><span class="ml">Rate Commitment</span><span class="mv">Same Day</span></div>
+        <div><span class="ml">Partner</span><span class="mv">Flatiron Realty Capital</span></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- INTRO -->
+<section class="hm-intro" aria-labelledby="hm-intro-hd">
+  <div class="wrap">
+    <div class="hm-intro-inner">
+      <div class="hm-intro-left reveal">
+        <div class="eyebrow-row"><span class="eyebrow">Private Lending</span></div>
+        <h2 id="hm-intro-hd" class="h2">Speed is the<br><em>whole point.</em></h2>
+        <p>When a deal requires fast action, conventional financing is often the wrong tool. Hard money lenders underwrite based on the asset — not your tax returns — which means decisions happen in hours, not weeks.</p>
+        <p style="color:var(--ivory-soft);font-size:17px;line-height:1.65;margin:16px 0 0;max-width:44ch">Lee works with Flatiron Realty Capital, one of the fastest-closing private lenders for real estate investors in the country. Direct lending, competitive rates, and an in-house account manager from application to close.</p>
+      </div>
+      <div class="hm-intro-right reveal">
+        <div class="hm-stat">
+          <span class="hm-stat-lbl">Closing time</span>
+          <span class="hm-stat-val"><em>As fast as 5 days*</em></span>
+        </div>
+        <div class="hm-stat">
+          <span class="hm-stat-lbl">Rate commitment</span>
+          <span class="hm-stat-val"><em>Same day</em></span>
+        </div>
+        <div class="hm-stat">
+          <span class="hm-stat-lbl">Loan terms</span>
+          <span class="hm-stat-val">Short-term &amp; long-term</span>
+        </div>
+        <div class="hm-stat">
+          <span class="hm-stat-lbl">Underwriting basis</span>
+          <span class="hm-stat-val">Asset-based</span>
+        </div>
+        <div class="hm-stat">
+          <span class="hm-stat-lbl">Support</span>
+          <span class="hm-stat-val">Dedicated account manager</span>
+        </div>
+        <div class="hm-stat">
+          <span class="hm-stat-lbl">Lender type</span>
+          <span class="hm-stat-val"><em>Direct private lender</em></span>
+        </div>
+      </div>
+    </div>
+    <p style="margin:clamp(40px,5vw,72px) 0 0;font-size:12px;color:var(--mute);letter-spacing:.04em">* Typical closing within 5 days, subject to property and borrower qualification. Terms vary by loan type.</p>
+  </div>
+</section>
+
+<!-- LOAN TYPES -->
+<section class="loan-sec" aria-labelledby="loan-hd">
+  <div class="wrap">
+    <div class="loan-hd reveal">
+      <div class="loan-hd-left">
+        <div class="tag-row"><span class="eyebrow">Loan Programs</span></div>
+        <h2 id="loan-hd" class="h2">Six programs<br><em>for investors.</em></h2>
+      </div>
+      <p>From a quick residential flip to a ground-up development, there's a private lending structure built for the deal — not a generic product forced to fit it.</p>
+    </div>
+
+    <div class="loan-grid">
+
+      <div class="loan-item reveal">
+        <div class="loan-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+            <polyline points="9 22 9 12 15 12 15 22"/>
+          </svg>
+        </div>
+        <h3>Fix &amp; Flip</h3>
+        <p>Short-term bridge loans designed for residential investors buying, renovating, and reselling. Fast close, interest-only payments during the hold, and terms structured around your project timeline.</p>
+      </div>
+
+      <div class="loan-item reveal">
+        <div class="loan-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+            <circle cx="12" cy="10" r="3"/>
+          </svg>
+        </div>
+        <h3>Land Acquisition</h3>
+        <p>Financing for raw land, infill lots, and development sites where conventional lenders typically won't go. Asset-based underwriting means the deal can move even on unimproved parcels.</p>
+      </div>
+
+      <div class="loan-item reveal">
+        <div class="loan-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <line x1="2" y1="20" x2="22" y2="20"/>
+            <path d="M17 20V8l-5-6-5 6v12"/>
+            <line x1="9" y1="20" x2="9" y2="14"/>
+            <line x1="15" y1="20" x2="15" y2="14"/>
+            <rect x="9" y="14" width="6" height="6"/>
+          </svg>
+        </div>
+        <h3>Ground-Up Construction</h3>
+        <p>New build financing for developers and builders. Draw schedules aligned with construction milestones, with terms flexible enough to accommodate extended project timelines.</p>
+      </div>
+
+      <div class="loan-item reveal">
+        <div class="loan-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <polyline points="17 1 21 5 17 9"/>
+            <path d="M3 11V9a4 4 0 0 1 4-4h14"/>
+            <polyline points="7 23 3 19 7 15"/>
+            <path d="M21 13v2a4 4 0 0 1-4 4H3"/>
+          </svg>
+        </div>
+        <h3>Bridge Loans</h3>
+        <p>Short-term capital to bridge a gap — between purchase and refinance, between sell and buy, or while a project stabilizes ahead of permanent financing. Structured for speed and flexibility.</p>
+      </div>
+
+      <div class="loan-item reveal">
+        <div class="loan-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <line x1="12" y1="1" x2="12" y2="23"/>
+            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+          </svg>
+        </div>
+        <h3>Cash-Out Refinance</h3>
+        <p>Pull equity from an existing investment property quickly — without waiting months for a bank appraisal cycle. Ideal for investors recycling capital into the next acquisition.</p>
+      </div>
+
+      <div class="loan-item reveal">
+        <div class="loan-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <rect x="2" y="7" width="20" height="14" rx="2"/>
+            <path d="M16 7V5a2 2 0 0 0-4 0v2"/>
+            <path d="M8 7V5a2 2 0 0 0-4 0"/>
+            <line x1="12" y1="12" x2="12" y2="16"/>
+            <line x1="10" y1="14" x2="14" y2="14"/>
+          </svg>
+        </div>
+        <h3>Multi-Family &amp; Investment</h3>
+        <p>Private lending for 2–4 unit and 5+ unit investment properties — acquisitions, value-add repositioning, and portfolio expansion where the deal economics justify speed over rate.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how-sec" aria-labelledby="how-hd">
+  <div class="wrap">
+    <div class="how-hd reveal">
+      <div class="how-hd-left">
+        <div class="tag-row"><span class="eyebrow">Process</span></div>
+        <h2 id="how-hd" class="h2">From inquiry<br><em>to closed.</em></h2>
+      </div>
+      <p>The process is designed around the pace of real estate investing — decisions in hours, commitments the same day, closings in days rather than weeks.</p>
+    </div>
+
+    <div class="how-steps">
+
+      <div class="how-step reveal">
+        <div class="how-num" aria-hidden="true">01</div>
+        <h3>Request a Rate</h3>
+        <p>Submit your deal details below or call Lee directly. As a direct lending partner, Flatiron Realty Capital underwrites in-house — no broker chains, no third-party delays slowing down the initial assessment.</p>
+      </div>
+
+      <div class="how-step reveal">
+        <div class="how-num" aria-hidden="true">02</div>
+        <h3>Same-Day Commitment</h3>
+        <p>Receive a rate commitment the same day you apply. Terms are clear upfront — loan amount, LTV, rate, and timeline — so you can make decisions with confidence before you're under contract.</p>
+      </div>
+
+      <div class="how-step reveal">
+        <div class="how-num" aria-hidden="true">03</div>
+        <h3>Close in as Few as 5 Days</h3>
+        <p>Your dedicated in-house account manager handles everything from commitment to closing table. Typical closing in 5 days — fast enough to compete with all-cash buyers when it matters.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PARTNER CALLOUT -->
+<div class="partner-sec" aria-label="Flatiron Realty Capital partnership">
+  <div class="wrap">
+    <div class="partner-inner reveal">
+      <div class="partner-copy">
+        <div class="eyebrow-row"><span class="eyebrow">Lending Partner</span></div>
+        <h2 class="h2" style="font-size:clamp(28px,3.5vw,52px)">Flatiron<br><em>Realty Capital.</em></h2>
+        <p>A private lending company offering developers, investors, and brokers direct funding for real estate investments nationwide. Competitive rates, in-house underwriting, and personalized service — from the first call through the closing wire.</p>
+      </div>
+      <div class="partner-badge">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <span class="partner-badge-name">Flatiron Realty Capital</span>
+        <span class="partner-badge-sub">Direct Private Lender</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<section id="contact" class="contact-sec sec" aria-labelledby="contact-hd">
+  <div class="wrap">
+    <div class="contact-inner">
+      <div class="contact-info reveal">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:0">
+          <span style="width:32px;height:1px;background:var(--gold);display:block" aria-hidden="true"></span>
+          <span class="eyebrow">Get a Rate</span>
+        </div>
+        <h2 id="contact-hd" class="h2">Tell us about<br><em>your deal.</em></h2>
+        <p class="lede">Share the basics and Lee will connect you with Flatiron Realty Capital for a same-day rate commitment. No cost, no obligation.</p>
+        <div class="clist">
+          <div class="cli">
+            <span class="cli-lbl">Mobile</span>
+            <a href="tel:+15162256733" class="cli-val">+1 (516) 225-6733</a>
+          </div>
+          <div class="cli">
+            <span class="cli-lbl">Office</span>
+            <a href="tel:+13478524446" class="cli-val">+1 (347) 852-4446</a>
+          </div>
+          <div class="cli">
+            <span class="cli-lbl">Email</span>
+            <a href="mailto:leliyahu@bridgenyre.com" class="cli-val">leliyahu@bridgenyre.com</a>
+          </div>
+          <div class="cli">
+            <span class="cli-lbl">Rate commitment</span>
+            <span class="cli-val">Same day</span>
+          </div>
+        </div>
+      </div>
+      <form class="dark-form reveal" id="contact-form" novalidate>
+        <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_KEY_HERE">
+        <input type="hidden" name="subject" value="Hard money inquiry — leeeliyahu.com">
+        <input type="hidden" name="redirect" value="false">
+        <div class="row">
+          <div class="f"><label for="cf-name">Your Name</label><input id="cf-name" name="name" type="text" autocomplete="name" required></div>
+          <div class="f"><label for="cf-email">Email</label><input id="cf-email" name="email" type="email" autocomplete="email" required></div>
+        </div>
+        <div class="row">
+          <div class="f"><label for="cf-phone">Phone</label><input id="cf-phone" name="phone" type="tel" autocomplete="tel"></div>
+          <div class="f">
+            <label for="cf-loan-type">Loan Type</label>
+            <select id="cf-loan-type" name="loan_type">
+              <option value="">— Select —</option>
+              <option>Fix &amp; Flip</option>
+              <option>Land Acquisition</option>
+              <option>Ground-Up Construction</option>
+              <option>Bridge Loan</option>
+              <option>Cash-Out Refinance</option>
+              <option>Multi-Family / Investment</option>
+              <option>Not sure — help me choose</option>
+            </select>
+          </div>
+        </div>
+        <div class="f"><label for="cf-address">Property Address</label><input id="cf-address" name="property_address" type="text" placeholder="Street address, city, state"></div>
+        <div class="row">
+          <div class="f">
+            <label for="cf-amount">Loan Amount Needed</label>
+            <select id="cf-amount" name="loan_amount">
+              <option value="">— Select —</option>
+              <option>Under $250,000</option>
+              <option>$250,000 – $500,000</option>
+              <option>$500,000 – $1M</option>
+              <option>$1M – $3M</option>
+              <option>$3M+</option>
+            </select>
+          </div>
+          <div class="f">
+            <label for="cf-timeline">Closing Timeline</label>
+            <select id="cf-timeline" name="timeline">
+              <option value="">— Select —</option>
+              <option>ASAP — under contract now</option>
+              <option>Within 2 weeks</option>
+              <option>Within 30 days</option>
+              <option>30–60 days</option>
+              <option>Planning ahead</option>
+            </select>
+          </div>
+        </div>
+        <div class="f"><label for="cf-msg">Deal overview</label><textarea id="cf-msg" name="message" rows="3" placeholder="Property type, condition, purchase price, exit strategy, ARV if applicable"></textarea></div>
+        <button type="submit" class="btn btn-gold" id="form-btn">Request a Rate <i class="lucide lucide-arrow-right" aria-hidden="true"></i></button>
+        <p class="f-status" id="f-status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div class="foot-brand">
+        <a href="/" class="logo" aria-label="Lee Eliyahu home">
+          <span class="logo-mark" aria-hidden="true">LE</span>
+          <span class="logo-word">Lee <em>Eliyahu</em></span>
+        </a>
+        <p>Residential, commercial, and investment real estate across the five boroughs since 2014.</p>
+        <div class="socials">
+          <a href="#" aria-label="LinkedIn">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="#" aria-label="Facebook">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="#" aria-label="Instagram">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+          </a>
+        </div>
+      </div>
+      <div>
+        <h4>Real Estate</h4>
+        <a href="/active-listings/">Residential Listings</a>
+        <a href="/commercial-active-listing/">Commercial Listings</a>
+        <a href="/property-management/">Property Management</a>
+        <a href="/broker-opinion-value/">Broker Opinion of Value</a>
+        <a href="/mortgages/">Mortgages</a>
+      </div>
+      <div>
+        <h4>Financial &amp; Affiliate</h4>
+        <a href="/merchant-processing/">Merchant Processing</a>
+        <a href="/business-funding/">Business Funding</a>
+        <a href="/hard-money-for-real-estate/">Hard Money</a>
+        <a href="/billboards/">Billboards</a>
+        <a href="/5g-antennas/">Antennas</a>
+        <a href="/electrical-storage/">Electrical Storage</a>
+      </div>
+      <div>
+        <h4>Office</h4>
+        <a href="tel:+15162256733">+1 (516) 225-6733</a>
+        <a href="tel:+13478524446">+1 (347) 852-4446</a>
+        <a href="mailto:leliyahu@bridgenyre.com">leliyahu@bridgenyre.com</a>
+        <a href="/about-us/">About Lee</a>
+        <a href="/contact/">Get in Touch</a>
+      </div>
+    </div>
+    <div class="foot-btm">
+      <span>© 2026 Lee Eliyahu · Licensed Real Estate Broker · New York State</span>
+      <span>
+        <a href="/privacy-policy/">Privacy</a>&ensp;·&ensp;<a href="/terms-of-use/">Terms</a>&ensp;·&ensp;Fair Housing
+      </span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  /* scroll reveals */
+  const io=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})
+  },{threshold:.1});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+  /* mobile nav */
+  const menuBtn=document.getElementById('menu-btn');
+  const mobNav=document.getElementById('mob-nav');
+  const mobClose=document.getElementById('mob-close');
+  function openNav(){mobNav.classList.add('open');mobNav.setAttribute('aria-hidden','false');menuBtn.setAttribute('aria-expanded','true');document.body.style.overflow='hidden'}
+  function closeNav(){mobNav.classList.remove('open');mobNav.setAttribute('aria-hidden','true');menuBtn.setAttribute('aria-expanded','false');document.body.style.overflow=''}
+  menuBtn.addEventListener('click',openNav);
+  mobClose.addEventListener('click',closeNav);
+  document.addEventListener('keydown',e=>{if(e.key==='Escape')closeNav()});
+
+  /* mobile accordion */
+  document.querySelectorAll('.mob-dd-toggle').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      const target=document.getElementById(btn.dataset.target);
+      const isOpen=target.classList.contains('open');
+      document.querySelectorAll('.mob-sub').forEach(s=>s.classList.remove('open'));
+      document.querySelectorAll('.mob-dd-toggle').forEach(b=>b.setAttribute('aria-expanded','false'));
+      if(!isOpen){target.classList.add('open');btn.setAttribute('aria-expanded','true')}
+    });
+  });
+
+  /* contact form */
+  const form=document.getElementById('contact-form');
+  const btn=document.getElementById('form-btn');
+  const fStatus=document.getElementById('f-status');
+  if(form){
+    form.addEventListener('submit',async e=>{
+      e.preventDefault();
+      btn.disabled=true;btn.textContent='Sending…';
+      fStatus.style.display='none';
+      try{
+        const res=await fetch('https://api.web3forms.com/submit',{method:'POST',body:new FormData(form)});
+        const data=await res.json();
+        if(data.success){
+          fStatus.textContent='Got it — Lee will be in touch with a same-day rate commitment.';
+          fStatus.style.display='block';
+          form.reset();
+        } else {
+          throw new Error();
+        }
+      } catch {
+        fStatus.textContent='Something went wrong. Email leliyahu@bridgenyre.com directly.';
+        fStatus.style.display='block';
+      }
+      btn.disabled=false;btn.innerHTML='Request a Rate <i class="lucide lucide-arrow-right" aria-hidden="true"></i>';
+    });
+  }
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+HTTP/2 200 
+x-powered-by: PHP/8.2.30
+content-type: text/html; charset=UTF-8
+link: <https://leeeliyahu.com/wp-json/>; rel="https://api.w.org/"
+link: <https://leeeliyahu.com/wp-json/wp/v2/pages/1754>; rel="alternate"; title="JSON"; type="application/json"
+link: <https://leeeliyahu.com/>; rel=shortlink
+etag: "567-1776712650;;;"
+x-litespeed-cache: hit
+date: Tue, 21 Apr 2026 04:43:56 GMT
+server: LiteSpeed
+platform: hostinger
+panel: hpanel
+content-security-policy: upgrade-insecure-requests
+alt-svc: h3=":443"; ma=2592000, h3-29=":443"; ma=2592000, h3-Q050=":443"; ma=2592000, h3-Q046=":443"; ma=2592000, h3-Q043=":443"; ma=2592000, quic=":443"; ma=2592000; v="43,46"
+

@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Electrical Storage | Lee Eliyahu · New York</title>
+<meta name="description" content="Battery energy storage and EV charging for the New York City metro area. Find out if your property qualifies for clean energy infrastructure and earn recurring income."/>
+<link rel="icon" href="https://leeeliyahu.com/wp-content/uploads/2026/02/cropped-Logo-Lee-3-32x32.png" sizes="32x32"/>
+<link rel="apple-touch-icon" href="https://leeeliyahu.com/wp-content/uploads/2026/02/cropped-Logo-Lee-3-180x180.png"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@1&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lucide-static@0.460.0/font/lucide.css"/>
+<style>
+:root{--black:#0B0A08;--obsidian:#131210;--coal:#1C1A17;--ivory:#EFEADB;--ivory-soft:#C9C3B4;--mute:#8A8479;--rule:rgba(239,234,219,.09);--rule-hi:rgba(239,234,219,.18);--gold:#D4A94A;--gold-soft:#E6C572;--serif:'Instrument Serif','Iowan Old Style',Georgia,serif;--sans:'Plus Jakarta Sans',system-ui,sans-serif;--cmax:1400px;--pad:clamp(20px,4vw,56px);--ease:cubic-bezier(.2,.8,.2,1)}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+body{margin:0;background:var(--black);color:var(--ivory);font-family:var(--sans);font-size:16px;line-height:1.55;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:9999;opacity:.06;mix-blend-mode:overlay;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.9 0 0 0 0 0.88 0 0 0 0 0.78 0 0 0 1 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer}
+.wrap{max-width:var(--cmax);margin:0 auto;padding:0 var(--pad);position:relative;z-index:2}
+.display{font-family:var(--serif);font-weight:400;font-size:clamp(52px,8vw,130px);line-height:.95;letter-spacing:-.02em;margin:0}
+.display em{font-style:italic;color:var(--gold)}
+.h2{font-family:var(--serif);font-weight:400;font-size:clamp(32px,4vw,64px);line-height:1.05;letter-spacing:-.015em;margin:0 0 24px}
+.h2 em{font-style:italic;color:var(--gold)}
+.eyebrow{font-size:11px;font-weight:500;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-soft)}
+.logo{display:flex;align-items:center;gap:12px;flex-shrink:0}
+.logo-mark{width:38px;height:38px;border-radius:50%;border:1px solid var(--gold);display:grid;place-items:center;font-family:var(--serif);font-size:14px;color:var(--gold);font-style:italic;position:relative;flex-shrink:0}
+.logo-mark::after{content:"";position:absolute;inset:4px;border-radius:50%;border:1px solid rgba(212,169,74,.3)}
+.logo-word{font-family:var(--serif);font-size:20px;letter-spacing:.005em;white-space:nowrap}
+.logo-word em{font-style:italic;color:var(--gold)}
+.nav{position:sticky;top:0;z-index:200;backdrop-filter:blur(18px) saturate(160%);background:color-mix(in oklab,var(--black) 78%,transparent);border-bottom:1px solid var(--rule)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:78px;gap:16px}
+.nav-links{display:flex;align-items:stretch;flex:1;justify-content:center}
+.nav-links > a,.nav-dd > button{font-size:13px;color:var(--ivory-soft);letter-spacing:.03em;padding:0 15px;height:78px;display:inline-flex;align-items:center;gap:5px;background:transparent;border:0;transition:color .3s var(--ease);white-space:nowrap}
+.nav-links > a:hover,.nav-dd:hover > button,.nav-links > a.active,.nav-dd > button.active{color:var(--gold)}
+.nav-dd{position:relative;display:flex;align-items:center}
+.nav-dd-panel{position:absolute;top:100%;left:0;min-width:220px;background:var(--obsidian);border:1px solid var(--rule-hi);border-top:2px solid var(--gold);padding:8px 0;opacity:0;pointer-events:none;transform:translateY(-6px);transition:opacity .25s var(--ease),transform .25s var(--ease);z-index:100}
+.nav-dd:hover .nav-dd-panel,.nav-dd:focus-within .nav-dd-panel{opacity:1;pointer-events:auto;transform:none}
+.nav-dd-panel a{display:block;padding:11px 20px;font-size:13px;color:var(--ivory-soft);border-left:2px solid transparent;transition:color .2s ease,background .2s ease,border-color .2s ease}
+.nav-dd-panel a:hover{color:var(--gold);background:var(--coal);border-left-color:var(--gold)}
+.nav-dd-panel .sub-lbl{font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--mute);padding:14px 20px 6px;display:block}
+.nav-dd-panel .dd-rule{height:1px;background:var(--rule);margin:6px 0}
+.nav-dd-wide .nav-dd-panel{min-width:460px;display:grid;grid-template-columns:1fr 1fr}
+.nav-dd-wide .dd-col:first-child{border-right:1px solid var(--rule)}
+.dd-col{display:flex;flex-direction:column}
+.nav-cta{font-size:12px;letter-spacing:.14em;text-transform:uppercase;padding:12px 20px;background:var(--gold);color:var(--black);border:1px solid var(--gold);transition:all .4s var(--ease);display:inline-flex;align-items:center;gap:8px;white-space:nowrap;flex-shrink:0}
+.nav-cta:hover{background:transparent;color:var(--gold)}
+.menu-btn{display:none;background:transparent;border:0;color:var(--ivory);font-size:22px;padding:8px;flex-shrink:0}
+.mob-nav{display:none;position:fixed;inset:0;background:var(--obsidian);z-index:300;overflow-y:auto;padding:100px var(--pad) 60px}
+.mob-nav.open{display:block}
+.mob-nav > a,.mob-dd-toggle{display:flex;justify-content:space-between;align-items:center;font-size:17px;color:var(--ivory-soft);padding:16px 0;border-bottom:1px solid var(--rule);background:transparent;border-left:0;border-right:0;border-top:0;text-align:left;width:100%;letter-spacing:.02em;transition:color .2s ease}
+.mob-nav > a:hover,.mob-dd-toggle:hover{color:var(--gold)}
+.mob-sub{display:none;padding-left:20px}
+.mob-sub.open{display:block}
+.mob-sub a{display:block;font-size:14px;color:var(--ivory-soft);padding:12px 0;border-bottom:1px solid var(--rule);transition:color .2s ease}
+.mob-sub a:hover{color:var(--gold)}
+.mob-cta-link{display:inline-flex;margin-top:32px;padding:16px 28px;background:var(--gold);color:var(--black);font-size:13px;letter-spacing:.14em;text-transform:uppercase;border-bottom:none !important;width:auto !important}
+.mob-close{position:fixed;top:18px;right:var(--pad);background:transparent;border:1px solid var(--rule-hi);color:var(--ivory);width:44px;height:44px;display:flex;align-items:center;justify-content:center;font-size:20px;cursor:pointer;z-index:301}
+.pg-hero{position:relative;padding:clamp(64px,9vw,120px) 0 clamp(48px,7vw,88px);overflow:hidden;background-image:url('/assets/images/nyc-skyline-2.png');background-size:cover;background-position:center 50%}
+.pg-hero::before{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,rgba(11,10,8,.78) 0%,rgba(11,10,8,.60) 40%,rgba(11,10,8,.92) 100%);pointer-events:none}
+.pg-hero-eyebrow{display:flex;align-items:center;gap:14px;margin-bottom:clamp(32px,5vw,60px)}
+.pg-hero-eyebrow span{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--mute)}
+.pg-hero-eyebrow .dot{width:5px;height:5px;border-radius:50%;background:var(--gold);flex-shrink:0}
+.aff-content{padding:clamp(72px,9vw,140px) 0;border-bottom:1px solid var(--rule)}
+.aff-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(48px,7vw,100px);align-items:center}
+.aff-images img{width:100%;object-fit:cover;aspect-ratio:4/3;border:1px solid var(--rule-hi)}
+.aff-copy .eyebrow-row{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+.aff-copy .eyebrow-row::before{content:"";width:32px;height:1px;background:var(--gold)}
+.aff-copy p{color:var(--ivory-soft);font-size:17px;line-height:1.65;margin:0 0 32px;max-width:44ch}
+.aff-bullets{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:16px;border-top:1px solid var(--rule);padding-top:32px}
+.aff-bullets li{display:flex;align-items:flex-start;gap:14px;font-size:15px;color:var(--ivory-soft);line-height:1.5}
+.aff-bullets li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--gold);margin-top:7px;flex-shrink:0}
+.contact-sec{background:var(--obsidian);border-top:1px solid var(--rule-hi);padding:clamp(72px,9vw,140px) 0}
+.contact-inner{display:grid;grid-template-columns:1fr 1fr;gap:clamp(48px,6vw,96px);align-items:start}
+.contact-info .eyebrow-row{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+.contact-info .eyebrow-row::before{content:"";width:32px;height:1px;background:var(--gold)}
+.contact-info p{color:var(--ivory-soft);font-size:17px;max-width:40ch;margin:16px 0 0}
+.dark-form{display:grid;gap:20px}
+.dark-form .row{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.dark-form .f label{font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--mute);display:block;margin-bottom:10px}
+.dark-form .f input,.dark-form .f textarea{width:100%;background:transparent;border:0;border-bottom:1px solid var(--rule-hi);padding:12px 0;color:var(--ivory);font-family:var(--sans);font-size:16px;transition:border-color .3s ease}
+.dark-form .f input:focus,.dark-form .f textarea:focus{outline:0;border-color:var(--gold)}
+.dark-form textarea{resize:vertical;min-height:100px}
+.dark-form button{justify-self:start}
+.f-status{font-size:14px;color:var(--gold-soft);display:none;margin-top:4px}
+.btn-gold{font-family:var(--sans);font-size:12px;letter-spacing:.18em;text-transform:uppercase;padding:17px 28px;border:1px solid var(--gold);background:transparent;color:var(--gold);display:inline-flex;align-items:center;gap:16px;transition:all .4s var(--ease);cursor:pointer}
+.btn-gold:hover{background:var(--gold);color:var(--black)}
+footer{background:var(--black);padding:clamp(72px,8vw,120px) 0 40px;border-top:1px solid var(--rule)}
+.foot{display:grid;grid-template-columns:1.6fr repeat(3,1fr);gap:clamp(32px,4vw,72px);padding-bottom:56px;border-bottom:1px solid var(--rule)}
+.foot h4{font-family:var(--serif);font-style:italic;font-size:16px;color:var(--gold);margin:0 0 20px}
+.foot a{display:block;color:var(--ivory-soft);font-size:14px;padding:6px 0;transition:color .3s ease}
+.foot a:hover{color:var(--gold)}
+.foot-brand p{color:var(--ivory-soft);font-size:14px;margin:20px 0 24px;max-width:36ch;line-height:1.55}
+.socials{display:flex;gap:10px}
+.socials a{width:40px;height:40px;border:1px solid var(--rule-hi);display:grid;place-items:center;font-size:16px;padding:0;transition:border-color .3s ease,color .3s ease}
+.socials a:hover{border-color:var(--gold);color:var(--gold)}
+.foot-btm{display:flex;justify-content:space-between;align-items:center;padding-top:28px;flex-wrap:wrap;gap:16px;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--mute)}
+.foot-btm a{color:var(--mute);font-size:12px;padding:0;transition:color .3s ease}
+.foot-btm a:hover{color:var(--gold-soft)}
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+@media(max-width:1024px){.nav-links,.nav-cta{display:none}.menu-btn{display:flex}.aff-grid,.contact-inner,.foot{grid-template-columns:1fr}.dark-form .row{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none !important;transition:none !important}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<nav class="nav" aria-label="Primary navigation">
+  <div class="wrap nav-inner">
+    <a href="/" class="logo" aria-label="Lee Eliyahu — home">
+      <span class="logo-mark" aria-hidden="true">LE</span>
+      <span class="logo-word">Lee <em>Eliyahu</em></span>
+    </a>
+    <div class="nav-links" id="desktop-nav" role="list">
+      <a href="/" role="listitem">Home</a>
+      <a href="/about-us/" role="listitem">About</a>
+      <div class="nav-dd nav-dd-wide" role="listitem">
+        <button aria-haspopup="true" aria-expanded="false">Real Estate <i class="lucide lucide-chevron-down" style="font-size:12px" aria-hidden="true"></i></button>
+        <div class="nav-dd-panel" role="menu">
+          <div class="dd-col">
+            <span class="sub-lbl">Residential</span>
+            <a href="/active-listings/" role="menuitem">Active Listings</a>
+            <div class="dd-rule"></div>
+            <span class="sub-lbl">Commercial</span>
+            <a href="/commercial-active-listing/" role="menuitem">Active Listings</a>
+          </div>
+          <div class="dd-col">
+            <span class="sub-lbl">Services</span>
+            <a href="/property-management/" role="menuitem">Property Management</a>
+            <a href="/broker-opinion-value/" role="menuitem">Broker Opinion of Value</a>
+            <a href="/mortgages/" role="menuitem">Mortgages</a>
+          </div>
+        </div>
+      </div>
+      <div class="nav-dd" role="listitem">
+        <button aria-haspopup="true" aria-expanded="false">Financial <i class="lucide lucide-chevron-down" style="font-size:12px" aria-hidden="true"></i></button>
+        <div class="nav-dd-panel" role="menu">
+          <a href="/merchant-processing/" role="menuitem">Merchant Processing</a>
+          <a href="/business-funding/" role="menuitem">Business Funding</a>
+          <a href="/hard-money-for-real-estate/" role="menuitem">Hard Money</a>
+        </div>
+      </div>
+      <div class="nav-dd" role="listitem">
+        <button class="active" aria-haspopup="true" aria-expanded="false">Affiliate <i class="lucide lucide-chevron-down" style="font-size:12px" aria-hidden="true"></i></button>
+        <div class="nav-dd-panel" role="menu">
+          <a href="/billboards/" role="menuitem">Billboards</a>
+          <a href="/5g-antennas/" role="menuitem">Antennas</a>
+          <a href="/electrical-storage/" role="menuitem" style="color:var(--gold)">Electrical Storage</a>
+          <a href="/security-and-surveillance/" role="menuitem">Security &amp; Surveillance</a>
+        </div>
+      </div>
+      <a href="/contact/" role="listitem">Contact</a>
+    </div>
+    <a class="nav-cta" href="tel:+13478524446">+1 (347) 852-4446 <i class="lucide lucide-arrow-up-right" aria-hidden="true"></i></a>
+    <button class="menu-btn" id="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="mob-nav">
+      <i class="lucide lucide-menu" aria-hidden="true"></i>
+    </button>
+  </div>
+</nav>
+
+<nav class="mob-nav" id="mob-nav" aria-label="Mobile navigation" aria-hidden="true">
+  <button class="mob-close" id="mob-close" aria-label="Close menu"><i class="lucide lucide-x" aria-hidden="true"></i></button>
+  <a href="/">Home</a>
+  <a href="/about-us/">About</a>
+  <button class="mob-dd-toggle" aria-expanded="false" data-target="mob-re">Real Estate <i class="lucide lucide-chevron-down" aria-hidden="true"></i></button>
+  <div class="mob-sub" id="mob-re">
+    <a href="/active-listings/">Active Listings (Residential)</a>
+    <a href="/commercial-active-listing/">Active Listings (Commercial)</a>
+    <a href="/property-management/">Property Management</a>
+    <a href="/broker-opinion-value/">Broker Opinion of Value</a>
+    <a href="/mortgages/">Mortgages</a>
+  </div>
+  <button class="mob-dd-toggle" aria-expanded="false" data-target="mob-fin">Financial <i class="lucide lucide-chevron-down" aria-hidden="true"></i></button>
+  <div class="mob-sub" id="mob-fin">
+    <a href="/merchant-processing/">Merchant Processing</a>
+    <a href="/business-funding/">Business Funding</a>
+    <a href="/hard-money-for-real-estate/">Hard Money</a>
+  </div>
+  <button class="mob-dd-toggle" aria-expanded="false" data-target="mob-aff">Affiliate <i class="lucide lucide-chevron-down" aria-hidden="true"></i></button>
+  <div class="mob-sub" id="mob-aff">
+    <a href="/billboards/">Billboards</a>
+    <a href="/5g-antennas/">Antennas</a>
+    <a href="/electrical-storage/" style="color:var(--gold)">Electrical Storage</a>
+    <a href="/security-and-surveillance/">Security &amp; Surveillance</a>
+  </div>
+  <a href="/contact/">Contact</a>
+  <a href="tel:+13478524446" class="mob-cta-link">+1 (347) 852-4446</a>
+</nav>
+
+<header class="pg-hero" aria-label="Electrical storage hero">
+  <div class="wrap">
+    <div class="pg-hero-eyebrow reveal">
+      <span>Affiliate</span>
+      <span class="dot" aria-hidden="true"></span>
+      <span>Clean Energy</span>
+    </div>
+    <h1 class="display reveal">Electrical<br><em>storage.</em></h1>
+    <p class="reveal" style="font-family:var(--serif);font-style:italic;font-size:clamp(18px,1.8vw,26px);color:var(--ivory-soft);margin:clamp(20px,3vw,36px) 0 0;max-width:48ch;line-height:1.4">Leading the way to urban clean energy — battery storage systems and EV charging for properties across the New York City metro area.</p>
+  </div>
+</header>
+
+<section class="aff-content" aria-labelledby="aff-hd">
+  <div class="wrap">
+    <div class="aff-grid">
+      <div class="aff-images two-col reveal">
+        <img src="/assets/images/5J7A0850-scaled_653x435_acf_cropped.jpg" alt="Battery energy storage installation" loading="lazy">
+        <img src="/assets/images/1310484172-1.webp" alt="Energy storage infrastructure" loading="lazy">
+      </div>
+      <div class="aff-copy reveal">
+        <div class="eyebrow-row"><span class="eyebrow">Battery &amp; EV Infrastructure</span></div>
+        <h2 id="aff-hd" class="h2">Power your property.<br><em>Power the grid.</em></h2>
+        <p>Lee connects property owners with the leading developer of community-scale battery energy storage systems (BESS) in the New York City metropolitan area — serving the Bronx, Brooklyn, Queens, Staten Island, Westchester, and Long Island. Properties can also host Blink EV charging stations to attract new customers and generate additional revenue.</p>
+        <ul class="aff-bullets">
+          <li>Host battery energy storage systems and earn from your property</li>
+          <li>Add Blink EV charging stations and create a new revenue stream</li>
+          <li>Supports NYC's clean energy transition and grid resilience goals</li>
+          <li>Available across all five boroughs and the surrounding metro area</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact-sec" aria-labelledby="contact-hd">
+  <div class="wrap">
+    <div class="contact-inner">
+      <div class="contact-info reveal">
+        <div class="eyebrow-row"><span class="eyebrow">Find Out If You Qualify</span></div>
+        <h2 id="contact-hd" class="h2">Does your property<br><em>qualify?</em></h2>
+        <p>Share your property details and Lee will assess whether it's a candidate for battery storage or EV charging infrastructure.</p>
+      </div>
+      <form class="dark-form reveal" id="contact-form" novalidate>
+        <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_KEY_HERE">
+        <input type="hidden" name="subject" value="Electrical storage inquiry — leeeliyahu.com">
+        <input type="hidden" name="redirect" value="false">
+        <div class="row">
+          <div class="f"><label for="cf-name">Your Name</label><input id="cf-name" name="name" type="text" autocomplete="name" required></div>
+          <div class="f"><label for="cf-email">Email</label><input id="cf-email" name="email" type="email" autocomplete="email" required></div>
+        </div>
+        <div class="f"><label for="cf-phone">Phone</label><input id="cf-phone" name="phone" type="tel" autocomplete="tel"></div>
+        <div class="f"><label for="cf-msg">Property address &amp; details</label><textarea id="cf-msg" name="message" rows="4" placeholder="Address, property type, parking availability, approximate square footage"></textarea></div>
+        <button type="submit" class="btn-gold" id="form-btn">Check Eligibility <i class="lucide lucide-arrow-right" aria-hidden="true"></i></button>
+        <p class="f-status" id="f-status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div class="foot-brand">
+        <a href="/" class="logo" aria-label="Lee Eliyahu home">
+          <span class="logo-mark" aria-hidden="true">LE</span>
+          <span class="logo-word">Lee <em>Eliyahu</em></span>
+        </a>
+        <p>Residential, commercial, and investment real estate across the five boroughs since 2014.</p>
+        <div class="socials">
+          <a href="#" aria-label="LinkedIn"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4>Real Estate</h4>
+        <a href="/active-listings/">Residential Listings</a>
+        <a href="/commercial-active-listing/">Commercial Listings</a>
+        <a href="/property-management/">Property Management</a>
+        <a href="/broker-opinion-value/">Broker Opinion of Value</a>
+        <a href="/mortgages/">Mortgages</a>
+      </div>
+      <div>
+        <h4>Financial &amp; Affiliate</h4>
+        <a href="/merchant-processing/">Merchant Processing</a>
+        <a href="/business-funding/">Business Funding</a>
+        <a href="/hard-money-for-real-estate/">Hard Money</a>
+        <a href="/billboards/">Billboards</a>
+        <a href="/5g-antennas/">Antennas</a>
+        <a href="/electrical-storage/">Electrical Storage</a>
+      </div>
+      <div>
+        <h4>Office</h4>
+        <a href="tel:+15162256733">+1 (516) 225-6733</a>
+        <a href="tel:+13478524446">+1 (347) 852-4446</a>
+        <a href="mailto:leliyahu@bridgenyre.com">leliyahu@bridgenyre.com</a>
+        <a href="/about-us/">About Lee</a>
+        <a href="/contact/">Get in Touch</a>
+      </div>
+    </div>
+    <div class="foot-btm">
+      <span>© 2026 Lee Eliyahu · Licensed Real Estate Broker · New York State</span>
+      <span><a href="/privacy-policy/">Privacy</a>&ensp;·&ensp;<a href="/terms-of-use/">Terms</a>&ensp;·&ensp;Fair Housing</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  const io=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.1});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  const menuBtn=document.getElementById('menu-btn'),mobNav=document.getElementById('mob-nav'),mobClose=document.getElementById('mob-close');
+  function openNav(){mobNav.classList.add('open');mobNav.setAttribute('aria-hidden','false');menuBtn.setAttribute('aria-expanded','true');document.body.style.overflow='hidden'}
+  function closeNav(){mobNav.classList.remove('open');mobNav.setAttribute('aria-hidden','true');menuBtn.setAttribute('aria-expanded','false');document.body.style.overflow=''}
+  menuBtn.addEventListener('click',openNav);mobClose.addEventListener('click',closeNav);
+  document.addEventListener('keydown',e=>{if(e.key==='Escape')closeNav()});
+  document.querySelectorAll('.mob-dd-toggle').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      const t=document.getElementById(btn.dataset.target),isOpen=t.classList.contains('open');
+      document.querySelectorAll('.mob-sub').forEach(s=>s.classList.remove('open'));
+      document.querySelectorAll('.mob-dd-toggle').forEach(b=>b.setAttribute('aria-expanded','false'));
+      if(!isOpen){t.classList.add('open');btn.setAttribute('aria-expanded','true')}
+    });
+  });
+  const form=document.getElementById('contact-form'),btn=document.getElementById('form-btn'),fStatus=document.getElementById('f-status');
+  if(form){form.addEventListener('submit',async e=>{
+    e.preventDefault();btn.disabled=true;btn.textContent='Sending…';fStatus.style.display='none';
+    try{const r=await fetch('https://api.web3forms.com/submit',{method:'POST',body:new FormData(form)});const d=await r.json();
+      if(d.success){fStatus.textContent='Got it — Lee will be in touch shortly.';fStatus.style.display='block';form.reset();}else throw new Error();
+    }catch{fStatus.textContent='Something went wrong. Email leliyahu@bridgenyre.com directly.';fStatus.style.display='block';}
+    btn.disabled=false;btn.innerHTML='Check Eligibility <i class="lucide lucide-arrow-right" aria-hidden="true"></i>';
+  });}
+})();
+</script>
+</body>
+</html>
