@@ -266,7 +266,8 @@ footer{background:var(--black);padding:clamp(72px,8vw,120px) 0 40px}
 @media(max-width:640px){
   .foot{grid-template-columns:1fr}
   .hero .display{font-size:clamp(44px,13vw,80px)}
-  .hero .wrap{padding-top:20px}
+  .hero .wrap{padding-top:16px}
+  .hero-bar{margin-bottom:20px;padding-bottom:12px}
 }
 @media(prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none !important;transition:none !important}
@@ -641,6 +642,10 @@ footer{background:var(--black);padding:clamp(72px,8vw,120px) 0 40px}
 
 <script>
 (function(){
+  /* force-play hero video on mobile (iOS blocks cross-origin autoplay) */
+  const vid=document.querySelector('.hero-vid');
+  if(vid){vid.muted=true;vid.play().catch(()=>{});}
+
   /* reduced motion — pause videos */
   if(window.matchMedia('(prefers-reduced-motion:reduce)').matches){
     document.querySelectorAll('video').forEach(v=>{v.removeAttribute('autoplay');v.pause()});
