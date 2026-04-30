@@ -121,7 +121,10 @@ footer{background:var(--black);padding:clamp(72px,8vw,120px) 0 40px;border-top:1
   .aff-grid.reverse{direction:ltr}
   .dark-form .row{grid-template-columns:1fr}
 }
-@media(max-width:640px){.aff-images.two-col{grid-template-columns:1fr}}
+@media(max-width:640px){
+  .pg-hero{justify-content:flex-start}
+  .pg-hero .wrap{padding-top:72px}
+  .pg-hero-bar{margin-bottom:20px;padding-bottom:12px}.aff-images.two-col{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none !important;transition:none !important}.reveal{opacity:1;transform:none}}
 </style>
 </head>
