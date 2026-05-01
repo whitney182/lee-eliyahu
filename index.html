@@ -132,16 +132,13 @@ figure,blockquote{margin:0;padding:0}
 
 /* ── SERVICES ── */
 .services{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--rule-hi);border-bottom:1px solid var(--rule-hi)}
-.svc{padding:clamp(32px,3vw,56px) clamp(24px,2.4vw,40px);border-right:1px solid var(--rule);position:relative;transition:background .6s ease;min-height:480px;display:flex;flex-direction:column}
+.svc{padding:clamp(32px,3vw,56px) clamp(24px,2.4vw,40px);border-right:1px solid var(--rule);position:relative;transition:background .6s ease;min-height:380px;display:flex;flex-direction:column;text-align:center;align-items:center}
 .svc:last-child{border-right:0}
 .svc::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .6s var(--ease)}
 .svc:hover{background:var(--obsidian)}
 .svc:hover::after{transform:scaleX(1)}
-.svc .idx{font-family:var(--serif);font-style:italic;color:var(--gold);font-size:18px}
-.svc .shape{width:60px;height:60px;margin:24px 0 auto;border:1px solid var(--gold);display:grid;place-items:center;color:var(--gold);font-size:22px;transition:transform .6s var(--ease)}
-.svc:hover .shape{transform:rotate(45deg)}
-.svc h3{margin-top:40px}
-.svc p{color:var(--ivory-soft);margin:14px 0 28px;font-size:15px;max-width:34ch}
+.svc h3{margin-top:0;color:var(--gold)}
+.svc p{color:#ffffff;margin:14px 0 28px;font-size:15px}
 .svc .lnk{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);display:inline-flex;align-items:center;gap:10px;margin-top:auto}
 .svc .lnk i{transition:transform .4s var(--ease)}
 .svc:hover .lnk i{transform:translateX(8px)}
@@ -394,44 +391,19 @@ footer{background:var(--black);padding:clamp(72px,8vw,120px) 0 40px}
     </div>
     <div class="services">
       <article class="svc reveal">
-        <span class="idx">Service / 01</span>
-        <div class="shape" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" width="26" height="26">
-            <path d="M3 10L12 3l9 7v10a1 1 0 01-1 1H4a1 1 0 01-1-1V10z"/>
-            <polyline points="9,22 9,13 15,13 15,22"/>
-          </svg>
-        </div>
         <h3 class="h3">Residential Sales &amp; Rentals</h3>
-        <p>Buyer, seller, and tenant representation. Condos, co-ops, townhouses, and rentals across all five boroughs. Active listings and sold history available.</p>
+        <p>Representing buyers and sellers in home purchases and condo, co-op rentals across the five boroughs and Long Island.</p>
         <a href="/active-listings/" class="lnk">Explore <i class="lucide lucide-arrow-right" aria-hidden="true"></i></a>
       </article>
       <article class="svc reveal">
-        <span class="idx">Service / 02</span>
-        <div class="shape" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" width="26" height="26">
-            <rect x="2" y="7" width="20" height="15" rx="1"/>
-            <path d="M2 7l2-4h16l2 4"/>
-            <line x1="12" y1="7" x2="12" y2="22"/>
-            <rect x="4.5" y="11" width="4" height="3" rx="0.5"/>
-            <rect x="15.5" y="11" width="4" height="3" rx="0.5"/>
-            <rect x="9.5" y="15" width="5" height="7" rx="0.5"/>
-          </svg>
-        </div>
-        <h3 class="h3">Commercial Leasing &amp; Sales</h3>
-        <p>Retail, office, and mixed-use. Tenant and landlord representation for leases and sales. Active commercial listings across New York City.</p>
+        <h3 class="h3">Investment Sales</h3>
+        <p>Senior associate at the most rapidly growing and active investment sales firm in Manhattan. Lee can source exclusive and off-market opportunities for those looking for residential, mixed-use and land development deals.</p>
         <a href="/commercial-active-listing/" class="lnk">Explore <i class="lucide lucide-arrow-right" aria-hidden="true"></i></a>
       </article>
       <article class="svc reveal">
-        <span class="idx">Service / 03</span>
-        <div class="shape" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" width="26" height="26">
-            <line x1="12" y1="2" x2="12" y2="22"/>
-            <path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/>
-          </svg>
-        </div>
-        <h3 class="h3">Financial &amp; Affiliate Services</h3>
-        <p>A variety of financial services including hard money lending, business funding and merchant processing services to help you maximize your business' success.</p>
-        <a href="/merchant-processing/" class="lnk">Explore <i class="lucide lucide-arrow-right" aria-hidden="true"></i></a>
+        <h3 class="h3">Commercial Leasing</h3>
+        <p>Landlord and tenant representation for retail, condo offices and industrial properties in the tri-state area.</p>
+        <a href="/commercial-active-listing/" class="lnk">Explore <i class="lucide lucide-arrow-right" aria-hidden="true"></i></a>
       </article>
     </div>
   </div>
