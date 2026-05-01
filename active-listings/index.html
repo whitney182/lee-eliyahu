@@ -130,6 +130,10 @@ figure,blockquote{margin:0;padding:0}
 .card:hover .card-frame img{transform:scale(1.04)}
 .card-frame .tag{position:absolute;top:14px;left:14px;font-size:10px;letter-spacing:.22em;text-transform:uppercase;padding:6px 12px;color:var(--ivory);border:1px solid var(--rule-hi);background:color-mix(in oklab,var(--black) 70%,transparent);backdrop-filter:blur(6px);z-index:1}
 .card-frame .tag.new{color:var(--black);background:var(--gold);border-color:var(--gold)}
+.card-frame .tag.inv{color:var(--gold);border-color:var(--gold)}
+.card-frame .tag.sold{color:#c9c3b4;border-color:rgba(201,195,180,.4)}
+.card-placeholder{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:var(--coal)}
+.card-placeholder span{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--mute)}
 .card-frame .city{position:absolute;bottom:14px;right:14px;font-family:var(--serif);font-style:italic;font-size:13px;color:var(--gold);z-index:1}
 .card .price-row{display:flex;align-items:baseline;justify-content:space-between;gap:14px;padding-bottom:14px;border-bottom:1px solid var(--rule)}
 .card .price{font-family:var(--serif);font-size:clamp(28px,3vw,40px);line-height:1;letter-spacing:-.02em;color:var(--ivory)}
@@ -325,9 +329,9 @@ footer{background:var(--black);padding:clamp(72px,8vw,120px) 0 40px}
     <div class="pg-hero-body reveal">
       <p class="pg-hero-lede">Properties available now — residential sales across the market. New inventory added as deals come to market.</p>
       <div class="pg-hero-meta">
-        <div><span class="ml">On Market</span><span class="mv">0 properties</span></div>
-        <div><span class="ml">Price Range</span><span class="mv">$299K — $3.5M</span></div>
-        <div><span class="ml">Updated</span><span class="mv">April 2026</span></div>
+        <div><span class="ml">On Market</span><span class="mv">1 property</span></div>
+        <div><span class="ml">Price Range</span><span class="mv">From $280K</span></div>
+        <div><span class="ml">Updated</span><span class="mv">May 2026</span></div>
       </div>
     </div>
   </div>
@@ -346,6 +350,133 @@ footer{background:var(--black);padding:clamp(72px,8vw,120px) 0 40px}
 
     <div class="cards">
 
+      <!-- AVAILABLE -->
+      <article class="card reveal">
+        <div class="card-frame">
+          <span class="tag inv">Available</span>
+          <span class="city">Dania Beach, FL</span>
+          <div class="card-placeholder"><span>Photo Coming Soon</span></div>
+        </div>
+        <div class="price-row">
+          <span class="price">$280<em>K</em></span>
+          <span class="idx">01</span>
+        </div>
+        <address>4111 Stirling Rd, Apt 509<br>Dania Beach, FL</address>
+        <a class="view" href="/contact/">Inquire <i class="lucide lucide-arrow-up-right" aria-hidden="true"></i></a>
+      </article>
+
+      <!-- SOLD -->
+      <article class="card reveal">
+        <div class="card-frame">
+          <span class="tag sold">Sold</span>
+          <span class="city">Hollywood, FL</span>
+          <div class="card-placeholder"><span>Photo Coming Soon</span></div>
+        </div>
+        <div class="price-row">
+          <span class="price">2800 <em>Palmer</em></span>
+          <span class="idx">02</span>
+        </div>
+        <address>2800 Palmer Drive<br>Hollywood, FL 33021</address>
+        <a class="view" href="/contact/">Contact Lee <i class="lucide lucide-arrow-up-right" aria-hidden="true"></i></a>
+      </article>
+
+      <article class="card reveal">
+        <div class="card-frame">
+          <span class="tag sold">Sold</span>
+          <span class="city">Great Neck, NY</span>
+          <div class="card-placeholder"><span>Photo Coming Soon</span></div>
+        </div>
+        <div class="price-row">
+          <span class="price">337 <em>E Shore</em></span>
+          <span class="idx">03</span>
+        </div>
+        <address>337 E Shore Road<br>Great Neck, NY 11023</address>
+        <a class="view" href="/contact/">Contact Lee <i class="lucide lucide-arrow-up-right" aria-hidden="true"></i></a>
+      </article>
+
+      <article class="card reveal">
+        <div class="card-frame">
+          <span class="tag sold">Sold</span>
+          <span class="city">Bronx, NY</span>
+          <div class="card-placeholder"><span>Photo Coming Soon</span></div>
+        </div>
+        <div class="price-row">
+          <span class="price">1170 <em>Vyse Ave</em></span>
+          <span class="idx">04</span>
+        </div>
+        <address>1170 Vyse Avenue<br>Bronx, NY 10459</address>
+        <a class="view" href="/contact/">Contact Lee <i class="lucide lucide-arrow-up-right" aria-hidden="true"></i></a>
+      </article>
+
+      <article class="card reveal">
+        <div class="card-frame">
+          <span class="tag sold">Sold</span>
+          <span class="city">Brooklyn, NY</span>
+          <div class="card-placeholder"><span>Photo Coming Soon</span></div>
+        </div>
+        <div class="price-row">
+          <span class="price">282 <em>E 35th St</em></span>
+          <span class="idx">05</span>
+        </div>
+        <address>282 East 35th St, #6F<br>Brooklyn, NY 11203</address>
+        <a class="view" href="/contact/">Contact Lee <i class="lucide lucide-arrow-up-right" aria-hidden="true"></i></a>
+      </article>
+
+      <article class="card reveal">
+        <div class="card-frame">
+          <span class="tag sold">Sold</span>
+          <span class="city">Brooklyn, NY</span>
+          <div class="card-placeholder"><span>Photo Coming Soon</span></div>
+        </div>
+        <div class="price-row">
+          <span class="price">190 <em>Cozine Ave</em></span>
+          <span class="idx">06</span>
+        </div>
+        <address>190 Cozine Avenue<br>Brooklyn, NY 11207</address>
+        <a class="view" href="/contact/">Contact Lee <i class="lucide lucide-arrow-up-right" aria-hidden="true"></i></a>
+      </article>
+
+      <article class="card reveal">
+        <div class="card-frame">
+          <span class="tag sold">Sold</span>
+          <span class="city">Bay Shore, NY</span>
+          <div class="card-placeholder"><span>Photo Coming Soon</span></div>
+        </div>
+        <div class="price-row">
+          <span class="price">45 <em>E Lakeland</em></span>
+          <span class="idx">07</span>
+        </div>
+        <address>45 E Lakeland Street<br>Bay Shore, NY</address>
+        <a class="view" href="/contact/">Contact Lee <i class="lucide lucide-arrow-up-right" aria-hidden="true"></i></a>
+      </article>
+
+      <article class="card reveal">
+        <div class="card-frame">
+          <span class="tag sold">Sold</span>
+          <span class="city">Brooklyn, NY</span>
+          <div class="card-placeholder"><span>Photo Coming Soon</span></div>
+        </div>
+        <div class="price-row">
+          <span class="price">3500 <em>Snyder Ave</em></span>
+          <span class="idx">08</span>
+        </div>
+        <address>3500 Snyder Ave, #4U<br>Brooklyn, NY 11203</address>
+        <a class="view" href="/contact/">Contact Lee <i class="lucide lucide-arrow-up-right" aria-hidden="true"></i></a>
+      </article>
+
+      <article class="card reveal">
+        <div class="card-frame">
+          <span class="tag sold">Sold</span>
+          <span class="city">Long Beach, NY</span>
+          <div class="card-placeholder"><span>Photo Coming Soon</span></div>
+        </div>
+        <div class="price-row">
+          <span class="price">217 <em>Neptune</em></span>
+          <span class="idx">09</span>
+        </div>
+        <address>217 Neptune Blvd<br>Long Beach, NY</address>
+        <a class="view" href="/contact/">Contact Lee <i class="lucide lucide-arrow-up-right" aria-hidden="true"></i></a>
+      </article>
 
     </div>
 
