@@ -56,9 +56,9 @@ figure,blockquote{margin:0;padding:0}
 .eyebrow{font-family:var(--sans);font-size:11px;font-weight:500;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-soft)}
 
 /* ── LOGO ── */
-.logo{display:flex;align-items:center;gap:12px;flex-shrink:0}
-.logo-mark{width:34px;height:34px;border:1px solid var(--gold);transform:rotate(45deg);display:grid;place-items:center;position:relative;flex-shrink:0}.logo-inner{transform:rotate(-45deg);font-family:var(--serif);font-size:13px;color:var(--gold);font-style:italic;letter-spacing:.06em}
-.logo-mark::after{content:"";position:absolute;inset:4px;border-radius:50%;border:1px solid rgba(212,169,74,.3)}
+.logo{display:flex;align-items:center;gap:12px;flex-shrink:0}.logo-img{height:36px;width:auto}
+
+
 .logo-word{font-family:var(--serif);font-size:20px;letter-spacing:.005em;white-space:nowrap}
 .logo-word em{font-style:italic;color:var(--gold)}
 
@@ -81,7 +81,7 @@ figure,blockquote{margin:0;padding:0}
 .nav-dd-wide .dd-col:first-child{border-right:1px solid var(--rule)}
 .dd-col{display:flex;flex-direction:column}
 .nav-cta{font-family:var(--sans);font-size:12px;letter-spacing:.14em;text-transform:uppercase;padding:12px 20px;background:var(--gold);color:var(--black);border:1px solid var(--gold);border-radius:0;transition:all .4s var(--ease);display:inline-flex;align-items:center;gap:8px;white-space:nowrap;flex-shrink:0}
-.nav-cta:hover{background:transparent;color:var(--gold)}
+.nav-cta:hover{background:transparent;color:var(--gold)}.nav-email{font-size:12px;letter-spacing:.14em;text-transform:uppercase;padding:12px 16px;background:transparent;color:var(--ivory-soft);border:1px solid var(--rule-hi);transition:all .4s var(--ease);display:inline-flex;align-items:center;gap:7px;white-space:nowrap;flex-shrink:0}.nav-email:hover{border-color:var(--gold);color:var(--gold)}
 .menu-btn{display:none;background:transparent;border:0;color:var(--ivory);font-size:22px;padding:8px;flex-shrink:0}
 
 /* ── MOBILE NAV ── */
@@ -217,7 +217,7 @@ footer{background:var(--black);padding:clamp(72px,8vw,120px) 0 40px;border-top:1
 
 /* ── RESPONSIVE ── */
 @media(max-width:1024px){
-  .nav-links,.nav-cta{display:none}
+  .nav-links,.nav-cta,.nav-email{display:none}
   .menu-btn{display:flex}
   .pg-hero-body,.contact-inner,.hm-intro-inner,.loan-hd,.how-hd{grid-template-columns:1fr}
   .loan-grid,.how-steps{grid-template-columns:1fr 1fr}
@@ -246,7 +246,7 @@ footer{background:var(--black);padding:clamp(72px,8vw,120px) 0 40px;border-top:1
 <nav class="nav" aria-label="Primary navigation">
   <div class="wrap nav-inner">
     <a href="/" class="logo" aria-label="Lee Eliyahu — home">
-      <span class="logo-mark" aria-hidden="true"><span class="logo-inner">LE</span></span>
+      <img src="/assets/images/LEE ELIYAHU.png" alt="" class="logo-img" aria-hidden="true">
       <span class="logo-word">Lee <em>Eliyahu</em></span>
     </a>
     <div class="nav-links" id="desktop-nav" role="list">
@@ -289,6 +289,7 @@ footer{background:var(--black);padding:clamp(72px,8vw,120px) 0 40px;border-top:1
       </div>
       <a href="/contact/" role="listitem">Contact</a>
     </div>
+    <a class="nav-email" href="mailto:leliyahu@bridgenyre.com" aria-label="Send Lee an email"><i class="lucide lucide-mail" aria-hidden="true"></i> Email</a>
     <a class="nav-cta" href="tel:+13478524446">+1 (347) 852-4446 <i class="lucide lucide-arrow-up-right" aria-hidden="true"></i></a>
     <button class="menu-btn" id="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="mob-nav">
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></svg>
@@ -626,7 +627,7 @@ footer{background:var(--black);padding:clamp(72px,8vw,120px) 0 40px;border-top:1
     <div class="foot">
       <div class="foot-brand">
         <a href="/" class="logo" aria-label="Lee Eliyahu home">
-          <span class="logo-mark" aria-hidden="true"><span class="logo-inner">LE</span></span>
+          <img src="/assets/images/LEE ELIYAHU.png" alt="" class="logo-img" aria-hidden="true">
           <span class="logo-word">Lee <em>Eliyahu</em></span>
         </a>
         <p>Residential, commercial, and investment real estate across the five boroughs since 2014.</p>

@@ -58,9 +58,9 @@ figure,blockquote{margin:0;padding:0}
 .eyebrow{font-family:var(--sans);font-size:11px;font-weight:500;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-soft)}
 
 /* ── LOGO ── */
-.logo{display:flex;align-items:center;gap:12px;flex-shrink:0}
-.logo-mark{width:34px;height:34px;border:1px solid var(--gold);transform:rotate(45deg);display:grid;place-items:center;position:relative;flex-shrink:0}.logo-inner{transform:rotate(-45deg);font-family:var(--serif);font-size:13px;color:var(--gold);font-style:italic;letter-spacing:.06em}
-.logo-mark::after{content:"";position:absolute;inset:4px;border-radius:50%;border:1px solid rgba(212,169,74,.3)}
+.logo{display:flex;align-items:center;gap:12px;flex-shrink:0}.logo-img{height:36px;width:auto}
+
+
 .logo-word{font-family:var(--serif);font-size:20px;letter-spacing:.005em;white-space:nowrap}
 .logo-word em{font-style:italic;color:var(--gold)}
 
@@ -86,7 +86,7 @@ figure,blockquote{margin:0;padding:0}
 .dd-col{display:flex;flex-direction:column}
 /* cta */
 .nav-cta{font-family:var(--sans);font-size:12px;letter-spacing:.14em;text-transform:uppercase;padding:12px 20px;background:var(--gold);color:var(--black);border:1px solid var(--gold);border-radius:0;transition:all .4s var(--ease);display:inline-flex;align-items:center;gap:8px;white-space:nowrap;flex-shrink:0}
-.nav-cta:hover{background:transparent;color:var(--gold)}
+.nav-cta:hover{background:transparent;color:var(--gold)}.nav-email{font-size:12px;letter-spacing:.14em;text-transform:uppercase;padding:12px 16px;background:transparent;color:var(--ivory-soft);border:1px solid var(--rule-hi);transition:all .4s var(--ease);display:inline-flex;align-items:center;gap:7px;white-space:nowrap;flex-shrink:0}.nav-email:hover{border-color:var(--gold);color:var(--gold)}
 .menu-btn{display:none;background:transparent;border:0;color:var(--ivory);font-size:22px;padding:8px;flex-shrink:0}
 
 /* ── MOBILE NAV ── */
@@ -142,6 +142,13 @@ figure,blockquote{margin:0;padding:0}
 .svc .lnk{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);display:inline-flex;align-items:center;gap:10px;margin-top:auto}
 .svc .lnk i{transition:transform .4s var(--ease)}
 .svc:hover .lnk i{transform:translateX(8px)}
+.add-svc{border-top:1px solid var(--rule);padding:clamp(36px,4vw,56px) 0 0}
+.add-svc-intro{max-width:660px;margin:14px 0 clamp(24px,3vw,40px);color:var(--ivory-soft);font-size:15px;line-height:1.75}
+.add-svc-grid{display:flex;flex-direction:column;gap:10px}
+.add-svc-row{display:flex;flex-wrap:wrap;gap:10px}
+.add-pill{font-family:var(--sans);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--ivory-soft);border:1px solid var(--rule-hi);padding:9px 18px;transition:color .3s ease,border-color .3s ease;white-space:nowrap;text-decoration:none}
+.add-pill:hover{color:var(--gold);border-color:var(--gold)}
+.add-svc-hook{margin-top:clamp(28px,3vw,44px);padding:24px 28px;border-left:2px solid var(--gold);background:var(--obsidian);font-size:15px;color:var(--ivory-soft);line-height:1.75;max-width:760px}
 
 /* ── ABOUT ── */
 .about{display:grid;grid-template-columns:1fr 1.1fr;gap:clamp(40px,6vw,100px);align-items:center}
@@ -243,7 +250,7 @@ footer{background:var(--black);padding:clamp(72px,8vw,120px) 0 40px}
 
 /* ── RESPONSIVE ── */
 @media(max-width:1024px){
-  .nav-links,.nav-cta{display:none}
+  .nav-links,.nav-cta,.nav-email{display:none}
   .menu-btn{display:flex}
   .hero-grid,.sec-hd,.about,.stats-grid,.quotes,.contact-inner{grid-template-columns:1fr}
   .services{grid-template-columns:1fr}
@@ -280,7 +287,7 @@ footer{background:var(--black);padding:clamp(72px,8vw,120px) 0 40px}
 <nav class="nav" aria-label="Primary navigation">
   <div class="wrap nav-inner">
     <a href="/" class="logo" aria-label="Lee Eliyahu — home">
-      <span class="logo-mark" aria-hidden="true"><span class="logo-inner">LE</span></span>
+      <img src="/assets/images/LEE ELIYAHU.png" alt="" class="logo-img" aria-hidden="true">
       <span class="logo-word">Lee <em>Eliyahu</em></span>
     </a>
     <div class="nav-links" id="desktop-nav" role="list">
@@ -323,6 +330,7 @@ footer{background:var(--black);padding:clamp(72px,8vw,120px) 0 40px}
       </div>
       <a href="/contact/" role="listitem">Contact</a>
     </div>
+    <a class="nav-email" href="mailto:leliyahu@bridgenyre.com" aria-label="Send Lee an email"><i class="lucide lucide-mail" aria-hidden="true"></i> Email</a>
     <a class="nav-cta" href="tel:+15162256733">+1 (516) 225-6733 <i class="lucide lucide-arrow-up-right" aria-hidden="true"></i></a>
     <button class="menu-btn" id="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="mob-nav">
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></svg>
@@ -369,7 +377,7 @@ footer{background:var(--black);padding:clamp(72px,8vw,120px) 0 40px}
   <div class="wrap">
     <h1 class="display reveal">The broker<br>the five boroughs<br><em>call first.</em></h1>
     <div class="hero-grid reveal">
-      <p class="hero-lede">Residential, commercial, and investment real estate across all five boroughs.</p>
+      <p class="hero-lede">Full-service real estate brokerage, property income strategies, and business cost solutions — all from one trusted source.</p>
       <div class="hero-ctas">
         <a class="btn btn-gold" href="/contact/">Schedule a Consultation <i class="lucide lucide-arrow-up-right" aria-hidden="true"></i></a>
         <a class="btn" href="/active-listings/">View Active Listings <i class="lucide lucide-arrow-right" aria-hidden="true"></i></a>
@@ -404,6 +412,23 @@ footer{background:var(--black);padding:clamp(72px,8vw,120px) 0 40px}
         <p>Dedicated landlord and tenant representation for retail, office, and industrial properties across the tri-state area, focused on securing the best possible terms for every client.</p>
         <a href="/commercial-active-listing/" class="lnk">Explore <i class="lucide lucide-arrow-right" aria-hidden="true"></i></a>
       </article>
+    </div>
+    <div class="add-svc reveal">
+      <span class="eyebrow">Additional Services</span>
+      <p class="add-svc-intro">Through strategic partnerships built across the financial services and real estate space over the last decade, we're also able to provide the following services to complement your business and investment strategy.</p>
+      <div class="add-svc-grid">
+        <div class="add-svc-row">
+          <a href="/merchant-processing/" class="add-pill">Merchant Processing</a>
+          <a href="/property-management/" class="add-pill">Property Management</a>
+          <span class="add-pill">Cash Flow Maximization</span>
+        </div>
+        <div class="add-svc-row">
+          <a href="/hard-money-for-real-estate/" class="add-pill">Bridge Financing</a>
+          <a href="/mortgages/" class="add-pill">Traditional Lending &amp; Mortgages</a>
+          <a href="/business-funding/" class="add-pill">Business Funding</a>
+        </div>
+      </div>
+      <p class="add-svc-hook reveal">Are you sure you're getting the most potential out of your property? We can add additional revenue streams to your asset and give you a full analysis of the opportunities available. Some of the ways we've helped property owners maximize their potential: antennas, billboards, EV charging stations, electrical storage, and more. <a href="/contact/" class="lnk" style="font-size:inherit;letter-spacing:.06em;text-transform:none">Get a free assessment <i class="lucide lucide-arrow-right" aria-hidden="true"></i></a></p>
     </div>
   </div>
 </section>
@@ -561,7 +586,7 @@ footer{background:var(--black);padding:clamp(72px,8vw,120px) 0 40px}
     <div class="foot">
       <div class="foot-brand">
         <a href="/" class="logo" aria-label="Lee Eliyahu home">
-          <span class="logo-mark" aria-hidden="true"><span class="logo-inner">LE</span></span>
+          <img src="/assets/images/LEE ELIYAHU.png" alt="" class="logo-img" aria-hidden="true">
           <span class="logo-word">Lee <em>Eliyahu</em></span>
         </a>
         <p>Residential, commercial, and investment real estate across the five boroughs since 2014.</p>
