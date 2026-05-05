@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>5G Antennas | Lee Eliyahu · New York</title>
-<meta name="description" content="Turn your rooftop into income. Find out if your property qualifies to host wireless antenna infrastructure and earn monthly recurring rent."/>
+<title>Cash Flow Maximization | Lee Eliyahu · New York</title>
+<meta name="description" content="Turn your property into a revenue engine. Lee connects New York property owners with income-generating opportunities — billboards, antennas, EV charging, battery storage, and security."/>
 <link rel="icon" href="https://leeeliyahu.com/wp-content/uploads/2026/02/cropped-Logo-Lee-3-32x32.png" sizes="32x32"/>
 <link rel="apple-touch-icon" href="https://leeeliyahu.com/wp-content/uploads/2026/02/cropped-Logo-Lee-3-180x180.png"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
@@ -26,11 +26,11 @@ button{font-family:inherit;cursor:pointer}
 .h2{font-family:var(--serif);font-weight:400;font-size:clamp(32px,4vw,64px);line-height:1.05;letter-spacing:-.015em;margin:0 0 24px}
 .h2 em{font-style:italic;color:var(--gold)}
 .eyebrow{font-size:11px;font-weight:500;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-soft)}
+/* logo */
 .logo{display:flex;align-items:center;gap:12px;flex-shrink:0}.logo-img{height:36px;width:auto}
-
-
 .logo-word{font-family:var(--serif);font-size:20px;letter-spacing:.005em;white-space:nowrap}
 .logo-word em{font-style:italic;color:var(--gold)}
+/* nav */
 .nav{position:sticky;top:0;z-index:200;backdrop-filter:blur(18px) saturate(160%);background:color-mix(in oklab,var(--black) 78%,transparent);border-bottom:1px solid var(--rule)}
 .nav-inner{display:flex;align-items:center;justify-content:center;height:78px;gap:16px}
 .nav-links{display:flex;align-items:stretch;flex:1;justify-content:center}
@@ -49,6 +49,7 @@ button{font-family:inherit;cursor:pointer}
 .nav-cta{font-size:12px;letter-spacing:.14em;text-transform:uppercase;padding:12px 20px;background:var(--gold);color:var(--black);border:1px solid var(--gold);transition:all .4s var(--ease);display:inline-flex;align-items:center;justify-content:center;gap:8px;white-space:nowrap;flex-shrink:0}
 .nav-cta:hover{background:transparent;color:var(--gold)}.nav-email{font-size:12px;letter-spacing:.14em;text-transform:uppercase;padding:12px 16px;background:transparent;color:var(--ivory-soft);border:1px solid var(--rule-hi);transition:all .4s var(--ease);display:inline-flex;align-items:center;justify-content:center;gap:7px;white-space:nowrap;flex-shrink:0}.nav-email:hover{border-color:var(--gold);color:var(--gold)}
 .menu-btn{display:none;background:transparent;border:0;color:var(--ivory);font-size:22px;padding:8px;flex-shrink:0}
+/* mobile nav */
 .mob-nav{display:none;position:fixed;inset:0;background:var(--obsidian);z-index:300;overflow-y:auto;padding:100px var(--pad) 60px}
 .mob-nav.open{display:block}
 .mob-nav > a,.mob-dd-toggle{display:flex;justify-content:center;align-items:center;font-size:17px;color:var(--ivory-soft);padding:16px 0;border-bottom:1px solid var(--rule);background:transparent;border-left:0;border-right:0;border-top:0;text-align:left;width:100%;letter-spacing:.02em;transition:color .2s ease}
@@ -59,20 +60,27 @@ button{font-family:inherit;cursor:pointer}
 .mob-sub a:hover{color:var(--gold)}
 .mob-cta-link{display:inline-flex;margin-top:32px;padding:16px 28px;background:var(--gold);color:var(--black);font-size:13px;letter-spacing:.14em;text-transform:uppercase;border-bottom:none !important;width:auto !important}
 .mob-close{position:fixed;top:18px;right:var(--pad);background:transparent;border:1px solid var(--rule-hi);color:var(--ivory);width:44px;height:44px;display:flex;align-items:center;justify-content:center;font-size:20px;cursor:pointer;z-index:301}
-.pg-hero{position:relative;padding:clamp(64px,9vw,120px) 0 clamp(48px,7vw,88px);overflow:hidden;background-image:url('/assets/images/nyc-skyline.jpg');background-size:cover;background-position:center 40%}
+/* hero */
+.pg-hero{position:relative;padding:clamp(64px,9vw,120px) 0 clamp(48px,7vw,88px);overflow:hidden;background-image:url('/assets/images/nyc-skyline-2.jpg');background-size:cover;background-position:center 40%}
 .pg-hero::before{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,rgba(11,10,8,.78) 0%,rgba(11,10,8,.60) 40%,rgba(11,10,8,.92) 100%);pointer-events:none}
 .pg-hero-eyebrow{display:flex;align-items:center;gap:14px;margin-bottom:clamp(32px,5vw,60px)}
 .pg-hero-eyebrow span{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--mute)}
 .pg-hero-eyebrow .dot{width:5px;height:5px;border-radius:50%;background:var(--gold);flex-shrink:0}
-.aff-content{padding:clamp(72px,9vw,140px) 0;border-bottom:1px solid var(--rule)}
-.aff-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(48px,7vw,100px);align-items:center}
-.aff-images img{width:100%;object-fit:cover;aspect-ratio:4/3;border:1px solid var(--rule-hi)}
-.aff-copy .eyebrow-row{display:flex;align-items:center;gap:12px;margin-bottom:16px}
-.aff-copy .eyebrow-row::before{content:"";width:32px;height:1px;background:var(--gold)}
-.aff-copy p{color:var(--ivory-soft);font-size:17px;line-height:1.65;margin:0 0 32px;max-width:44ch}
-.aff-bullets{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:16px;border-top:1px solid var(--rule);padding-top:32px}
-.aff-bullets li{display:flex;align-items:flex-start;gap:14px;font-size:15px;color:var(--ivory-soft);line-height:1.5}
-.aff-bullets li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--gold);margin-top:7px;flex-shrink:0}
+/* service sections */
+.cfm-section{padding:clamp(72px,9vw,140px) 0;border-bottom:1px solid var(--rule)}
+.cfm-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(48px,7vw,100px);align-items:center}
+.cfm-grid.reverse{direction:rtl}
+.cfm-grid.reverse > *{direction:ltr}
+.cfm-images{display:grid;gap:12px}
+.cfm-images.two-col{grid-template-columns:1fr 1fr}
+.cfm-images img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/3;border:1px solid var(--rule-hi);display:block}
+.cfm-copy .eyebrow-row{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+.cfm-copy .eyebrow-row::before{content:"";width:32px;height:1px;background:var(--gold)}
+.cfm-copy p{color:var(--ivory-soft);font-size:17px;line-height:1.65;margin:0 0 32px;max-width:44ch}
+.cfm-bullets{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:16px;border-top:1px solid var(--rule);padding-top:32px}
+.cfm-bullets li{display:flex;align-items:flex-start;gap:14px;font-size:15px;color:var(--ivory-soft);line-height:1.5}
+.cfm-bullets li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--gold);margin-top:7px;flex-shrink:0}
+/* contact */
 .contact-sec{background:var(--obsidian);border-top:1px solid var(--rule-hi);padding:clamp(72px,9vw,140px) 0}
 .contact-inner{display:grid;grid-template-columns:1fr 1fr;gap:clamp(48px,6vw,96px);align-items:start}
 .contact-info .eyebrow-row{display:flex;align-items:center;gap:12px;margin-bottom:16px}
@@ -86,8 +94,15 @@ button{font-family:inherit;cursor:pointer}
 .dark-form textarea{resize:vertical;min-height:100px}
 .dark-form button{justify-self:start}
 .f-status{font-size:14px;color:var(--gold-soft);display:none;margin-top:4px}
-.btn-gold{font-family:var(--sans);font-size:12px;letter-spacing:.18em;text-transform:uppercase;padding:17px 28px;border:1px solid var(--gold);background:transparent;color:var(--gold);display:inline-flex;align-items:center;gap:16px;transition:all .4s var(--ease);cursor:pointer}
+.btn-gold{font-family:var(--sans);font-size:12px;letter-spacing:.18em;text-transform:uppercase;padding:17px 28px;border:1px solid var(--gold);background:transparent;color:var(--gold);display:inline-flex;align-items:center;justify-content:center;gap:16px;transition:all .4s var(--ease);cursor:pointer}
 .btn-gold:hover{background:var(--gold);color:var(--black)}
+/* service nav pills */
+.cfm-nav{border-bottom:1px solid var(--rule);background:var(--obsidian)}
+.cfm-nav-inner{display:flex;gap:0;overflow-x:auto;scrollbar-width:none}
+.cfm-nav-inner::-webkit-scrollbar{display:none}
+.cfm-nav-inner a{font-family:var(--sans);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--ivory-soft);padding:18px 24px;border-bottom:2px solid transparent;white-space:nowrap;transition:color .2s ease,border-color .2s ease;flex-shrink:0}
+.cfm-nav-inner a:hover{color:var(--gold);border-bottom-color:var(--gold)}
+/* footer */
 footer{background:var(--black);padding:clamp(72px,8vw,120px) 0 40px;border-top:1px solid var(--rule)}
 .foot{display:grid;grid-template-columns:1.6fr repeat(3,1fr);gap:clamp(32px,4vw,72px);padding-bottom:56px;border-bottom:1px solid var(--rule)}
 .foot h4{font-family:var(--serif);font-style:italic;font-size:16px;color:var(--gold);margin:0 0 20px}
@@ -100,9 +115,16 @@ footer{background:var(--black);padding:clamp(72px,8vw,120px) 0 40px;border-top:1
 .foot-btm{display:flex;justify-content:center;align-items:center;padding-top:28px;flex-wrap:wrap;gap:16px;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--mute)}
 .foot-btm a{color:var(--mute);font-size:12px;padding:0;transition:color .3s ease}
 .foot-btm a:hover{color:var(--gold-soft)}
+/* reveal */
 .reveal{opacity:0;transform:translateY(20px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
 .reveal.in{opacity:1;transform:none}
-@media(max-width:1024px){.nav-links,.nav-cta,.nav-email{display:none}.menu-btn{display:flex}.aff-grid,.contact-inner,.foot{grid-template-columns:1fr}.dark-form .row{grid-template-columns:1fr}}
+@media(max-width:1024px){
+  .nav-links,.nav-cta,.nav-email{display:none}.menu-btn{display:flex}
+  .cfm-grid,.contact-inner,.foot{grid-template-columns:1fr}
+  .cfm-grid.reverse{direction:ltr}
+  .dark-form .row{grid-template-columns:1fr}
+}
+@media(max-width:640px){.cfm-images.two-col{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none !important;transition:none !important}.reveal{opacity:1;transform:none}}
 </style>
 </head>
@@ -118,7 +140,7 @@ footer{background:var(--black);padding:clamp(72px,8vw,120px) 0 40px;border-top:1
       <a href="/" role="listitem">Home</a>
       <a href="/about-us/" role="listitem">About</a>
       <div class="nav-dd nav-dd-wide" role="listitem">
-        <button aria-haspopup="true" aria-expanded="false">Real Estate <i class="lucide lucide-chevron-down" style="font-size:12px" aria-hidden="true"></i></button>
+        <button class="active" aria-haspopup="true" aria-expanded="false">Real Estate <i class="lucide lucide-chevron-down" style="font-size:12px" aria-hidden="true"></i></button>
         <div class="nav-dd-panel" role="menu">
           <div class="dd-col">
             <span class="sub-lbl">Residential</span>
@@ -132,7 +154,7 @@ footer{background:var(--black);padding:clamp(72px,8vw,120px) 0 40px;border-top:1
             <a href="/property-management/" role="menuitem">Property Management</a>
             <a href="/broker-opinion-value/" role="menuitem">Broker Opinion of Value</a>
             <a href="/mortgages/" role="menuitem">Mortgages</a>
-            <a href="/cash-flow-maximization/" role="menuitem">Cash Flow Maximization</a>
+            <a href="/cash-flow-maximization/" role="menuitem" style="color:var(--gold)">Cash Flow Maximization</a>
           </div>
         </div>
       </div>
@@ -147,7 +169,7 @@ footer{background:var(--black);padding:clamp(72px,8vw,120px) 0 40px;border-top:1
       <a href="/contact/" role="listitem">Contact</a>
     </div>
     <a class="nav-email" href="mailto:leliyahu@bridgenyre.com" aria-label="Send Lee an email"><i class="lucide lucide-mail" aria-hidden="true"></i> Email</a>
-    <a class="nav-cta" href="tel:+13478524446">+1 (347) 852-4446 <i class="lucide lucide-arrow-up-right" aria-hidden="true"></i></a>
+    <a class="nav-cta" href="tel:+15162256733">+1 (516) 225-6733 <i class="lucide lucide-arrow-up-right" aria-hidden="true"></i></a>
     <button class="menu-btn" id="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="mob-nav">
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></svg>
     </button>
@@ -165,7 +187,7 @@ footer{background:var(--black);padding:clamp(72px,8vw,120px) 0 40px;border-top:1
     <a href="/property-management/">Property Management</a>
     <a href="/broker-opinion-value/">Broker Opinion of Value</a>
     <a href="/mortgages/">Mortgages</a>
-    <a href="/cash-flow-maximization/">Cash Flow Maximization</a>
+    <a href="/cash-flow-maximization/" style="color:var(--gold)">Cash Flow Maximization</a>
   </div>
   <button class="mob-dd-toggle" aria-expanded="false" data-target="mob-fin">Financial <i class="lucide lucide-chevron-down" aria-hidden="true"></i></button>
   <div class="mob-sub" id="mob-fin">
@@ -174,60 +196,144 @@ footer{background:var(--black);padding:clamp(72px,8vw,120px) 0 40px;border-top:1
     <a href="/hard-money-for-real-estate/">Hard Money</a>
   </div>
   <a href="/contact/">Contact</a>
-  <a href="tel:+13478524446" class="mob-cta-link">+1 (347) 852-4446</a>
+  <a href="tel:+15162256733" class="mob-cta-link">+1 (516) 225-6733</a>
 </nav>
 
-<header class="pg-hero" aria-label="5G antennas hero">
+<header class="pg-hero" aria-label="Cash flow maximization hero">
   <div class="wrap">
     <div class="pg-hero-eyebrow reveal">
-      <span>Affiliate</span>
+      <span>Real Estate</span>
       <span class="dot" aria-hidden="true"></span>
-      <span>Wireless Infrastructure</span>
+      <span>Services</span>
     </div>
-    <h1 class="display reveal">5G<br><em>antennas.</em></h1>
-    <p class="reveal" style="font-family:var(--serif);font-style:italic;font-size:clamp(18px,1.8vw,26px);color:var(--ivory-soft);margin:clamp(20px,3vw,36px) 0 0;max-width:48ch;line-height:1.4">Your rooftop is an asset. Find out if your property qualifies to host wireless antenna infrastructure and earn monthly recurring income.</p>
+    <h1 class="display reveal">Cash flow<br><em>maximization.</em></h1>
+    <p class="reveal" style="font-family:var(--serif);font-style:italic;font-size:clamp(18px,1.8vw,26px);color:var(--ivory-soft);margin:clamp(20px,3vw,36px) 0 0;max-width:52ch;line-height:1.4">Your property could be generating more revenue than you think. Through a decade of strategic partnerships, Lee connects New York property owners with income-generating opportunities — at no upfront cost.</p>
   </div>
 </header>
 
-<section class="aff-content" aria-labelledby="aff-hd">
+<!-- SERVICE NAV -->
+<div class="cfm-nav">
   <div class="wrap">
-    <div class="aff-grid">
-      <div class="aff-copy reveal">
+    <div class="cfm-nav-inner">
+      <a href="#billboards">Billboards</a>
+      <a href="#antennas">5G Antennas</a>
+      <a href="#electrical-storage">Electrical Storage</a>
+      <a href="#security">Security &amp; Surveillance</a>
+    </div>
+  </div>
+</div>
+
+<!-- BILLBOARDS -->
+<section id="billboards" class="cfm-section" aria-label="Billboards">
+  <div class="wrap">
+    <div class="cfm-grid">
+      <div class="cfm-images two-col reveal">
+        <img src="/assets/images/bulletins_10.webp" alt="Large format bulletin billboard" loading="lazy">
+        <img src="/assets/images/3-pizza-programmatic.jpg" alt="Programmatic digital billboard" loading="lazy">
+        <img src="/assets/images/wallscapes_2.webp" alt="Wallscape billboard" loading="lazy">
+        <img src="/assets/images/2.jpg" alt="Billboard advertising" loading="lazy">
+      </div>
+      <div class="cfm-copy reveal">
+        <div class="eyebrow-row"><span class="eyebrow">Outdoor Advertising</span></div>
+        <h2 class="h2">Bring your<br><em>property to life.</em></h2>
+        <p>Outdoor advertising is one of the simplest ways to add cash flow to a property you already own. Lee works with established outdoor media partners to identify qualifying locations and structure arrangements that generate recurring income — with no upfront cost to you.</p>
+        <ul class="cfm-bullets">
+          <li>Static and digital billboard formats available for qualifying locations</li>
+          <li>Add meaningful cash flow to commercial, mixed-use, or vacant land</li>
+          <li>Partners with leading outdoor advertising operators including Lamar</li>
+          <li>No cost to the property owner to find out if your location qualifies</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5G ANTENNAS -->
+<section id="antennas" class="cfm-section" aria-label="5G antennas">
+  <div class="wrap">
+    <div class="cfm-grid reverse">
+      <div class="cfm-copy reveal">
         <div class="eyebrow-row"><span class="eyebrow">Passive Rooftop Income</span></div>
-        <h2 id="aff-hd" class="h2">Turn your roof<br><em>into rent.</em></h2>
+        <h2 class="h2">Turn your roof<br><em>into rent.</em></h2>
         <p>Wireless carriers and infrastructure providers pay property owners monthly rent to host antenna equipment on rooftops, towers, and facades. It's passive income from space you're already not using — and it increases your property's value at the same time.</p>
-        <ul class="aff-bullets">
+        <ul class="cfm-bullets">
           <li>Monthly recurring rental payments for hosting antenna equipment</li>
           <li>Qualifies on residential, commercial, and mixed-use rooftops</li>
           <li>No cost to the property owner to assess eligibility</li>
           <li>Supports 5G infrastructure build-out across New York</li>
         </ul>
       </div>
-      <div class="aff-images reveal">
+      <div class="cfm-images reveal">
         <img src="/assets/images/1-1.jpg" alt="Rooftop antenna infrastructure" loading="lazy">
       </div>
     </div>
   </div>
 </section>
 
+<!-- ELECTRICAL STORAGE -->
+<section id="electrical-storage" class="cfm-section" aria-label="Electrical storage">
+  <div class="wrap">
+    <div class="cfm-grid">
+      <div class="cfm-images two-col reveal">
+        <img src="/assets/images/5J7A0850-scaled_653x435_acf_cropped.jpg" alt="Battery energy storage installation" loading="lazy">
+        <img src="/assets/images/1310484172-1.webp" alt="Energy storage infrastructure" loading="lazy">
+      </div>
+      <div class="cfm-copy reveal">
+        <div class="eyebrow-row"><span class="eyebrow">Battery &amp; EV Infrastructure</span></div>
+        <h2 class="h2">Power your property.<br><em>Power the grid.</em></h2>
+        <p>Lee connects property owners with the leading developer of community-scale battery energy storage systems (BESS) in the New York City metropolitan area — serving all five boroughs, Westchester, and Long Island. Properties can also host Blink EV charging stations to attract new customers and generate additional revenue.</p>
+        <ul class="cfm-bullets">
+          <li>Host battery energy storage systems and earn from your property</li>
+          <li>Add Blink EV charging stations and create a new revenue stream</li>
+          <li>Supports NYC's clean energy transition and grid resilience goals</li>
+          <li>Available across all five boroughs and the surrounding metro area</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECURITY & SURVEILLANCE -->
+<section id="security" class="cfm-section" aria-label="Security and surveillance">
+  <div class="wrap">
+    <div class="cfm-grid reverse">
+      <div class="cfm-copy reveal">
+        <div class="eyebrow-row"><span class="eyebrow">Partner · DGA</span></div>
+        <h2 class="h2">Complete protection<br><em>for your business.</em></h2>
+        <p>Through DGA — one of the industry's most trusted security integrators — Lee connects New York business owners with a full suite of commercial security solutions. From intrusion detection to award-winning UL-compliant monitoring, every system is designed around your property and your needs.</p>
+        <ul class="cfm-bullets">
+          <li>Intrusion alarms — customized, unobtrusive systems for any commercial space</li>
+          <li>OneVIEW video surveillance — accessible from anywhere, 24/7</li>
+          <li>Access control — mobile, card, fob, and tag options for every entry point</li>
+          <li>UL-compliant alarm monitoring — award-winning central station coverage</li>
+        </ul>
+      </div>
+      <div class="cfm-images reveal">
+        <img src="/assets/images/CCTV-monitoring-services-in-Dubai.webp" alt="Professional CCTV and surveillance monitoring" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
 <section id="contact" class="contact-sec" aria-labelledby="contact-hd">
   <div class="wrap">
     <div class="contact-inner">
       <div class="contact-info reveal">
-        <div class="eyebrow-row"><span class="eyebrow">Find Out If You Qualify</span></div>
-        <h2 id="contact-hd" class="h2">Does your rooftop<br><em>qualify?</em></h2>
-        <p>Share your property details and Lee will determine whether your location is a candidate for antenna hosting and what you could earn.</p>
+        <div class="eyebrow-row"><span class="eyebrow">Free · No Obligation</span></div>
+        <h2 id="contact-hd" class="h2">Find out what your<br>property <em>qualifies for.</em></h2>
+        <p>Share your property details and Lee will assess which income opportunities are available to you — billboards, antennas, EV charging, battery storage, or security. No cost, no commitment.</p>
       </div>
       <form class="dark-form reveal" id="contact-form" novalidate>
         <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_KEY_HERE">
-        <input type="hidden" name="subject" value="Antenna inquiry — leeeliyahu.com">
+        <input type="hidden" name="subject" value="Cash flow maximization inquiry — leeeliyahu.com">
         <input type="hidden" name="redirect" value="false">
         <div class="row">
           <div class="f"><label for="cf-name">Your Name</label><input id="cf-name" name="name" type="text" autocomplete="name" required></div>
           <div class="f"><label for="cf-email">Email</label><input id="cf-email" name="email" type="email" autocomplete="email" required></div>
         </div>
         <div class="f"><label for="cf-phone">Phone</label><input id="cf-phone" name="phone" type="tel" autocomplete="tel"></div>
-        <div class="f"><label for="cf-msg">Property address &amp; details</label><textarea id="cf-msg" name="message" rows="4" placeholder="Address, number of floors, property type (residential, commercial, mixed-use)"></textarea></div>
+        <div class="f"><label for="cf-msg">Property address &amp; details</label><textarea id="cf-msg" name="message" rows="4" placeholder="Address, property type, approximate size — the more detail, the better"></textarea></div>
         <button type="submit" class="btn-gold" id="form-btn">Check Eligibility <i class="lucide lucide-arrow-right" aria-hidden="true"></i></button>
         <p class="f-status" id="f-status" role="status" aria-live="polite"></p>
       </form>
@@ -263,10 +369,6 @@ footer{background:var(--black);padding:clamp(72px,8vw,120px) 0 40px;border-top:1
         <a href="/merchant-processing/">Merchant Processing</a>
         <a href="/business-funding/">Business Funding</a>
         <a href="/hard-money-for-real-estate/">Hard Money</a>
-        
-        <a href="/billboards/">Billboards</a>
-        <a href="/5g-antennas/">Antennas</a>
-        <a href="/electrical-storage/">Electrical Storage</a>
       </div>
       <div>
         <h4>Office</h4>
