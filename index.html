@@ -148,7 +148,7 @@ figure,blockquote{margin:0;padding:0}
 .add-svc-pills{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;width:100%}
 .add-pill{font-family:var(--sans);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--ivory-soft);border:1px solid var(--rule-hi);padding:13px 26px;transition:color .3s ease,border-color .3s ease;white-space:nowrap;text-decoration:none;display:inline-flex;align-items:center}
 .add-pill:hover{color:var(--gold);border-color:var(--gold)}
-.add-svc-hook{display:block;width:100%;box-sizing:border-box;margin-top:clamp(48px,6vw,80px);padding:clamp(36px,4vw,56px) clamp(24px,4vw,56px);border-top:1px solid var(--rule);text-align:center}
+.add-svc-hook{display:flex;flex-direction:column;align-items:center;width:100%;box-sizing:border-box;margin-top:clamp(48px,6vw,80px);padding:clamp(36px,4vw,56px) clamp(24px,4vw,56px);border-top:1px solid var(--rule);text-align:center}
 .add-svc-hook .h3{margin-bottom:clamp(16px,2vw,24px)}
 .add-svc-hook p{color:var(--ivory-soft);font-size:15px;line-height:1.75;max-width:640px;margin:0 auto clamp(24px,3vw,36px)}
 
@@ -225,7 +225,7 @@ a.cli-val:hover{color:var(--gold-soft)}
 .dark-form .f textarea:focus,
 .dark-form .f select:focus{outline:0;border-color:var(--gold)}
 .dark-form textarea{resize:vertical;min-height:110px}
-.dark-form button{justify-self:start}
+.dark-form button{justify-self:center}
 .f-status{font-size:14px;color:var(--gold-soft);display:none;margin-top:4px}
 
 /* ── FOOTER ── */
@@ -266,7 +266,7 @@ footer{background:var(--black);padding:clamp(72px,8vw,120px) 0 40px}
   .facts div:nth-child(odd){padding-right:0;border-right:0}
   .facts div:nth-child(even){padding-left:0}
   .vid-feat{aspect-ratio:16/9}
-  .btn{min-width:auto;width:100%}
+  .btn{min-width:auto;width:100%;display:flex;justify-content:center}
   .hero-ctas{width:100%}
 }
 @media(max-width:640px){
