@@ -430,14 +430,14 @@ footer{background:var(--black);padding:clamp(72px,8vw,120px) 0 40px}
     <span id="stats-hd" class="eyebrow">The Results</span>
     <div class="stats-grid">
       <div class="stat reveal">
-        <div class="stat-n">$<em>420</em>M</div>
+        <div class="stat-n">$<em>140.6</em>M</div>
         <div class="stat-tl"><span>Closed Volume</span></div>
-        <p>Residential, commercial, and investment transactions closed since 2014.</p>
+        <p>Residential, commercial, and investment transactions closed.</p>
       </div>
       <div class="stat reveal">
-        <div class="stat-n"><em>1,200</em>+</div>
-        <div class="stat-tl"><span>Doors Closed</span></div>
-        <p>Units leased and sold, from Financial District studios to multi-family in Bay Ridge.</p>
+        <div class="stat-n"><em>71</em>+</div>
+        <div class="stat-tl"><span>Deals Closed</span></div>
+        <p>Deals closed across New York State.</p>
       </div>
       <div class="stat reveal">
         <div class="stat-n"><em>0</em>/5</div>
@@ -650,6 +650,35 @@ footer{background:var(--black);padding:clamp(72px,8vw,120px) 0 40px}
     entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})
   },{threshold:.1});
   document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+  /* countup animation for stat numbers */
+  const reducedMotion=window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+  function countUp(el,target,duration,decimals=0){
+    if(reducedMotion){el.textContent=target.toLocaleString('en-US',{minimumFractionDigits:decimals,maximumFractionDigits:decimals});return;}
+    const start=performance.now();
+    const update=now=>{
+      const p=Math.min((now-start)/duration,1);
+      const ease=1-Math.pow(1-p,3);
+      const val=ease*target;
+      el.textContent=val.toLocaleString('en-US',{minimumFractionDigits:decimals,maximumFractionDigits:decimals});
+      if(p<1)requestAnimationFrame(update);
+    };
+    requestAnimationFrame(update);
+  }
+  const statIo=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{
+      if(!e.isIntersecting)return;
+      statIo.unobserve(e.target);
+      e.target.querySelectorAll('.stat-n em').forEach(em=>{
+        const raw=parseFloat(em.textContent.replace(/,/g,''));
+        if(!isNaN(raw)){
+          const decimals=(em.textContent.split('.')[1]||'').length;
+          countUp(em,raw,1800,decimals);
+        }
+      });
+    });
+  },{threshold:.3});
+  document.querySelectorAll('.stat').forEach(s=>statIo.observe(s));
 
   /* mobile nav open/close */
   const menuBtn=document.getElementById('menu-btn');
