@@ -174,14 +174,14 @@ figure,blockquote{margin:0;padding:0}
 .stats-sec::before{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,rgba(11,10,8,1) 0%,rgba(11,10,8,.82) 12%,rgba(11,10,8,.82) 88%,rgba(11,10,8,1) 100%);z-index:0}
 .stats-sec > .wrap{position:relative;z-index:1}
 .stats-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--rule);margin-top:48px}
-.stat{padding:clamp(32px,4vw,56px) clamp(20px,2vw,40px) 0 0;border-right:1px solid var(--rule)}
-.stat:last-child{border-right:0;padding-right:0}
+.stat{padding:clamp(32px,4vw,56px) clamp(20px,2vw,40px) 0;border-right:1px solid var(--rule);text-align:center}
+.stat:last-child{border-right:0;padding-right:clamp(20px,2vw,40px)}
 .stat-n{font-family:var(--serif);font-weight:400;font-size:clamp(64px,10vw,160px);line-height:.85;letter-spacing:-.03em;color:var(--ivory)}
 .stat-n em{font-style:italic;color:var(--gold)}
-.stat-tl{margin-top:24px;display:flex;align-items:center;gap:12px}
+.stat-tl{margin-top:24px;display:flex;align-items:center;justify-content:center;gap:12px}
 .stat-tl::before{content:"";width:22px;height:1px;background:var(--gold)}
 .stat-tl span{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-soft)}
-.stat p{margin:16px 0 0;color:var(--ivory-soft);max-width:32ch;font-size:15px}
+.stat p{margin:16px auto 0;color:var(--ivory-soft);max-width:32ch;font-size:15px}
 
 /* ── QUOTES ── */
 .quotes{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--rule-hi)}
@@ -228,7 +228,7 @@ a.cli-val:hover{color:var(--gold-soft)}
 
 /* ── FOOTER ── */
 footer{background:var(--black);padding:clamp(72px,8vw,120px) 0 40px}
-.foot{display:grid;grid-template-columns:1.6fr repeat(3,1fr);gap:clamp(32px,4vw,72px);padding-bottom:56px;border-bottom:1px solid var(--rule)}
+.foot{display:grid;grid-template-columns:1.6fr repeat(4,1fr);gap:clamp(32px,4vw,72px);padding-bottom:56px;border-bottom:1px solid var(--rule)}
 .foot h4{font-family:var(--serif);font-style:italic;font-size:16px;color:var(--gold);margin:0 0 20px}
 .foot a{display:block;color:var(--ivory-soft);font-size:14px;padding:6px 0;transition:color .3s ease}
 .foot a:hover{color:var(--gold)}
@@ -290,7 +290,7 @@ footer{background:var(--black);padding:clamp(72px,8vw,120px) 0 40px}
 <nav class="nav" aria-label="Primary navigation">
   <div class="wrap nav-inner">
     <a href="/" class="logo" aria-label="Lee Eliyahu — home">
-      <img src="/assets/images/LEE ELIYAHU.png" alt="" class="logo-img" aria-hidden="true">
+      <img src="/assets/images/logo-mark.png" alt="" class="logo-img" aria-hidden="true">
       <span class="logo-word">Lee <em>Eliyahu</em></span>
     </a>
     <div class="nav-links" id="desktop-nav" role="list">
@@ -438,9 +438,9 @@ footer{background:var(--black);padding:clamp(72px,8vw,120px) 0 40px}
         <p>Deals closed across New York State.</p>
       </div>
       <div class="stat reveal">
-        <div class="stat-n"><em>0</em>/5</div>
-        <div class="stat-tl"><span>Boroughs Skipped</span></div>
-        <p>Because a broker who only knows Manhattan isn't really a New York broker.</p>
+        <div class="stat-n"><em>0</em></div>
+        <div class="stat-tl"><span>Handoffs Required</span></div>
+        <p>Real estate, financing, and investment strategy — Lee handles the full picture.</p>
       </div>
     </div>
   </div>
@@ -579,12 +579,12 @@ footer{background:var(--black);padding:clamp(72px,8vw,120px) 0 40px}
     <div class="foot">
       <div class="foot-brand">
         <a href="/" class="logo" aria-label="Lee Eliyahu home">
-          <img src="/assets/images/LEE ELIYAHU.png" alt="" class="logo-img" aria-hidden="true">
+          <img src="/assets/images/logo-mark.png" alt="" class="logo-img" aria-hidden="true">
           <span class="logo-word">Lee <em>Eliyahu</em></span>
         </a>
         <p>Residential, commercial, and investment real estate across the five boroughs since 2014.</p>
         <div class="socials">
-          <a href="#" aria-label="LinkedIn">
+          <a href="http://www.linkedin.com/in/lee-eliyahu" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
             <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
           </a>
           <a href="#" aria-label="Facebook">
@@ -610,6 +610,11 @@ footer{background:var(--black);padding:clamp(72px,8vw,120px) 0 40px}
         <a href="/business-funding/">Business Funding</a>
         <a href="/hard-money-for-real-estate/">Hard Money</a>
         
+      </div>
+      <div>
+        <h4>Partners</h4>
+        <a href="https://www.sigglobe.com/" target="_blank" rel="noopener noreferrer">Signature Investment Group</a>
+        <a href="https://bridgenyre.com" target="_blank" rel="noopener noreferrer">Bridge Advisory Group</a>
       </div>
       <div>
         <h4>Office</h4>
