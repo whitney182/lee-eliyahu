@@ -140,7 +140,7 @@ figure,blockquote{margin:0;padding:0}
 .add-svc{display:block;width:100%;border-top:1px solid var(--rule);padding:clamp(48px,6vw,80px) 0 0;box-sizing:border-box;text-align:center}
 .add-svc > .h2{margin-bottom:clamp(16px,2vw,24px)}
 .add-svc-intro{margin:0 auto clamp(32px,4vw,56px);color:var(--ivory-soft);font-size:16px;line-height:1.75;max-width:680px}
-.add-svc-pills{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;width:100%}
+.add-svc-pills{display:grid;grid-template-columns:repeat(3,auto);justify-content:center;gap:12px;width:100%}
 .add-pill{font-family:var(--sans);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--ivory-soft);border:1px solid var(--rule-hi);padding:13px 26px;transition:color .3s ease,border-color .3s ease;white-space:nowrap;text-decoration:none;display:inline-flex;align-items:center}
 .add-pill:hover{color:var(--gold);border-color:var(--gold)}
 .add-svc-hook{display:flex;flex-direction:column;align-items:center;width:100%;box-sizing:border-box;margin-top:clamp(48px,6vw,80px);padding:clamp(36px,4vw,56px) clamp(24px,4vw,56px);border-top:1px solid var(--rule);text-align:center}
@@ -402,12 +402,12 @@ footer{background:var(--black);padding:clamp(72px,8vw,120px) 0 40px}
       <h2 class="h2">Additional <em>Services.</em></h2>
       <p class="add-svc-intro">Through strategic partnerships built across the financial services and real estate space over the last decade, we're also able to provide the following services to complement your business and investment strategy.</p>
       <div class="add-svc-pills">
-        <a href="/merchant-processing/" class="add-pill">Merchant Processing</a>
         <a href="/property-management/" class="add-pill">Property Management</a>
-        <a href="/cash-flow-maximization/" class="add-pill">Cash Flow Maximization</a>
         <a href="/hard-money-for-real-estate/" class="add-pill">Bridge Financing</a>
-        <a href="/mortgages/" class="add-pill">Traditional Lending &amp; Mortgages</a>
+        <a href="/mortgages/" class="add-pill">Traditional Mortgage</a>
+        <a href="/cash-flow-maximization/" class="add-pill">Cash Flow Maximization</a>
         <a href="/business-funding/" class="add-pill">Business Funding</a>
+        <a href="/merchant-processing/" class="add-pill">Merchant Processing</a>
       </div>
       <div class="add-svc-hook reveal">
         <h3 class="h3">Are you sure you're getting the most<br><em>out of your property?</em></h3>
