@@ -306,7 +306,7 @@ footer{background:var(--black);padding:clamp(72px,8vw,120px) 0 40px;border-top:1
   if(form){form.addEventListener('submit',async e=>{
     e.preventDefault();btn.disabled=true;btn.textContent='Sending…';fStatus.style.display='none';
     try{const r=await fetch('https://api.web3forms.com/submit',{method:'POST',body:new FormData(form)});const d=await r.json();
-      if(d.success){fStatus.textContent='Got it — Lee will be in touch shortly to set up your consultation.';fStatus.style.display='block';form.reset();}else throw new Error();
+      if(d.success){fStatus.textContent='Message received — Lee will be in touch as soon as possible.';fStatus.style.display='block';form.reset();}else throw new Error();
     }catch{fStatus.textContent='Something went wrong. Email leliyahu@bridgenyre.com directly.';fStatus.style.display='block';}
     btn.disabled=false;btn.innerHTML='Get Free Consultation <i class="lucide lucide-arrow-right" aria-hidden="true"></i>';
   });}

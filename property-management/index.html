@@ -574,7 +574,7 @@ footer{background:var(--black);padding:clamp(72px,8vw,120px) 0 40px}
         const res=await fetch('https://api.web3forms.com/submit',{method:'POST',body:new FormData(form)});
         const data=await res.json();
         if(data.success){
-          fStatus.textContent='Message sent — Lee will follow up shortly.';
+          fStatus.textContent='Message received — Lee will be in touch as soon as possible.';
           fStatus.style.display='block';
           form.reset();
         } else {

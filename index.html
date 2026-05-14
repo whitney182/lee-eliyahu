@@ -756,7 +756,9 @@ footer{background:var(--black);padding:clamp(72px,8vw,120px) 0 40px}
         });
         const json=await res.json();
         if(json.success){
-          formBtn.innerHTML='Sent &#x2014; reply within 24 hrs <i class="lucide lucide-check" aria-hidden="true"></i>';
+          formBtn.innerHTML='Sent <i class="lucide lucide-check" aria-hidden="true"></i>';
+          fStatus.textContent='Message received — Lee will be in touch as soon as possible.';
+          fStatus.style.display='block';
           form.reset();
         } else { throw new Error(json.message||'Failed') }
       } catch {
