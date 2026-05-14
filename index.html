@@ -4,9 +4,9 @@
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
 <title>Lee Eliyahu: Real Estate and Financial Services</title>
-<meta name="description" content="Lee Eliyahu — New York real estate broker since 2014. Residential sales, commercial leasing, and investment across all five boroughs. Licensed in New York State."/>
+<meta name="description" content="Lee Eliyahu — real estate broker since 2014. Residential sales, commercial leasing, and investment wherever opportunity takes you. Licensed in New York State."/>
 <meta property="og:title" content="Lee Eliyahu: Real Estate and Financial Services"/>
-<meta property="og:description" content="Residential sales, commercial leasing, and investment across all five New York boroughs. Licensed since 2014."/>
+<meta property="og:description" content="Residential sales, commercial leasing, and investment wherever opportunity takes you. Licensed since 2014."/>
 <meta property="og:type" content="website"/>
 <meta property="og:url" content="https://leeeliyahu.com/"/>
 <meta property="og:image" content="https://lee-eliyahu.pages.dev/assets/images/nyc-skyline.jpg"/>
@@ -240,7 +240,8 @@ footer{background:var(--black);padding:clamp(72px,8vw,120px) 0 40px}
 /* ── MAP ── */
 .txn-map{height:540px;border:1px solid var(--rule-hi);position:relative;overflow:hidden}
 .txn-map iframe{width:100%;height:100%;border:0;display:block}
-.map-legend{display:flex;gap:20px;margin-top:14px;justify-content:flex-end}
+.map-wrap{position:relative}
+.map-legend{display:flex;gap:20px;position:absolute;top:14px;right:14px;z-index:10;background:rgba(11,10,8,.72);padding:8px 14px;border:1px solid var(--rule-hi)}
 .map-legend-item{display:flex;align-items:center;gap:7px;font-family:var(--sans);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--mute)}
 .map-legend-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
 
@@ -360,7 +361,7 @@ footer{background:var(--black);padding:clamp(72px,8vw,120px) 0 40px}
   </video>
   <div class="hero-scrim" aria-hidden="true"></div>
   <div class="wrap">
-    <h1 class="display reveal">The broker<br>the five boroughs<br><em>call first.</em></h1>
+    <h1 class="display reveal">The broker<br>clients everywhere<br><em>call first.</em></h1>
     <div class="hero-grid reveal">
       <p class="hero-lede">Full-service real estate brokerage, property income strategies, and business cost solutions — all from one trusted source.</p>
       <div class="hero-ctas">
@@ -384,7 +385,7 @@ footer{background:var(--black);padding:clamp(72px,8vw,120px) 0 40px}
     <div class="services">
       <article class="svc reveal">
         <h3 class="h3">Residential Sales &amp; Rentals</h3>
-        <p>Full-service representation for buyers, sellers, and renters across condos, co-ops, and single-family homes throughout the five boroughs and Long Island.</p>
+        <p>Full-service representation for buyers, sellers, and renters across condos, co-ops, and single-family homes — New York and beyond.</p>
         <a href="/active-listings/" class="lnk">Explore <i class="lucide lucide-arrow-right" aria-hidden="true"></i></a>
       </article>
       <article class="svc reveal">
@@ -503,16 +504,18 @@ footer{background:var(--black);padding:clamp(72px,8vw,120px) 0 40px}
     <div class="sec-hd reveal">
       <div>
         <div class="tag-row"><span class="eyebrow">Where We've Transacted</span></div>
-        <h2 id="map-hd" class="h2">All five<br><em>boroughs.</em></h2>
+        <h2 id="map-hd" class="h2">Where deals<br><em>get done.</em></h2>
       </div>
-      <p class="meta">Active across Manhattan, Brooklyn, Queens, the Bronx, and Staten Island since 2014. Every pin is a closed deal.</p>
+      <p class="meta">From New York to wherever the opportunity is. Every pin on this map is a closed deal.</p>
     </div>
-    <div class="txn-map reveal">
-      <iframe src="https://www.google.com/maps/d/embed?mid=1PMThBZZDPJSOS8R2LFyQYhSDOSe1A94&ehbc=2E312F&noprof=1" title="Lee Eliyahu transaction map" loading="lazy" allowfullscreen></iframe>
-    </div>
-    <div class="map-legend">
-      <div class="map-legend-item"><span class="map-legend-dot" style="background:#4CAF50"></span>Available</div>
-      <div class="map-legend-item"><span class="map-legend-dot" style="background:#E53935"></span>Sold</div>
+    <div class="map-wrap">
+      <div class="txn-map reveal">
+        <iframe src="https://www.google.com/maps/d/embed?mid=1PMThBZZDPJSOS8R2LFyQYhSDOSe1A94&ehbc=2E312F&noprof=1" title="Lee Eliyahu transaction map" loading="lazy" allowfullscreen></iframe>
+      </div>
+      <div class="map-legend">
+        <div class="map-legend-item"><span class="map-legend-dot" style="background:#4CAF50"></span>Available</div>
+        <div class="map-legend-item"><span class="map-legend-dot" style="background:#E53935"></span>Sold</div>
+      </div>
     </div>
   </div>
 </section>
