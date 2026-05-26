@@ -100,7 +100,7 @@ figure,blockquote{margin:0;padding:0}
 /* ── PAGE HERO ── */
 .pg-hero{position:relative;min-height:62vh;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;background:var(--black) url('/assets/images/nyc-skyline-2.jpg') center/cover no-repeat;text-align:left}
 .pg-hero::before{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,rgba(11,10,8,1) 0%,rgba(11,10,8,.78) 15%,rgba(11,10,8,.78) 85%,rgba(11,10,8,1) 100%),linear-gradient(to right,rgba(11,10,8,.7) 0%,transparent 55%)}
-.pg-hero .wrap{padding-bottom:clamp(56px,8vw,100px);width:100%}
+.pg-hero .wrap{padding-top:clamp(80px,11vw,160px);padding-bottom:clamp(56px,8vw,100px);width:100%}
 .pg-hero-bar{display:flex;align-items:center;gap:16px;border-bottom:1px solid var(--rule-hi);padding-bottom:20px;margin-bottom:clamp(32px,5vw,56px)}
 .pg-hero-bar span{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:rgba(239,234,219,.6)}
 .pg-hero-bar .dot{width:6px;height:6px;border-radius:50%;background:var(--gold);flex-shrink:0}
@@ -241,7 +241,7 @@ footer{background:var(--black);padding:clamp(72px,8vw,120px) 0 40px}
 }
 @media(max-width:640px){
   .pg-hero{justify-content:flex-start}
-  .pg-hero .wrap{padding-top:120px}
+  .pg-hero .wrap{padding-top:clamp(80px,11vw,160px)}
   .pg-hero-bar{margin-bottom:20px;padding-bottom:12px}
   .foot{grid-template-columns:1fr}
   .creds-grid{grid-template-columns:1fr}
