@@ -206,14 +206,14 @@ footer{background:var(--black);padding:clamp(72px,8vw,120px) 0 40px}
 /* ── RESPONSIVE ── */
 @media(max-width:1024px){
   .nav-links,.nav-cta,.nav-email{display:none}
-  .menu-btn{display:flex}
+  .menu-btn{display:flex}.nav-inner{justify-content:space-between}
   .listings-hd,.pg-hero-body,.contact-inner{grid-template-columns:1fr}
   .cards{grid-template-columns:1fr}
   .foot{grid-template-columns:1fr 1fr}
   .dark-form .row{grid-template-columns:1fr}
   .btn{min-width:auto;width:100%;display:flex;justify-content:center}
 }
-@media(max-width:640px){
+@media(max-width:640px){.tag-row{justify-content:center}.pg-hero-bar{justify-content:center}.pg-hero-eyebrow{justify-content:center}.pg-hero-content{text-align:center}.sec-hd,.listings-hd,.about-txt,.partner-copy,.svc-intro{text-align:center}
   .pg-hero{padding-top:44px}
   .pg-hero-index{margin-bottom:20px}
   .pg-hero-body{margin-top:20px;padding-top:20px}

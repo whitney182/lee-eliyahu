@@ -119,12 +119,12 @@ footer{background:var(--black);padding:clamp(72px,8vw,120px) 0 40px;border-top:1
 .reveal{opacity:0;transform:translateY(20px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
 .reveal.in{opacity:1;transform:none}
 @media(max-width:1024px){
-  .nav-links,.nav-cta,.nav-email{display:none}.menu-btn{display:flex}
+  .nav-links,.nav-cta,.nav-email{display:none}.menu-btn{display:flex}.nav-inner{justify-content:space-between}
   .cfm-grid,.contact-inner,.foot{grid-template-columns:1fr}
   .cfm-grid.reverse{direction:ltr}
   .dark-form .row{grid-template-columns:1fr}
 }
-@media(max-width:640px){.cfm-images.two-col{grid-template-columns:1fr}}
+@media(max-width:640px){.tag-row{justify-content:center}.pg-hero-bar{justify-content:center}.pg-hero-eyebrow{justify-content:center}.pg-hero-content{text-align:center}.sec-hd,.listings-hd,.about-txt,.partner-copy,.svc-intro{text-align:center}.cfm-images.two-col{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none !important;transition:none !important}.reveal{opacity:1;transform:none}}
 </style>
 </head>

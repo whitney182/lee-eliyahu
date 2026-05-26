@@ -223,7 +223,7 @@ footer{background:var(--black);padding:clamp(72px,8vw,120px) 0 40px}
 /* ── RESPONSIVE ── */
 @media(max-width:1024px){
   .nav-links,.nav-cta,.nav-email{display:none}
-  .menu-btn{display:flex}
+  .menu-btn{display:flex}.nav-inner{justify-content:space-between}
   .about,.sec-hd,.contact-inner{grid-template-columns:1fr}
   .creds-grid{grid-template-columns:1fr 1fr}
   .cred{border-right:0;border-bottom:1px solid var(--rule);padding:0 0 24px;margin-bottom:24px}
@@ -239,7 +239,7 @@ footer{background:var(--black);padding:clamp(72px,8vw,120px) 0 40px}
   .dark-form .row{grid-template-columns:1fr}
   .btn{min-width:auto;width:100%;display:flex;justify-content:center}
 }
-@media(max-width:640px){
+@media(max-width:640px){.tag-row{justify-content:center}.pg-hero-bar{justify-content:center}.pg-hero-eyebrow{justify-content:center}.pg-hero-content{text-align:center}.sec-hd,.listings-hd,.about-txt,.partner-copy,.svc-intro{text-align:center}
   .pg-hero{justify-content:flex-start}
   .pg-hero .wrap{padding-top:clamp(80px,11vw,160px)}
   .pg-hero-bar{margin-bottom:20px;padding-bottom:12px}
