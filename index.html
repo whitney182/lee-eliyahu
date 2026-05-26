@@ -258,6 +258,7 @@ footer{background:var(--black);padding:clamp(72px,8vw,120px) 0 40px}
 @media(max-width:1024px){
   .nav-links,.nav-cta,.nav-email{display:none}
   .menu-btn{display:flex}
+  .nav-inner{justify-content:space-between}
   .hero-grid,.sec-hd,.about,.stats-grid,.contact-inner{grid-template-columns:1fr}
   .closing-card{flex:0 0 calc(100% - 0px)}
   .slide-hd-row{flex-direction:column;align-items:flex-start;gap:20px}
@@ -277,10 +278,19 @@ footer{background:var(--black);padding:clamp(72px,8vw,120px) 0 40px}
 }
 @media(max-width:640px){
   .foot{grid-template-columns:1fr}
-  .hero .display{font-size:clamp(44px,13vw,80px)}
+  .hero .display{font-size:clamp(44px,13vw,80px);text-align:center}
   .hero{justify-content:flex-start}
   .hero .wrap{padding-top:72px}
-  .hero-bar{margin-bottom:20px;padding-bottom:12px}
+  .hero-bar{margin-bottom:20px;padding-bottom:12px;justify-content:center}
+  .hero-lede{text-align:center}
+  .hero-ctas{justify-content:center}
+  .sec-hd{text-align:center}
+  .tag-row{justify-content:center}
+  .about-txt{text-align:center}
+  .bov-callout .wrap{text-align:center}
+  .slide-hd-row{align-items:center;text-align:center}
+  .add-svc-pills{grid-template-columns:repeat(2,1fr)}
+  .add-pill{white-space:normal;text-align:center;justify-content:center}
 }
 @media(prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none !important;transition:none !important}
