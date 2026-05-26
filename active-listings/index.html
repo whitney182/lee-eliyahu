@@ -147,6 +147,7 @@ figure,blockquote{margin:0;padding:0}
 .card .view i{transition:transform .45s var(--ease)}
 .card:hover .view i{transform:translateX(8px)}
 
+.no-listings{padding:clamp(48px,7vw,96px) 0;border-top:1px solid var(--rule-hi);border-bottom:1px solid var(--rule-hi);text-align:center}.no-listings p{font-family:var(--serif);font-style:italic;font-size:clamp(18px,1.6vw,24px);color:var(--ivory-soft);max-width:52ch;margin:0 auto;line-height:1.5}
 .listings-foot{margin-top:clamp(56px,7vw,96px);display:flex;justify-content:center;align-items:center;border-top:1px solid var(--rule);padding-top:36px;flex-wrap:wrap;gap:24px}
 .listings-foot p{font-family:var(--serif);font-style:italic;font-size:clamp(18px,1.6vw,22px);color:var(--ivory);max-width:44ch;margin:0}
 
@@ -316,8 +317,7 @@ footer{background:var(--black);padding:clamp(72px,8vw,120px) 0 40px}
     <div class="pg-hero-body reveal">
       <p class="pg-hero-lede">Properties available now — residential sales across the market. New inventory added as deals come to market.</p>
       <div class="pg-hero-meta">
-        <div><span class="ml">On Market</span><span class="mv">1 property</span></div>
-        <div><span class="ml">Price Range</span><span class="mv">From $280K</span></div>
+        <div><span class="ml">On Market</span><span class="mv">0 properties</span></div>
         <div><span class="ml">Updated</span><span class="mv">May 2026</span></div>
       </div>
     </div>
@@ -335,136 +335,8 @@ footer{background:var(--black);padding:clamp(72px,8vw,120px) 0 40px}
       <p>Active residential properties available for purchase. Contact Lee directly for showings, additional details, or off-market inventory not listed here.</p>
     </div>
 
-    <div class="cards">
-
-      <!-- AVAILABLE -->
-      <article class="card reveal">
-        <div class="card-frame">
-          <span class="tag inv">Available</span>
-          <span class="city">Dania Beach, FL</span>
-          <div class="card-placeholder"><span>Photo Coming Soon</span></div>
-        </div>
-        <div class="price-row">
-          <span class="price">$280<em>K</em></span>
-          <span class="idx">01</span>
-        </div>
-        <address>4111 Stirling Rd, Apt 509<br>Dania Beach, FL</address>
-        <a class="view" href="/contact/">Inquire <i class="lucide lucide-arrow-up-right" aria-hidden="true"></i></a>
-      </article>
-
-      <!-- SOLD -->
-      <article class="card reveal">
-        <div class="card-frame">
-          <span class="tag sold">Sold</span>
-          <span class="city">Hollywood, FL</span>
-          <div class="card-placeholder"><span>Photo Coming Soon</span></div>
-        </div>
-        <div class="price-row">
-          <span class="price">2800 <em>Palmer</em></span>
-          <span class="idx">02</span>
-        </div>
-        <address>2800 Palmer Drive<br>Hollywood, FL 33021</address>
-        <a class="view" href="/contact/">Contact Lee <i class="lucide lucide-arrow-up-right" aria-hidden="true"></i></a>
-      </article>
-
-      <article class="card reveal">
-        <div class="card-frame">
-          <span class="tag sold">Sold</span>
-          <span class="city">Great Neck, NY</span>
-          <div class="card-placeholder"><span>Photo Coming Soon</span></div>
-        </div>
-        <div class="price-row">
-          <span class="price">337 <em>E Shore</em></span>
-          <span class="idx">03</span>
-        </div>
-        <address>337 E Shore Road<br>Great Neck, NY 11023</address>
-        <a class="view" href="/contact/">Contact Lee <i class="lucide lucide-arrow-up-right" aria-hidden="true"></i></a>
-      </article>
-
-      <article class="card reveal">
-        <div class="card-frame">
-          <span class="tag sold">Sold</span>
-          <span class="city">Bronx, NY</span>
-          <div class="card-placeholder"><span>Photo Coming Soon</span></div>
-        </div>
-        <div class="price-row">
-          <span class="price">1170 <em>Vyse Ave</em></span>
-          <span class="idx">04</span>
-        </div>
-        <address>1170 Vyse Avenue<br>Bronx, NY 10459</address>
-        <a class="view" href="/contact/">Contact Lee <i class="lucide lucide-arrow-up-right" aria-hidden="true"></i></a>
-      </article>
-
-      <article class="card reveal">
-        <div class="card-frame">
-          <span class="tag sold">Sold</span>
-          <span class="city">Brooklyn, NY</span>
-          <div class="card-placeholder"><span>Photo Coming Soon</span></div>
-        </div>
-        <div class="price-row">
-          <span class="price">282 <em>E 35th St</em></span>
-          <span class="idx">05</span>
-        </div>
-        <address>282 East 35th St, #6F<br>Brooklyn, NY 11203</address>
-        <a class="view" href="/contact/">Contact Lee <i class="lucide lucide-arrow-up-right" aria-hidden="true"></i></a>
-      </article>
-
-      <article class="card reveal">
-        <div class="card-frame">
-          <span class="tag sold">Sold</span>
-          <span class="city">Brooklyn, NY</span>
-          <div class="card-placeholder"><span>Photo Coming Soon</span></div>
-        </div>
-        <div class="price-row">
-          <span class="price">190 <em>Cozine Ave</em></span>
-          <span class="idx">06</span>
-        </div>
-        <address>190 Cozine Avenue<br>Brooklyn, NY 11207</address>
-        <a class="view" href="/contact/">Contact Lee <i class="lucide lucide-arrow-up-right" aria-hidden="true"></i></a>
-      </article>
-
-      <article class="card reveal">
-        <div class="card-frame">
-          <span class="tag sold">Sold</span>
-          <span class="city">Bay Shore, NY</span>
-          <div class="card-placeholder"><span>Photo Coming Soon</span></div>
-        </div>
-        <div class="price-row">
-          <span class="price">45 <em>E Lakeland</em></span>
-          <span class="idx">07</span>
-        </div>
-        <address>45 E Lakeland Street<br>Bay Shore, NY</address>
-        <a class="view" href="/contact/">Contact Lee <i class="lucide lucide-arrow-up-right" aria-hidden="true"></i></a>
-      </article>
-
-      <article class="card reveal">
-        <div class="card-frame">
-          <span class="tag sold">Sold</span>
-          <span class="city">Brooklyn, NY</span>
-          <div class="card-placeholder"><span>Photo Coming Soon</span></div>
-        </div>
-        <div class="price-row">
-          <span class="price">3500 <em>Snyder Ave</em></span>
-          <span class="idx">08</span>
-        </div>
-        <address>3500 Snyder Ave, #4U<br>Brooklyn, NY 11203</address>
-        <a class="view" href="/contact/">Contact Lee <i class="lucide lucide-arrow-up-right" aria-hidden="true"></i></a>
-      </article>
-
-      <article class="card reveal">
-        <div class="card-frame">
-          <span class="tag sold">Sold</span>
-          <span class="city">Long Beach, NY</span>
-          <div class="card-placeholder"><span>Photo Coming Soon</span></div>
-        </div>
-        <div class="price-row">
-          <span class="price">217 <em>Neptune</em></span>
-          <span class="idx">09</span>
-        </div>
-        <address>217 Neptune Blvd<br>Long Beach, NY</address>
-        <a class="view" href="/contact/">Contact Lee <i class="lucide lucide-arrow-up-right" aria-hidden="true"></i></a>
-      </article>
-
+    <div class="no-listings reveal">
+      <p>No active residential listings at this time. New inventory is added as properties come to market — reach out for off-market options or to be notified when new listings are available.</p>
     </div>
 
     <div class="listings-foot reveal">
