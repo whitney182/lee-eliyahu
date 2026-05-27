@@ -137,7 +137,7 @@ figure,blockquote{margin:0;padding:0}
 .svc .lnk{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);display:inline-flex;align-items:center;gap:10px;margin-top:auto}
 .svc .lnk i{transition:transform .4s var(--ease)}
 .svc:hover .lnk i{transform:translateX(8px)}
-.add-svc{display:block;position:relative;width:100vw;left:50%;margin-left:-50vw;padding:clamp(48px,6vw,80px) var(--pad);box-sizing:border-box;text-align:center;background:var(--black) url('assets/images/nyc-skyline.jpg') center/cover no-repeat}
+.add-svc{display:block;position:relative;padding:clamp(48px,6vw,80px) 0;box-sizing:border-box;text-align:center;background:var(--black) url('assets/images/nyc-skyline.jpg') center/cover no-repeat}
 .add-svc::before{content:"";position:absolute;inset:0;background:rgba(11,10,8,.92);z-index:0;pointer-events:none}
 .add-svc > *{position:relative;z-index:1}
 .add-svc > .h2{margin-bottom:clamp(16px,2vw,24px)}
@@ -420,25 +420,28 @@ footer{background:var(--black);padding:clamp(72px,8vw,120px) 0 40px}
         <a href="/commercial-active-listing/" class="lnk">Explore <i class="lucide lucide-arrow-right" aria-hidden="true"></i></a>
       </article>
     </div>
-    <div class="add-svc reveal">
-      <h2 class="h2">Additional <em>Services.</em></h2>
-      <p class="add-svc-intro">Through strategic partnerships built across the financial services and real estate space over the last decade, we're also able to provide the following services to complement your business and investment strategy.</p>
-      <div class="add-svc-pills">
-        <a href="/property-management/" class="add-pill">Property Management</a>
-        <a href="/hard-money-for-real-estate/" class="add-pill">Bridge Financing</a>
-        <a href="/mortgages/" class="add-pill">Traditional Mortgage</a>
-        <a href="/cash-flow-maximization/" class="add-pill">Cash Flow Maximization</a>
-        <a href="/business-funding/" class="add-pill">Business Funding</a>
-        <a href="/merchant-processing/" class="add-pill">Merchant Processing</a>
-      </div>
-      <div class="add-svc-hook reveal">
-        <h3 class="h3">Are you sure you're getting the most<br><em>out of your property?</em></h3>
-        <p>We can add additional revenue streams to your asset and give you a full analysis of the opportunities available. Some of the ways we've helped property owners maximize their potential: antennas, billboards, EV charging stations, electrical storage, and more.</p>
-        <a href="/contact/" class="btn btn-gold">Get a Free Assessment <i class="lucide lucide-arrow-up-right" aria-hidden="true"></i></a>
-      </div>
-    </div>
   </div>
 </section>
+
+<div class="add-svc reveal">
+  <div class="wrap">
+    <h2 class="h2">Additional <em>Services.</em></h2>
+    <p class="add-svc-intro">Through strategic partnerships built across the financial services and real estate space over the last decade, we're also able to provide the following services to complement your business and investment strategy.</p>
+    <div class="add-svc-pills">
+      <a href="/property-management/" class="add-pill">Property Management</a>
+      <a href="/hard-money-for-real-estate/" class="add-pill">Bridge Financing</a>
+      <a href="/mortgages/" class="add-pill">Traditional Mortgage</a>
+      <a href="/cash-flow-maximization/" class="add-pill">Cash Flow Maximization</a>
+      <a href="/business-funding/" class="add-pill">Business Funding</a>
+      <a href="/merchant-processing/" class="add-pill">Merchant Processing</a>
+    </div>
+    <div class="add-svc-hook reveal">
+      <h3 class="h3">Are you sure you're getting the most<br><em>out of your property?</em></h3>
+      <p>We can add additional revenue streams to your asset and give you a full analysis of the opportunities available. Some of the ways we've helped property owners maximize their potential: antennas, billboards, EV charging stations, electrical storage, and more.</p>
+      <a href="/contact/" class="btn btn-gold">Get a Free Assessment <i class="lucide lucide-arrow-up-right" aria-hidden="true"></i></a>
+    </div>
+  </div>
+</div>
 
 <!-- STATS -->
 <section class="stats-sec" aria-labelledby="stats-hd">
