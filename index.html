@@ -137,7 +137,9 @@ figure,blockquote{margin:0;padding:0}
 .svc .lnk{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);display:inline-flex;align-items:center;gap:10px;margin-top:auto}
 .svc .lnk i{transition:transform .4s var(--ease)}
 .svc:hover .lnk i{transform:translateX(8px)}
-.add-svc{display:block;width:100%;border-top:1px solid var(--rule);padding:clamp(48px,6vw,80px) 0 0;box-sizing:border-box;text-align:center}
+.add-svc{display:block;position:relative;width:100vw;left:50%;margin-left:-50vw;padding:clamp(48px,6vw,80px) var(--pad);box-sizing:border-box;text-align:center;background:var(--black) url('assets/images/nyc-skyline.jpg') center/cover no-repeat}
+.add-svc::before{content:"";position:absolute;inset:0;background:rgba(11,10,8,.92);z-index:0;pointer-events:none}
+.add-svc > *{position:relative;z-index:1}
 .add-svc > .h2{margin-bottom:clamp(16px,2vw,24px)}
 .add-svc-intro{margin:0 auto clamp(32px,4vw,56px);color:var(--ivory-soft);font-size:16px;line-height:1.75;max-width:680px}
 .add-svc-pills{display:grid;grid-template-columns:repeat(3,auto);justify-content:center;gap:12px;width:100%}
