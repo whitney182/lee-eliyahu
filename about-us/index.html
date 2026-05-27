@@ -104,7 +104,7 @@ figure,blockquote{margin:0;padding:0}
 .pg-hero-bar{display:flex;align-items:center;gap:16px;border-bottom:1px solid var(--rule-hi);padding-bottom:20px;margin-bottom:clamp(32px,5vw,56px)}
 .pg-hero-bar span{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:rgba(239,234,219,.6)}
 .pg-hero-bar .dot{width:6px;height:6px;border-radius:50%;background:var(--gold);flex-shrink:0}
-.pg-hero-content{max-width:52%}
+.pg-hero-content{max-width:52%}.about-txt .h2{margin-bottom:clamp(20px,2.5vw,32px)}
 .pg-hero-sub{font-family:var(--serif);font-style:italic;font-size:clamp(18px,1.8vw,26px);color:rgba(239,234,219,.75);margin:clamp(20px,3vw,32px) 0 0}
 
 /* ── SECTIONS ── */
@@ -239,12 +239,13 @@ footer{background:var(--black);padding:clamp(72px,8vw,120px) 0 40px}
   .dark-form .row{grid-template-columns:1fr}
   .btn{min-width:auto;width:100%;display:flex;justify-content:center}
 }
-@media(max-width:640px){.tag-row{justify-content:center}.pg-hero-bar{justify-content:center}.pg-hero-eyebrow{justify-content:center}.pg-hero-content{text-align:center}.sec-hd,.listings-hd,.about-txt,.partner-copy,.svc-intro{text-align:center}
+@media(max-width:640px){.tag-row{justify-content:center}.pg-hero-bar{justify-content:center}.pg-hero-eyebrow{justify-content:center}.pg-hero-content{text-align:center;max-width:100%}.sec-hd,.listings-hd,.about-txt,.partner-copy,.svc-intro{text-align:center}
   .pg-hero{justify-content:flex-start}
   .pg-hero .wrap{padding-top:clamp(80px,11vw,160px)}
   .pg-hero-bar{margin-bottom:20px;padding-bottom:12px}
   .foot{grid-template-columns:1fr}
-  .creds-grid{grid-template-columns:1fr}
+  .creds-grid{grid-template-columns:1fr;text-align:center}
+  .about-txt .tr{justify-content:center}
 }
 @media(prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none !important;transition:none !important}
@@ -346,7 +347,7 @@ footer{background:var(--black);padding:clamp(72px,8vw,120px) 0 40px}
   <div class="wrap">
     <div class="about">
       <div class="about-vis reveal" aria-label="Lee Eliyahu portrait">
-        <img class="about-photo" src="/Lee Eliyahu Headshot-2.png" alt="Lee Eliyahu, New York real estate broker" width="1200" height="1400" loading="lazy" decoding="async">
+        <img class="about-photo" src="/assets/images/Lee Eliyahu Headshot.png" alt="Lee Eliyahu, New York real estate broker" width="1200" height="1400" loading="lazy" decoding="async">
       </div>
       <div class="about-txt reveal">
         <div class="tr"><span class="eyebrow">Who Is Lee?</span></div>
@@ -381,7 +382,7 @@ footer{background:var(--black);padding:clamp(72px,8vw,120px) 0 40px}
       </div>
       <div class="cred">
         <span class="cred-lbl">Coverage</span>
-        <span class="cred-val">All Five Boroughs</span>
+        <span class="cred-val">New York and National</span>
       </div>
     </div>
   </div>
