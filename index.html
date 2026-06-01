@@ -189,7 +189,7 @@ figure,blockquote{margin:0;padding:0}
 .slide-outer{overflow:hidden}
 .slide-track{display:flex;gap:24px;transition:transform .5s cubic-bezier(.4,0,.2,1);will-change:transform}
 .closing-card{flex:0 0 calc(33.333% - 16px);background:var(--obsidian);border:1px solid var(--rule-hi);overflow:hidden}
-.closing-img{width:100%;aspect-ratio:4/3;object-fit:contain;display:block;background:#0e0d0b}
+.closing-img{width:100%;aspect-ratio:1/1;object-fit:cover;object-position:center bottom;display:block;background:#0e0d0b}
 .closing-body{padding:clamp(20px,2.5vw,28px)}
 .closing-badge{font-family:var(--sans);font-size:10px;letter-spacing:.16em;text-transform:uppercase;padding:4px 10px;border:1px solid var(--gold);color:var(--gold);display:inline-block;margin-bottom:16px}
 .closing-badge.leased{border-color:#7ba7d4;color:#7ba7d4}
@@ -514,39 +514,63 @@ footer{background:var(--black);padding:clamp(72px,8vw,120px) 0 40px}
     <div class="slide-outer">
       <div class="slide-track" id="slide-track">
 
-        <a class="closing-card" href="https://traded.co/deals/new-york/industrial/lease/noah-fernando-leases-industrial-space-at-80-77-cypress-avenue-glendale-to-amd-ak-corp-for-23-ft/" target="_blank" rel="noopener noreferrer" style="display:block;text-decoration:none;color:inherit">
-          <img class="closing-img" src="/assets/images/80-77 Cypress Avenue.webp" alt="80-77 Cypress Avenue, Glendale — Industrial Lease" loading="lazy" decoding="async">
-          <div class="closing-body">
-            <span class="closing-badge leased">Leased</span>
-            <p class="closing-addr">80-77 Cypress Ave, Glendale</p>
-            <span class="closing-detail">Industrial Space &middot; <span style="color:var(--gold-soft)">Traded.co</span></span>
-          </div>
-        </a>
-
+        <!-- 1 — Oct 2025 -->
         <div class="closing-card">
-          <img class="closing-img" src="/assets/images/1170-vyse-avenue-bronx.png" alt="1170 Vyse Avenue, Bronx — Multifamily Sale" loading="lazy" decoding="async">
-          <div class="closing-body">
-            <span class="closing-badge">Sold</span>
-            <p class="closing-addr">1170 Vyse Avenue, Bronx, NY</p>
-            <span class="closing-detail">Multifamily &middot; $829,000</span>
-          </div>
-        </div>
-
-        <div class="closing-card">
-          <img class="closing-img" src="/assets/images/282-east-35th-brooklyn.png" alt="282 East 35th Street, Brooklyn — Co-op Sale" loading="lazy" decoding="async">
+          <img class="closing-img" src="/assets/images/closing-282-east-35th.jpg" alt="282 East 35th Street #6F, Brooklyn — Co-op Sale" loading="lazy" decoding="async">
           <div class="closing-body">
             <span class="closing-badge">Sold</span>
             <p class="closing-addr">282 East 35th St #6F, Brooklyn, NY</p>
-            <span class="closing-detail">Co-op &middot; $315,000</span>
+            <span class="closing-detail">Co-op &middot; $315,000 &middot; Oct 2025</span>
           </div>
         </div>
 
+        <!-- 2 — Jan 2025 -->
         <div class="closing-card">
-          <img class="closing-img" src="/assets/images/260-plandome-road.png" alt="260 Plandome Road — Retail Lease" loading="lazy" decoding="async">
+          <img class="closing-img" src="/assets/images/closing-bay-shore.jpg" alt="Bay Shore, NY — Single Family Residence Sale" loading="lazy" decoding="async">
           <div class="closing-body">
-            <span class="closing-badge leased">Leased</span>
-            <p class="closing-addr">260 Plandome Road, Nassau County, LI</p>
-            <span class="closing-detail">Retail NNN &middot; $77/SF &middot; 20-yr Term</span>
+            <span class="closing-badge">Sold</span>
+            <p class="closing-addr">Bay Shore, NY</p>
+            <span class="closing-detail">Single Family &middot; $540,000 &middot; Jan 2025</span>
+          </div>
+        </div>
+
+        <!-- 3 — Jan 2025 -->
+        <div class="closing-card">
+          <img class="closing-img" src="/assets/images/closing-long-beach.jpg" alt="Long Beach, NY — Single Family Residence Sale" loading="lazy" decoding="async">
+          <div class="closing-body">
+            <span class="closing-badge">Sold</span>
+            <p class="closing-addr">Long Beach, NY</p>
+            <span class="closing-detail">Single Family &middot; $1,273,000 &middot; Jan 2025</span>
+          </div>
+        </div>
+
+        <!-- 4 — Dec 2024 -->
+        <div class="closing-card">
+          <img class="closing-img" src="/assets/images/closing-sonic-fayetteville.jpg" alt="Sonic QSR — Fayetteville, GA — NNN Lease Sale" loading="lazy" decoding="async">
+          <div class="closing-body">
+            <span class="closing-badge">Sold</span>
+            <p class="closing-addr">Sonic QSR, Fayetteville, GA</p>
+            <span class="closing-detail">NNN Lease &middot; $2,038,500 &middot; Dec 2024</span>
+          </div>
+        </div>
+
+        <!-- 5 — Sep 2024 -->
+        <div class="closing-card">
+          <img class="closing-img" src="/assets/images/closing-snyder-ave.jpg" alt="3500 Snyder Avenue, Brooklyn — Co-op Sale" loading="lazy" decoding="async">
+          <div class="closing-body">
+            <span class="closing-badge">Sold</span>
+            <p class="closing-addr">3500 Snyder Ave #4U, Brooklyn, NY</p>
+            <span class="closing-detail">Co-op &middot; $180,000 &middot; Sep 2024</span>
+          </div>
+        </div>
+
+        <!-- 6 — Jun 2024 -->
+        <div class="closing-card">
+          <img class="closing-img" src="/assets/images/closing-wendys-staten-island.jpg" alt="Wendy's NNN — 330 Bay Street, Staten Island — Sale" loading="lazy" decoding="async" style="object-position:right bottom">
+          <div class="closing-body">
+            <span class="closing-badge">Sold</span>
+            <p class="closing-addr">Wendy's, 330 Bay St, Staten Island, NY</p>
+            <span class="closing-detail">NNN Lease &middot; $3,922,875 &middot; Jun 2024</span>
           </div>
         </div>
 
