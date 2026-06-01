@@ -241,6 +241,21 @@ footer{background:var(--black);padding:clamp(72px,8vw,120px) 0 40px}
 .foot-btm a{color:var(--mute);font-size:12px;letter-spacing:.1em;text-transform:uppercase;padding:0;transition:color .3s ease}
 .foot-btm a:hover{color:var(--gold-soft)}
 
+/* ── WHO WE SERVE ── */
+.wws-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.wws-card{position:relative;aspect-ratio:2/3;overflow:hidden;background:var(--coal) center/cover no-repeat}
+.wws-card::before{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(11,10,8,.92) 0%,rgba(11,10,8,.5) 55%,rgba(11,10,8,.25) 100%);z-index:1;transition:background .5s ease}
+.wws-card:hover::before{background:linear-gradient(to top,rgba(11,10,8,.97) 0%,rgba(11,10,8,.65) 55%,rgba(11,10,8,.35) 100%)}
+.wws-card-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .7s cubic-bezier(.2,.8,.2,1)}
+.wws-card:hover .wws-card-bg{transform:scale(1.05)}
+.wws-card::after{content:"";position:absolute;bottom:0;left:0;right:0;height:3px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .55s cubic-bezier(.2,.8,.2,1);z-index:2}
+.wws-card:hover::after{transform:scaleX(1)}
+.wws-body{position:absolute;bottom:0;left:0;right:0;padding:clamp(20px,2.5vw,32px);z-index:3}
+.wws-icon{font-size:26px;color:var(--gold);display:block;margin-bottom:14px}
+.wws-label{font-family:var(--serif);font-size:clamp(20px,1.8vw,26px);color:var(--ivory);line-height:1.2;display:block}
+@media(max-width:900px){.wws-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:500px){.wws-grid{grid-template-columns:1fr;}.wws-card{aspect-ratio:4/3}}
+
 /* ── MAP ── */
 .txn-map{height:540px;border:1px solid var(--rule-hi);position:relative;overflow:hidden}
 .txn-map iframe{width:100%;height:100%;border:0;display:block}
@@ -460,9 +475,9 @@ footer{background:var(--black);padding:clamp(72px,8vw,120px) 0 40px}
         <p>Deals closed across New York State.</p>
       </div>
       <div class="stat reveal">
-        <div class="stat-n"><em>0</em></div>
-        <div class="stat-tl"><span>Handoffs Required</span></div>
-        <p>Real estate, financing, and investment strategy — Lee handles the full picture.</p>
+        <div class="stat-n"><em>108</em>K</div>
+        <div class="stat-tl"><span>Sq Ft Leased</span></div>
+        <p>Across Retail, Office and Industrial.</p>
       </div>
     </div>
   </div>
@@ -615,6 +630,52 @@ footer{background:var(--black);padding:clamp(72px,8vw,120px) 0 40px}
         </div>
 
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHO WE SERVE -->
+<section class="sec" aria-labelledby="wws-hd">
+  <div class="wrap">
+    <div class="sec-hd reveal" style="text-align:center;margin-bottom:clamp(40px,5vw,64px)">
+      <div class="tag-row" style="justify-content:center"><span class="eyebrow">Commercial Leasing</span></div>
+      <h2 id="wws-hd" class="h2">Who We <em>Serve</em></h2>
+      <p style="color:var(--ivory-soft);max-width:52ch;margin:16px auto 0;font-size:17px">Experience across a wide range of commercial tenant types across New York and nationally.</p>
+    </div>
+    <div class="wws-grid reveal">
+
+      <div class="wws-card">
+        <img class="wws-card-bg" src="/assets/images/Retail.png" alt="Retail Tenants" loading="lazy" decoding="async">
+        <div class="wws-body">
+          <i class="lucide lucide-store wws-icon" aria-hidden="true"></i>
+          <span class="wws-label">Retail Tenants</span>
+        </div>
+      </div>
+
+      <div class="wws-card">
+        <img class="wws-card-bg" src="/assets/images/Restaurant.png" alt="Restaurant and Hospitality" loading="lazy" decoding="async">
+        <div class="wws-body">
+          <i class="lucide lucide-utensils wws-icon" aria-hidden="true"></i>
+          <span class="wws-label">Restaurant &amp; Hospitality</span>
+        </div>
+      </div>
+
+      <div class="wws-card">
+        <img class="wws-card-bg" src="/assets/images/Wellness.png" alt="Wellness and Medical" loading="lazy" decoding="async">
+        <div class="wws-body">
+          <i class="lucide lucide-heart-pulse wws-icon" aria-hidden="true"></i>
+          <span class="wws-label">Wellness &amp; Medical</span>
+        </div>
+      </div>
+
+      <div class="wws-card">
+        <img class="wws-card-bg" src="/assets/images/Auto.png" alt="Auto, Warehouse and Industrial" loading="lazy" decoding="async">
+        <div class="wws-body">
+          <i class="lucide lucide-car wws-icon" aria-hidden="true"></i>
+          <span class="wws-label">Auto, Warehouse &amp; Industrial</span>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
